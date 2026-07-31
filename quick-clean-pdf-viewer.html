@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Clean Company Profile</title>
+<style>
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    background: #d8d8d5;
+    overscroll-behavior: none;
+  }
+
+  html {
+    overflow: hidden;
+  }
+
+  body {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #8d8d8d #d8d8d5;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #d8d8d5;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    min-height: 44px;
+    border: 3px solid #d8d8d5;
+    border-radius: 999px;
+    background: #8d8d8d;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: #747474;
+  }
+
+  #viewer {
+    width: 100%;
+    min-height: 100%;
+    background: #d8d8d5;
+  }
+
+  .pdf-page {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .pdf-page + .pdf-page {
+    margin-top: 8px;
+  }
+
+  .pdf-page canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #ffffff;
+  }
+
+  .status {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 30px;
+    color: #626262;
+    background: #f2f2ef;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div id="viewer">
+  <div class="status">Loading company profile…</div>
+</div>
+
+<script type="module">
+import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs";
+
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs";
+
+const viewer = document.getElementById("viewer");
+const pdfUrl = "assets/images/hospitality-ompany-profile.pdf";
+
+let pdfDocument = null;
+let pageObserver = null;
+let rebuildToken = 0;
+let resizeTimer = 0;
+let lastWidth = 0;
+
+const showStatus = message => {
+  viewer.replaceChildren();
+  const status = document.createElement("div");
+  status.className = "status";
+  status.textContent = message;
+  viewer.append(status);
+};
+
+const renderPage = async canvas => {
+  if (
+    !pdfDocument ||
+    canvas.dataset.rendered === "true" ||
+    canvas.dataset.rendering === "true"
+  ) {
+    return;
+  }
+
+  canvas.dataset.rendering = "true";
+
+  try {
+    const pageNumber = Number(canvas.dataset.pageNumber);
+    const page = await pdfDocument.getPage(pageNumber);
+    const baseViewport = page.getViewport({ scale: 1 });
+    const cssWidth = canvas.parentElement.clientWidth;
+    const cssScale = cssWidth / baseViewport.width;
+    const viewport = page.getViewport({ scale: cssScale });
+    const outputScale = Math.min(window.devicePixelRatio || 1, 1.35);
+    const context = canvas.getContext("2d", { alpha: false });
+
+    canvas.width = Math.ceil(viewport.width * outputScale);
+    canvas.height = Math.ceil(viewport.height * outputScale);
+
+    await page.render({
+      canvasContext: context,
+      viewport,
+      transform:
+        outputScale === 1
+          ? null
+          : [outputScale, 0, 0, outputScale, 0, 0]
+    }).promise;
+
+    canvas.dataset.rendered = "true";
+  } catch (error) {
+    console.error("PDF page render failed:", error);
+  } finally {
+    delete canvas.dataset.rendering;
+  }
+};
+
+const buildPageShells = async () => {
+  if (!pdfDocument || !viewer.clientWidth) return;
+
+  const token = ++rebuildToken;
+  lastWidth = viewer.clientWidth;
+
+  if (pageObserver) pageObserver.disconnect();
+
+  const fragment = document.createDocumentFragment();
+
+  for (let pageNumber = 1; pageNumber <= pdfDocument.numPages; pageNumber += 1) {
+    if (token !== rebuildToken) return;
+
+    const page = await pdfDocument.getPage(pageNumber);
+    const viewport = page.getViewport({ scale: 1 });
+    const pageShell = document.createElement("div");
+    const canvas = document.createElement("canvas");
+
+    pageShell.className = "pdf-page";
+    pageShell.style.aspectRatio = `${viewport.width} / ${viewport.height}`;
+
+    canvas.dataset.pageNumber = String(pageNumber);
+    canvas.setAttribute("aria-label", `Company profile page ${pageNumber}`);
+    canvas.setAttribute("role", "img");
+
+    pageShell.append(canvas);
+    fragment.append(pageShell);
+  }
+
+  if (token !== rebuildToken) return;
+
+  viewer.replaceChildren(fragment);
+
+  pageObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          renderPage(entry.target);
+          pageObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: document.body,
+      rootMargin: "1200px 0px",
+      threshold: 0.01
+    }
+  );
+
+  viewer.querySelectorAll("canvas[data-page-number]").forEach(canvas => {
+    pageObserver.observe(canvas);
+  });
+};
+
+try {
+  pdfDocument = await pdfjsLib.getDocument({ url: pdfUrl }).promise;
+  await buildPageShells();
+
+  const resizeObserver = new ResizeObserver(entries => {
+    const width = Math.round(entries[0]?.contentRect.width || 0);
+
+    if (!width || Math.abs(width - lastWidth) < 24) return;
+
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(buildPageShells, 180);
+  });
+
+  resizeObserver.observe(viewer);
+} catch (error) {
+  console.error("PDF failed to load:", error);
+  showStatus("The company profile could not be loaded.");
+}
+</script>
+</body>
+</html>

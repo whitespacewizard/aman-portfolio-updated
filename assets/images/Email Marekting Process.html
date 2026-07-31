@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T&C — Trade Show Lead Gen Operations</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--black:#0a0a0a;--white:#f8f8f6;--red:#e53e3e;--green:#38a169;--yellow:#d69e2e;--font:'DM Sans',sans-serif;--gap:clamp(1.5rem,4vw,3rem);--page-pad:clamp(1.25rem,5vw,5rem)}
+  html{font-size:16px;scroll-behavior:smooth}
+  body{font-family:var(--font);background:var(--white);color:var(--black);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+  /* LAYOUT */
+  .site-shell{min-height:100vh}
+  @media(max-width:900px){.sidebar{display:none}.mob-toggle{display:flex !important}}
+
+  /* SIDEBAR */
+  .sidebar{position:fixed;top:0;left:0;bottom:0;width:260px;background:var(--black);color:var(--white);overflow-y:auto;z-index:200;display:flex;flex-direction:column}
+  .sidebar-brand{padding:1.5rem 1.25rem;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;opacity:0.7;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .sidebar-section-label{padding:1.25rem 1.25rem 0.5rem;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.25}
+  .sidebar-link{display:block;padding:0.6rem 1.25rem;font-size:0.72rem;color:var(--white);text-decoration:none;opacity:0.45;transition:all 0.15s;border-left:3px solid transparent;letter-spacing:0.02em}
+  .sidebar-link:hover{opacity:0.8;background:rgba(255,255,255,0.04)}
+  .sidebar-link.is-active{opacity:1;border-left-color:var(--white);background:rgba(255,255,255,0.06);font-weight:600}
+  .sidebar-link.cmd-center{color:#ffd700;opacity:0.7}
+  .sidebar-link.cmd-center.is-active{opacity:1;border-left-color:#ffd700}
+  .sidebar-footer{margin-top:auto;padding:1.25rem;font-size:0.5rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.15;border-top:1px solid rgba(255,255,255,0.06)}
+
+  /* MOBILE TOGGLE */
+  .mob-toggle{display:none;position:fixed;top:1rem;left:1rem;z-index:300;width:40px;height:40px;background:var(--black);color:var(--white);border:none;border-radius:6px;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer}
+  .sidebar.mob-open{display:flex !important;width:100%;max-width:300px}
+
+  /* MAIN */
+  .main-area{margin-left:260px;min-height:100vh}
+  @media(max-width:900px){.main-area{margin-left:0}}
+
+  /* PAGE */
+  .page{display:none}
+  .page.is-active{display:block}
+
+  /* HERO */
+  .hero{background:var(--black);color:var(--white);padding:clamp(3rem,8vw,6rem) var(--page-pad) clamp(3rem,6vw,5rem);min-height:60vh;display:flex;flex-direction:column;justify-content:flex-end}
+  .hero-eyebrow{font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.35;margin-bottom:1.25rem}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,4.5rem);font-weight:400;line-height:1.08;max-width:16ch;margin-bottom:1.5rem;letter-spacing:-0.02em}
+  .hero-sub{font-size:0.72rem;line-height:1.8;opacity:0.45;max-width:55ch}
+  .hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1)}
+  .hero-stat-num{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;line-height:1;margin-bottom:0.4rem}
+  .hero-stat-label{font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;opacity:0.35}
+
+  /* SECTION */
+  .section{padding:clamp(2.5rem,6vw,5rem) var(--page-pad);border-bottom:1px solid rgba(0,0,0,0.06)}
+  .section:last-child{border-bottom:none}
+  .section-eyebrow{font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.3;margin-bottom:0.75rem}
+  .section-headline{font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:400;line-height:1.15;max-width:24ch;margin-bottom:0.75rem;letter-spacing:-0.01em}
+  .section-body{font-size:1rem;line-height:1.7;max-width:58ch;opacity:0.65;margin-bottom:var(--gap)}
+
+  .section-dark{background:var(--black);color:var(--white)}
+  .section-dark .section-eyebrow{opacity:0.25}
+  .section-dark .section-body{opacity:0.45}
+  .section-dark .card{border-color:rgba(255,255,255,0.1)}
+  .section-dark .card-body{opacity:0.4}
+  .section-dark .card-eyebrow{opacity:0.2}
+  .section-dark .data-table th{border-bottom-color:rgba(255,255,255,0.25)}
+  .section-dark .data-table td{border-bottom-color:rgba(255,255,255,0.05)}
+  .section-dark .bar-track{background:rgba(255,255,255,0.06)}
+  .section-dark .bar-fill{background:var(--white)}
+
+  /* GRIDS */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+  .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--gap)}
+  .four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+  .five-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+  @media(max-width:768px){.two-col,.three-col{grid-template-columns:1fr}}
+  @media(max-width:900px){.four-col{grid-template-columns:1fr 1fr}.five-flow{grid-template-columns:1fr}}
+
+  /* CARD */
+  .card{border:1px solid rgba(0,0,0,0.08);padding:clamp(1.25rem,2.5vw,2rem)}
+  .card-eyebrow{font-size:0.52rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0.3;margin-bottom:0.65rem}
+  .card-title{font-size:clamp(1.2rem,2.2vw,1.6rem);font-weight:400;line-height:1.2;margin-bottom:0.6rem}
+  .card-body{font-size:0.85rem;line-height:1.6;opacity:0.55}
+  .card-num{font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;line-height:1;margin-bottom:0.4rem}
+
+  /* TABLE */
+  .data-table{width:100%;border-collapse:collapse;font-size:0.72rem}
+  .data-table th{text-align:left;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;padding:0.65rem 0.85rem;border-bottom:2px solid var(--black);font-size:0.55rem;opacity:0.35}
+  .data-table td{padding:0.65rem 0.85rem;border-bottom:1px solid rgba(0,0,0,0.05);vertical-align:top}
+  .data-table tr:last-child td{border-bottom:none}
+  .data-table .row-highlight td{font-weight:600;border-top:1px solid var(--black);border-bottom:1px solid var(--black)}
+  .section-dark .data-table .row-highlight td{border-color:rgba(255,255,255,0.25)}
+
+  /* BAR */
+  .bar-row{display:flex;align-items:center;gap:0.85rem;margin-bottom:0.5rem}
+  .bar-label{font-size:0.62rem;width:110px;flex-shrink:0;text-align:right;opacity:0.45}
+  .bar-track{flex:1;height:24px;background:rgba(0,0,0,0.04)}
+  .bar-fill{height:100%;background:var(--black);transition:width 0.8s ease}
+  .bar-value{font-size:0.62rem;width:80px;flex-shrink:0;opacity:0.45}
+
+  /* SEQ FLOW */
+  .seq-step{padding:1.5rem 1.2rem;border-right:1px solid rgba(0,0,0,0.06)}
+  .seq-step:last-child{border-right:none}
+  .seq-num{font-size:0.5rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0.25;margin-bottom:0.75rem}
+  .seq-title{font-size:1.1rem;margin-bottom:0.4rem}
+  .seq-desc{font-size:0.68rem;opacity:0.45;line-height:1.5}
+  @media(max-width:768px){.five-flow .seq-step,.seq-flow .seq-step{border-right:none;border-bottom:1px solid rgba(0,0,0,0.06)}}
+
+  .seq-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  @media(max-width:768px){.seq-flow{grid-template-columns:1fr}}
+
+  /* STACK */
+  .stack-item{display:flex;justify-content:space-between;padding:0.65rem 0;border-bottom:1px solid rgba(0,0,0,0.05);font-size:0.72rem}
+  .stack-item:last-child{border-bottom:none}
+  .stack-key{opacity:0.45}
+  .stack-val{font-weight:500}
+  .section-dark .stack-item{border-bottom-color:rgba(255,255,255,0.05)}
+
+  /* CHECKLIST */
+  .check-item{font-size:0.72rem;padding:0.55rem 0;border-bottom:1px solid rgba(0,0,0,0.04);opacity:0.55}
+  .check-item::before{content:'—';margin-right:0.65rem;opacity:0.25}
+
+  /* CALLOUT */
+  .callout{border-left:3px solid var(--black);padding:1.25rem 1.75rem;margin-top:var(--gap)}
+  .callout p{font-size:1.05rem;font-style:italic;line-height:1.6;opacity:0.6}
+  .section-dark .callout{border-left-color:var(--white)}
+
+  /* REDFLAG */
+  .redflag{font-size:0.68rem;padding:0.45rem 0;opacity:0.55;border-bottom:1px solid rgba(0,0,0,0.04)}
+  .redflag::before{content:'⚠ ';opacity:0.3}
+
+  /* TIMELINE */
+  .timeline-month{display:grid;grid-template-columns:130px 1fr;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid rgba(0,0,0,0.05)}
+  .timeline-month:last-child{border-bottom:none}
+  .tl-label{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.35;padding-top:0.2rem}
+  .tl-goal{font-size:1.2rem;margin-bottom:0.4rem}
+  .tl-detail{font-size:0.68rem;opacity:0.45;line-height:1.65}
+
+  /* PROFILE */
+  .profile-card{border:1px solid rgba(255,255,255,0.1);padding:clamp(1.25rem,2.5vw,2rem)}
+  .profile-name{font-size:1.3rem;margin-bottom:0.3rem}
+  .profile-role{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.35;margin-bottom:0.85rem}
+  .profile-detail{font-size:0.8rem;line-height:1.6;opacity:0.45}
+
+  /* FUNNEL */
+  .funnel-step{display:flex;align-items:baseline;gap:1.25rem;padding:1rem 0;border-bottom:1px solid rgba(0,0,0,0.05)}
+  .funnel-step:last-child{border-bottom:none}
+  .funnel-pct{font-size:1.6rem;font-weight:400;min-width:70px;text-align:right}
+  .funnel-label{font-size:0.65rem;opacity:0.45;text-transform:uppercase;letter-spacing:0.06em}
+
+  /* EMAIL PREVIEW */
+  .email-preview{border:1px solid rgba(0,0,0,0.08);padding:clamp(1.25rem,2.5vw,1.75rem);font-size:0.75rem;line-height:1.65;background:rgba(0,0,0,0.012)}
+  .email-preview .ep-label{font-size:0.5rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.3;margin-bottom:0.85rem;display:block}
+  .email-preview .ep-subject{font-weight:600;margin-bottom:0.5rem;font-size:0.82rem}
+  .email-preview .ep-body{opacity:0.55}
+  .email-preview .ep-body em{font-style:italic;opacity:0.5}
+
+  /* FORMULA */
+  .formula-row{display:grid;grid-template-columns:32px 1fr;gap:0.85rem;padding:1rem 0;border-bottom:1px solid rgba(0,0,0,0.05);align-items:start}
+  .formula-row:last-child{border-bottom:none}
+  .formula-num{font-size:1.3rem;opacity:0.15;text-align:right}
+  .formula-title{font-size:1rem;margin-bottom:0.2rem}
+  .formula-desc{font-size:0.68rem;opacity:0.45;line-height:1.5}
+
+  /* ═══ COMMAND CENTER ═══ */
+  .cmd-hero{background:linear-gradient(135deg,#0a0a0a 0%,#1a1a2e 100%);color:var(--white);padding:clamp(2.5rem,5vw,4rem) var(--page-pad);border-bottom:2px solid #ffd700}
+  .cmd-hero h1{font-size:clamp(2rem,4.5vw,3.5rem);font-weight:400;margin-bottom:0.75rem;letter-spacing:-0.02em}
+  .cmd-hero .hero-sub{opacity:0.4}
+  .cmd-badge{display:inline-block;padding:0.35rem 0.75rem;background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);color:#ffd700;font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;border-radius:2px;margin-bottom:1.25rem}
+
+  .cmd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:var(--gap)}
+  @media(max-width:900px){.cmd-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.cmd-grid{grid-template-columns:1fr}}
+
+  .cmd-card{border:1px solid rgba(0,0,0,0.06);padding:1.25rem;position:relative}
+  .cmd-card-icon{font-size:1.5rem;margin-bottom:0.65rem;opacity:0.3}
+  .cmd-card-title{font-size:0.95rem;margin-bottom:0.35rem}
+  .cmd-card-desc{font-size:0.7rem;opacity:0.45;line-height:1.55}
+  .cmd-card-status{position:absolute;top:1.25rem;right:1.25rem;width:10px;height:10px;border-radius:50%;background:#ccc}
+  .cmd-card-status.green{background:var(--green)}
+  .cmd-card-status.yellow{background:var(--yellow)}
+  .cmd-card-status.red{background:var(--red)}
+
+  .checklist-section{margin-bottom:var(--gap)}
+  .checklist-title{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;opacity:0.3;margin-bottom:0.85rem;padding-bottom:0.5rem;border-bottom:1px solid rgba(0,0,0,0.06)}
+  .cl-item{display:flex;align-items:flex-start;gap:0.75rem;padding:0.65rem 0;border-bottom:1px solid rgba(0,0,0,0.035);font-size:0.75rem;cursor:pointer;transition:opacity 0.2s}
+  .cl-item input[type="checkbox"]{margin-top:0.15rem;accent-color:var(--black);width:15px;height:15px;cursor:pointer;flex-shrink:0}
+  .cl-item.checked{opacity:0.3;text-decoration:line-through}
+  .cl-item-text{flex:1}
+  .cl-item-tag{font-size:0.5rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.2rem 0.5rem;border:1px solid rgba(0,0,0,0.1);opacity:0.4;white-space:nowrap}
+
+  .warning-box{border:1px solid var(--red);background:rgba(229,62,62,0.03);padding:1.25rem;margin-bottom:0.75rem}
+  .warning-box-title{font-size:0.82rem;color:var(--red);margin-bottom:0.35rem}
+  .warning-box-desc{font-size:0.7rem;opacity:0.5;line-height:1.5}
+  .warning-placeholder{border:1px dashed rgba(0,0,0,0.1);padding:2rem;text-align:center;font-size:0.7rem;opacity:0.25;margin-bottom:0.75rem}
+
+  .obs-day{display:inline-flex;align-items:center;gap:0.5rem;padding:0.45rem 0.85rem;border:1px solid rgba(0,0,0,0.08);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;margin-right:0.5rem;margin-bottom:0.5rem}
+  .obs-day.active{background:var(--black);color:var(--white);border-color:var(--black)}
+  .obs-day.future{opacity:0.2}
+
+  footer{background:var(--black);color:var(--white);padding:2rem var(--page-pad);font-size:0.55rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.2}
+</style>
+</head>
+<body>
+
+<button class="mob-toggle" onclick="document.querySelector('.sidebar').classList.toggle('mob-open')">☰</button>
+
+<div class="site-shell">
+
+<!-- ═══ SIDEBAR ═══ -->
+<aside class="sidebar">
+  <div class="sidebar-brand">T&C Operations</div>
+
+  <div class="sidebar-section-label">Command</div>
+  <a class="sidebar-link cmd-center" href="#command" data-page="command">⚡ Aman's Command Center</a>
+
+  <div class="sidebar-section-label">Process</div>
+  <a class="sidebar-link" href="#overview" data-page="overview">Overview &amp; Business</a>
+  <a class="sidebar-link" href="#pipeline" data-page="pipeline">Process Pipeline</a>
+  <a class="sidebar-link" href="#extraction" data-page="extraction">Data Extraction</a>
+  <a class="sidebar-link" href="#icp" data-page="icp">ICP &amp; Contacts</a>
+
+  <div class="sidebar-section-label">Campaigns</div>
+  <a class="sidebar-link" href="#categories" data-page="categories">Campaign Categories</a>
+  <a class="sidebar-link" href="#sequence" data-page="sequence">Email Sequence</a>
+  <a class="sidebar-link" href="#copyformula" data-page="copyformula">Copy Formula</a>
+  <a class="sidebar-link" href="#copystrategy" data-page="copystrategy">Copy by Category</a>
+  <a class="sidebar-link" href="#antigpt" data-page="antigpt">Anti-ChatGPT Policy</a>
+  <a class="sidebar-link" href="#lifecycle" data-page="lifecycle">Campaign Lifecycle</a>
+
+  <div class="sidebar-section-label">Operations</div>
+  <a class="sidebar-link" href="#tools" data-page="tools">Tools &amp; Infra</a>
+  <a class="sidebar-link" href="#volume" data-page="volume">Sending Volume</a>
+  <a class="sidebar-link" href="#metrics" data-page="metrics">Performance Metrics</a>
+  <a class="sidebar-link" href="#shows" data-page="shows">Trade Shows</a>
+  <a class="sidebar-link" href="#team" data-page="team">Team Structure</a>
+  <a class="sidebar-link" href="#gaps" data-page="gaps">Known Gaps</a>
+
+  <div class="sidebar-footer">Internal Use Only</div>
+</aside>
+
+<!-- ═══ MAIN ═══ -->
+<div class="main-area">
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: COMMAND CENTER                     -->
+<!-- ════════════════════════════════════════ -->
+<div class="page is-active" id="page-command" data-page="command">
+  <div class="cmd-hero">
+    <div class="cmd-badge">Project Manager — Day 1 of 5 Observation</div>
+    <h1>Aman's Command Center</h1>
+    <div class="hero-sub">Your daily dashboard — track system health, monitor checklists, flag warnings to Tarik. This page will evolve as you observe more over the 5-day onboarding period.</div>
+    <div style="margin-top:2rem;">
+      <span class="obs-day active">Day 1 ✓</span>
+      <span class="obs-day future">Day 2</span>
+      <span class="obs-day future">Day 3</span>
+      <span class="obs-day future">Day 4</span>
+      <span class="obs-day future">Day 5</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-eyebrow">Your 4 Responsibilities</div>
+    <div class="section-headline">What Tarik expects from you</div>
+    <div class="section-body">You are the system watchdog. You don't personally write copy or extract data — you make sure the people doing those things are doing them right, on time, every day. If something breaks, you push the panic button.</div>
+
+    <div class="cmd-grid">
+      <div class="cmd-card">
+        <div class="cmd-card-status yellow"></div>
+        <div class="cmd-card-icon">⚙️</div>
+        <div class="cmd-card-title">System Health</div>
+        <div class="cmd-card-desc">Is the overall system working? Are campaigns going out on time? Is the GSR up to date? Are email accounts healthy? Is capacity being used fully?</div>
+      </div>
+      <div class="cmd-card">
+        <div class="cmd-card-status yellow"></div>
+        <div class="cmd-card-icon">✅</div>
+        <div class="cmd-card-title">Daily Task Completion</div>
+        <div class="cmd-card-desc">Did today's work get done? Were the scheduled campaigns activated? Were follow-ups sent? Was the data extraction on track? Did copies get written?</div>
+      </div>
+      <div class="cmd-card">
+        <div class="cmd-card-status yellow"></div>
+        <div class="cmd-card-icon">✍️</div>
+        <div class="cmd-card-title">Content Review</div>
+        <div class="cmd-card-desc">You don't write copy — but you review what Saurabh writes. Does it follow the 5-part formula? Is it human-sounding (not ChatGPT)? Are subject lines specific? No links?</div>
+      </div>
+      <div class="cmd-card">
+        <div class="cmd-card-status yellow"></div>
+        <div class="cmd-card-icon">📊</div>
+        <div class="cmd-card-title">Extraction Coordination</div>
+        <div class="cmd-card-desc">Talk to Tammy — how is she collecting leads? Is the extraction on schedule? Is the data fresh (current year)? Are booth sizes being filtered correctly (20×20+)?</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="section-eyebrow">Daily Checklist</div>
+    <div class="section-headline">Check these every single day</div>
+    <div class="section-body">Go through this list at the 11 AM standup. Anything unchecked by EOD is a flag. This checklist will get more specific as you observe Days 2–5.</div>
+
+    <div class="two-col">
+      <div>
+        <div class="checklist-title">Morning (11 AM Standup)</div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Check GSR — which shows are scheduled to send today</div><span class="cl-item-tag">System</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Confirm Hamad/Saurabh are online and ready</div><span class="cl-item-tag">Team</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Are email copies ready for today's campaigns?</div><span class="cl-item-tag">Content</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Are contacts uploaded to Instantly?</div><span class="cl-item-tag">System</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Check extraction team status — is Tammy's team on track?</div><span class="cl-item-tag">Extraction</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Check email account health in Instantly — any flags?</div><span class="cl-item-tag">System</span>
+        </div>
+      </div>
+      <div>
+        <div class="checklist-title">Afternoon / EOD</div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Were all scheduled campaigns activated today?</div><span class="cl-item-tag">System</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Check Unibox — any positive replies? Tag them.</div><span class="cl-item-tag">Leads</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Review copy Saurabh wrote — does it follow formula? Human tone?</div><span class="cl-item-tag">Content</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Any capacity issues? Enough email accounts for tomorrow?</div><span class="cl-item-tag">System</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">Update GSR with today's status</div><span class="cl-item-tag">System</span>
+        </div>
+        <div class="cl-item" onclick="this.classList.toggle('checked');this.querySelector('input').checked=!this.querySelector('input').checked">
+          <input type="checkbox"><div class="cl-item-text">If Friday → prepare customer report</div><span class="cl-item-tag">Reporting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-eyebrow">⚠ Warning System — Flag to Tarik</div>
+    <div class="section-headline">Problems go here</div>
+    <div class="section-body">"I don't care about good news — I'm only interested in bad news. Zero bad news? That's also not good news. It means we're not tracking it right." — When you spot a problem, document it here. These are the things you escalate.</div>
+
+    <div class="warning-placeholder">No warnings logged yet — Day 1 observation in progress. Warnings will accumulate as you observe Days 2–5.</div>
+
+    <div class="section-eyebrow" style="margin-top:var(--gap)">What to watch for</div>
+    <div class="two-col">
+      <div>
+        <div class="redflag">Campaign scheduled but copy not ready — blocks the day's sends</div>
+        <div class="redflag">Extraction data is old/wrong year — wrong exhibitors targeted</div>
+        <div class="redflag">Apollo variation gap too high — too many companies going uncontacted</div>
+        <div class="redflag">Email accounts flagged or warming down — deliverability risk</div>
+        <div class="redflag">Follow-up gap misconfigured (accidental consecutive sends)</div>
+      </div>
+      <div>
+        <div class="redflag">Saurabh's copy sounds AI-generated — "I noticed" patterns</div>
+        <div class="redflag">GSR not updated — nobody knows what went out</div>
+        <div class="redflag">Capacity maxed out — campaigns queued with no room</div>
+        <div class="redflag">Positive replies sitting in Unibox untagged — leads going cold</div>
+        <div class="redflag">Extraction team behind schedule — data not ready for upcoming shows</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="section-eyebrow">Content Review Checklist</div>
+    <div class="section-headline">What to check in every email copy</div>
+    <div class="section-body">You won't write the copy — but every copy Saurabh writes should pass these checks before going live. This is your quality gate.</div>
+    <div class="two-col">
+      <div>
+        <div class="check-item">Does it follow the 5-part formula? (Why reaching → Why important → Who we are → Offer → CTA)</div>
+        <div class="check-item">Is the subject line short, specific, and event-focused?</div>
+        <div class="check-item">Is the CTA specific? ("Connect tomorrow" not "sometime this week")</div>
+        <div class="check-item">Is there a human opt-out line (not an unsubscribe link)?</div>
+        <div class="check-item">Are there ZERO links in the email?</div>
+      </div>
+      <div>
+        <div class="check-item">Does it sound human? Or does it have ChatGPT patterns? ("I noticed, I noticed")</div>
+        <div class="check-item">Are client names and event names correct and verified?</div>
+        <div class="check-item">Is the tone right for the category? (Aspirational for Elongated, Direct for Standard)</div>
+        <div class="check-item">Has the exhibitor's website been checked for accuracy?</div>
+        <div class="check-item">Has the email been previewed in Instantly before activation?</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-eyebrow">5-Day Observation Tracker</div>
+    <div class="section-headline">What to focus on each day</div>
+    <div class="timeline-month"><div class="tl-label">Day 1 (Today)</div><div><div class="tl-goal">Watch the Full Flow</div><div class="tl-detail">Shadow Hamad through the entire process: GSR check → data verification → Apollo → Instantly → campaign activation. Watch Saurabh write copy. Watch Tarik draft an email live. Understand the 4 campaign categories. Take notes — don't change anything.</div></div></div>
+    <div class="timeline-month"><div class="tl-label">Day 2</div><div><div class="tl-goal">Deep Dive: Data &amp; Extraction</div><div class="tl-detail">Sit with Tammy's extraction team. Understand floor plan mining vs. directory mining. See how booth size filtering works. Check data freshness. Understand the variation gap (Apollo mismatches). Map the handoff from extraction → campaign team.</div></div></div>
+    <div class="timeline-month"><div class="tl-label">Day 3</div><div><div class="tl-goal">Deep Dive: Instantly &amp; Email Health</div><div class="tl-detail">Learn Instantly back-end: campaign setup, Unibox, analytics, warmup, slow ramp-up. Check open rates, reply categories. Understand email account allocation and capacity math. Review winning copies from past campaigns.</div></div></div>
+    <div class="timeline-month"><div class="tl-label">Day 4</div><div><div class="tl-goal">Deep Dive: Copy &amp; Content</div><div class="tl-detail">Study the email formula deeply. Review copies across all categories — Elongated, Standard (EM/DM/Owner), UK, WTF. Understand tone differences. Check Saurabh's recent copies against the formula. Try writing one draft yourself.</div></div></div>
+    <div class="timeline-month"><div class="tl-label">Day 5</div><div><div class="tl-goal">Build the System</div><div class="tl-detail">Compile all observations. Identify the top 5 gaps. Build the final daily SOP checklist. Set up your warning system. Prepare your first Friday customer report. Present findings to Tarik — "here's what's working, here's what's broken."</div></div></div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: OVERVIEW                           -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-overview" data-page="overview">
+  <section class="hero">
+    <div class="hero-eyebrow">01 — The Business</div>
+    <h1>A marketing agency for trade show booth builders.</h1>
+    <div class="hero-sub">Built from direct trade show execution experience. The founder traveled to events, managed booths, and realized 85% of builders can't market themselves. The agency fills that gap with cold email lead generation.</div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">$6–7M</div><div class="hero-stat-label">Lead value (2024)</div></div>
+      <div><div class="hero-stat-num">85%</div><div class="hero-stat-label">Builders can't market</div></div>
+      <div><div class="hero-stat-num">50+</div><div class="hero-stat-label">Builder connections (US)</div></div>
+      <div><div class="hero-stat-num">3</div><div class="hero-stat-label">Active customers</div></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-headline">How the agency works</div>
+    <div class="section-body">Booth builders (carpenters, fabricators, interior decorators) need leads but don't know marketing. Companies like Infosys or Wells Fargo never hire carpenters directly — they outsource booth building. The agency sits in that chain, generating exhibitor leads for the builders via cold email outreach.</div>
+    <div class="two-col">
+      <div>
+        <div class="stack-item"><span class="stack-key">Niche</span><span class="stack-val">Trade show booth builders only</span></div>
+        <div class="stack-item"><span class="stack-key">Service</span><span class="stack-val">Cold email lead generation</span></div>
+        <div class="stack-item"><span class="stack-key">Primary customer</span><span class="stack-val">Reaction Space</span></div>
+        <div class="stack-item"><span class="stack-key">Markets</span><span class="stack-val">US + UK trade shows</span></div>
+        <div class="stack-item"><span class="stack-key">Core offer to exhibitors</span><span class="stack-val">Complementary booth design concept (free)</span></div>
+        <div class="stack-item"><span class="stack-key">Founder background</span><span class="stack-val">Deloitte → Wells Fargo → Google</span></div>
+        <div class="stack-item"><span class="stack-key">Focus policy</span><span class="stack-val">Refused NTT Data to stay in niche</span></div>
+        <div class="stack-item"><span class="stack-key">Other ventures</span><span class="stack-val">Pharma company + Exeterly platform</span></div>
+      </div>
+      <div>
+        <div class="card"><div class="card-eyebrow">Complementary Booth Design</div><div class="card-title">The core hook</div><div class="card-body">The agency offers exhibitors a free booth design concept — a professional 3D render of their booth. This is a paid service internally (worth ₹1L+) given away as the conversation opener. If the exhibitor likes it, they engage the builder for the full build.</div></div>
+        <div class="card" style="margin-top:var(--gap)"><div class="card-eyebrow">Why not diversify?</div><div class="card-body">"I don't want to defocus. There's a company called NTT Data — they want me to manage their virtual events. I'm not even interested. I just want to stay in this niche and deliver results."</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: PIPELINE                           -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-pipeline" data-page="pipeline">
+  <section class="hero">
+    <div class="hero-eyebrow">02 — Process Pipeline</div>
+    <h1>Five stages from trade show list to campaign.</h1>
+    <div class="hero-sub">Every lead starts with a trade show list from the customer and ends with an outbound campaign on Instantly.</div>
+  </section>
+  <section class="section">
+    <div class="five-flow">
+      <div class="seq-step"><div class="seq-num">Step 01</div><div class="seq-title">Trade Show List</div><div class="seq-desc">Customer provides upcoming trade shows to target.</div></div>
+      <div class="seq-step"><div class="seq-num">Step 02</div><div class="seq-title">Data Extraction</div><div class="seq-desc">Tammy's team mines exhibitor data from floor plans or directories.</div></div>
+      <div class="seq-step"><div class="seq-num">Step 03</div><div class="seq-title">Filtering &amp; CSV</div><div class="seq-desc">Filter by booth size (20×20+), check data freshness, create CSVs.</div></div>
+      <div class="seq-step"><div class="seq-num">Step 04</div><div class="seq-title">Apollo Enrichment</div><div class="seq-desc">Upload to Apollo. Extract contacts by ICP. Verified emails only.</div></div>
+      <div class="seq-step"><div class="seq-num">Step 05</div><div class="seq-title">Instantly Campaigns</div><div class="seq-desc">Upload contacts. Create campaigns by category. Activate.</div></div>
+    </div>
+    <div class="callout"><p>"We get the list from the customer. Tammy's team extracts. I create CSVs, upload to Apollo, get contacts, then upload on Instantly by creating new campaigns for each trade show."</p></div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: EXTRACTION                         -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-extraction" data-page="extraction">
+  <section class="hero"><div class="hero-eyebrow">03 — Data Extraction</div><h1>Floor plans and directories.</h1><div class="hero-sub">The extraction team mines exhibitor data — the foundation of the entire pipeline.</div></section>
+  <section class="section">
+    <div class="two-col">
+      <div>
+        <table class="data-table"><thead><tr><th>Data Point</th><th>Floor Plan</th><th>Directory</th></tr></thead><tbody><tr><td>Exhibitor Name</td><td>✓</td><td>✓</td></tr><tr><td>Booth Number</td><td>✓</td><td>✗</td></tr><tr><td>Booth Size</td><td>✓</td><td>✗</td></tr><tr><td>Company URL</td><td>✓</td><td>✓</td></tr></tbody></table>
+        <div style="margin-top:var(--gap)">
+          <table class="data-table"><thead><tr><th>Filter</th><th>Value</th></tr></thead><tbody><tr><td>Booth size</td><td>20×20 and above</td></tr><tr><td>Fallback</td><td>10×30 (~300 sq ft)</td></tr><tr><td>Company size</td><td>≤ 5,000 employees</td></tr><tr><td>Email status</td><td>Verified only</td></tr><tr><td>Data freshness</td><td>Current year preferred</td></tr></tbody></table>
+        </div>
+      </div>
+      <div>
+        <div class="card"><div class="card-eyebrow">US Example</div><div class="card-body" style="opacity:0.65">Extracted: <strong>493</strong> → After filter: <strong>237</strong> → Apollo match: <strong>176</strong> → Gap: <strong>51</strong> uncontacted</div></div>
+        <div class="card" style="margin-top:var(--gap)"><div class="card-eyebrow">UK Example</div><div class="card-body" style="opacity:0.65">Extracted: <strong>114</strong> → Usable: <strong>112</strong>. UK often only has directories (2 data points).</div></div>
+        <div class="card" style="margin-top:var(--gap)"><div class="card-eyebrow">Pre-Copy Research</div><div class="card-body">"Whenever I give you a copy, you have to check the website. Third-party info must be verified." The company website is the investigator — always verify before writing.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: ICP                                -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-icp" data-page="icp">
+  <section class="hero"><div class="hero-eyebrow">04 — ICP &amp; Contacts</div><h1>Three segments, five contacts per company.</h1></section>
+  <section class="section">
+    <div class="three-col">
+      <div class="card"><div class="card-eyebrow">Segment 1</div><div class="card-title">Event Managers</div><div class="card-body">Event Managers, Event Marketing Managers, Field Marketing Managers. Task-oriented. Lowest reply rate. Copy speaks to logistics.</div></div>
+      <div class="card"><div class="card-eyebrow">Segment 2</div><div class="card-title">Decision Makers</div><div class="card-body">VPs, Directors, Senior Directors, Heads. Strong replies. ~251 per batch. Copy speaks to strategic value.</div></div>
+      <div class="card"><div class="card-eyebrow">Segment 3</div><div class="card-title">Owners / C-Level</div><div class="card-body">CEOs, Founders, C-suite. Highest replies. ~305 per batch. Most direct copy + immediate CTA.</div></div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: CATEGORIES                         -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-categories" data-page="categories">
+  <section class="hero"><div class="hero-eyebrow">05 — Campaign Categories</div><h1>Four types based on event proximity.</h1></section>
+  <section class="section">
+    <div class="four-col">
+      <div class="card"><div class="card-eyebrow">Elongated</div><div class="card-num" style="font-size:1.8rem">11 mo</div><div class="card-body">Single generic campaign. Brand awareness. No offer. 7-day follow-up gap.</div></div>
+      <div class="card"><div class="card-eyebrow">Standard</div><div class="card-num" style="font-size:1.8rem">7–9 mo</div><div class="card-body">3 campaigns (EM/DM/Owner). Complementary offer. 5-day gap. Highest volume.</div></div>
+      <div class="card"><div class="card-eyebrow">UK</div><div class="card-num" style="font-size:1.8rem">Ongoing</div><div class="card-body">No category split. Single flow. 8 AM / 10 AM send times.</div></div>
+      <div class="card"><div class="card-eyebrow">Walk the Floor</div><div class="card-num" style="font-size:1.8rem">3–4 wk</div><div class="card-body">Vendor attending. Personal tone. "I'll stop by your booth." WTF internally.</div></div>
+    </div>
+    <div style="margin-top:var(--gap)">
+      <table class="data-table"><thead><tr><th>Parameter</th><th>Elongated</th><th>Standard</th><th>UK</th><th>WTF</th></tr></thead><tbody><tr><td>ICP split</td><td>No</td><td>Yes (3)</td><td>No</td><td>No</td></tr><tr><td>Offer disclosed</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>Follow-up gap</td><td>7 days</td><td>5 days</td><td>7 days</td><td>5 days</td></tr><tr><td>New contact time</td><td>10 AM</td><td>10 AM</td><td>8 AM</td><td>10 AM</td></tr><tr><td>Follow-up time</td><td>12 PM</td><td>12 PM</td><td>10 AM</td><td>12 PM</td></tr></tbody></table>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: SEQUENCE                           -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-sequence" data-page="sequence">
+  <section class="hero"><div class="hero-eyebrow">06 — Email Sequence</div><h1>1 initial + 3 follow-ups. Plain text. No links.</h1></section>
+  <section class="section">
+    <div class="seq-flow">
+      <div class="seq-step"><div class="seq-num">Email 1</div><div class="seq-title">Initial</div><div class="seq-desc">Longest. Full formula. 10 AM (US) / 8 AM (UK).</div></div>
+      <div class="seq-step"><div class="seq-num">Email 2</div><div class="seq-title">Offer Reminder</div><div class="seq-desc">Short. Complementary design. Curiosity. 12 PM.</div></div>
+      <div class="seq-step"><div class="seq-num">Email 3</div><div class="seq-title">Urgency</div><div class="seq-desc">"October is closer than it looks." Time pressure.</div></div>
+      <div class="seq-step"><div class="seq-num">Email 4</div><div class="seq-title">Breakup</div><div class="seq-desc">"Last note from me." Triggers final response.</div></div>
+    </div>
+    <div class="two-col" style="margin-top:var(--gap)">
+      <div class="card"><div class="card-eyebrow">Critical Rule</div><div class="card-title">Zero links in any email</div><div class="card-body">Links trigger spam. Every email is plain text. Opt-out is a human sentence: "If you already have your builder, let me know and I won't follow up."</div></div>
+      <div class="card"><div class="card-eyebrow">Why 4 not 5?</div><div class="card-body">"After the third email they just leave — they don't read. So we reduced from five to four."</div></div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: COPY FORMULA                       -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-copyformula" data-page="copyformula">
+  <section class="hero"><div class="hero-eyebrow">07 — Copy Formula</div><h1>Five elements, every email, every time.</h1></section>
+  <section class="section">
+    <div class="two-col">
+      <div>
+        <div class="formula-row"><div class="formula-num">1</div><div><div class="formula-title">Why am I reaching out?</div><div class="formula-desc">"I was looking at the floor plan for one of our customers and noticed [Company]." Context — not random.</div></div></div>
+        <div class="formula-row"><div class="formula-num">2</div><div><div class="formula-title">Why is this important for you?</div><div class="formula-desc">"With 3,400 exhibitors, the stands that start the right conversations are the ones built to stand out."</div></div></div>
+        <div class="formula-row"><div class="formula-num">3</div><div><div class="formula-title">Who are we?</div><div class="formula-desc">"We're Reaction Space — we've built for [Client Names]." Keep it to 1–2 lines. Credibility, not a pitch deck.</div></div></div>
+        <div class="formula-row"><div class="formula-num">4</div><div><div class="formula-title">What are we offering?</div><div class="formula-desc">"I'd like to offer a complementary design concept." Free design — paid service given away as the hook.</div></div></div>
+        <div class="formula-row"><div class="formula-num">5</div><div><div class="formula-title">Call to Action</div><div class="formula-desc">"Can we connect tomorrow?" — Never "this week." Specific. Urgent. Direct.</div></div></div>
+      </div>
+      <div>
+        <div class="email-preview">
+          <span class="ep-label">Example — Standard DM (Electronica)</span>
+          <div class="ep-subject">Electronica — can I help you at the show?</div>
+          <div class="ep-body">Hi [First Name],<br><br>I was looking at the Electronica floor plan for one of our customers and noticed [Company] is also exhibiting.<br><br>With over 3,400 exhibitors and 80,000 visitors from 50+ countries, the stands that start the right conversations on the floor are the ones built to stand out.<br><br>We're Reaction Space — we've built for [Customer], [Customer], and many more.<br><br>I'd love to offer a complementary design concept for your team at Electronica. No commitment.<br><br>Can we connect tomorrow?<br><br><em>[If [Company] already has a stand builder and is happy, just let me know and I won't follow up.]</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: COPY STRATEGY                      -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-copystrategy" data-page="copystrategy">
+  <section class="hero"><div class="hero-eyebrow">08 — Copy by Category</div><h1>Aspirational → Confirmatory → Personal.</h1></section>
+  <section class="section">
+    <div class="two-col">
+      <div class="card"><div class="card-eyebrow">Elongated</div><div class="card-title">Brand Awareness</div><div class="card-body" style="opacity:0.65"><strong>Tone:</strong> "We hope you'll be back." No offer. Research: event website, dates, attendee count, industry. Ask for RFP timing, not a meeting. Example: America's Beauty Show, Vision Expo.</div></div>
+      <div class="card"><div class="card-eyebrow">Standard</div><div class="card-title">Direct Offer</div><div class="card-body" style="opacity:0.65"><strong>EM:</strong> Logistics angle — "serious logistics operation."<br><strong>DM:</strong> Strategic — "stands that start conversations."<br><strong>Owner:</strong> Most direct — complementary offer + CTA.<br>Example: RSNA, Electronica.</div></div>
+    </div>
+    <div class="two-col" style="margin-top:var(--gap)">
+      <div class="card"><div class="card-eyebrow">Walk the Floor</div><div class="card-title">Personal Connection</div><div class="card-body" style="opacity:0.65">"Will you be on site? I'll stop by your booth." Vendor is physically going. Most personal tone. Example: Apartmentalize. Subject: "Will you be at [Event] later this month?"</div></div>
+      <div class="card"><div class="card-eyebrow">Subject Lines</div><div class="card-title">Short + Event + Question</div><div class="card-body" style="opacity:0.65">"Electronica — can I help you?"<br>"RSNA — stand build across two halls"<br>"Are you traveling to New Orleans?"<br>"[Company]'s booth next year — ideas?"</div></div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: ANTI-GPT                           -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-antigpt" data-page="antigpt">
+  <section class="hero"><div class="hero-eyebrow">09 — Anti-ChatGPT Policy</div><h1>AI copy is killing deliverability.</h1></section>
+  <section class="section">
+    <div class="two-col">
+      <div class="card"><div class="card-eyebrow">The Problem</div><div class="card-body" style="opacity:0.65"><strong>"I noticed, I noticed, I noticed"</strong> — Google has flagged this pattern. Thousands of agencies using same GPT prompts = identical output = spam folder. Instantly's own system detects AI-generated copy.</div></div>
+      <div class="card"><div class="card-eyebrow">The Policy</div><div class="card-body" style="opacity:0.65"><strong>GPT for research only.</strong> Understand the event, the industry. Then rewrite everything in your own words. Tarik spent 2 months training a custom GPT — still only uses it for scaffolding. Final copy must sound like a human wrote it.</div></div>
+    </div>
+    <div class="callout"><p>"We are not the only agency — there are thousands. They all use ChatGPT. So ChatGPT is just a template. Google has already flagged that pattern. You never hit the inbox."</p></div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: LIFECYCLE                          -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-lifecycle" data-page="lifecycle">
+  <section class="hero"><div class="hero-eyebrow">10 — Campaign Lifecycle</div><h1>11 months to event day.</h1></section>
+  <section class="section">
+    <div class="timeline-month"><div class="tl-label">11 Months</div><div><div class="tl-goal">Elongated Launches</div><div class="tl-detail">Previous year data. Brand awareness. No offer. Positive replies noted.</div></div></div>
+    <div class="timeline-month"><div class="tl-label">~10 Months</div><div><div class="tl-goal">Elongated Completes</div><div class="tl-detail">4 emails done (~1 month). Non-responders queue for Standard. New floor plan may be available.</div></div></div>
+    <div class="timeline-month"><div class="tl-label">7–9 Months</div><div><div class="tl-goal">Re-Extract + Standard</div><div class="tl-detail">Fresh data. 3 campaigns (EM/DM/Owner). Complementary offer. Booth sizes may have changed.</div></div></div>
+    <div class="timeline-month"><div class="tl-label">3–4 Weeks</div><div><div class="tl-goal">Walk the Floor</div><div class="tl-detail">Vendor attending. Personal emails. Must complete before event date.</div></div></div>
+    <div class="timeline-month"><div class="tl-label">Event Day</div><div><div class="tl-goal">Pause / Complete</div><div class="tl-detail">All campaigns paused. Leads in Pipedrive. Cycle restarts for next year.</div></div></div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: TOOLS                              -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-tools" data-page="tools">
+  <section class="hero"><div class="hero-eyebrow">11 — Tools &amp; Infrastructure</div><h1>Apollo, Instantly, Discord.</h1></section>
+  <section class="section">
+    <table class="data-table"><thead><tr><th>Tool</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td>Apollo</td><td>Contact enrichment — CSV upload, ICP filter, verified emails</td></tr>
+      <tr><td>Instantly</td><td>Campaigns, warmup, Unibox, analytics, slow ramp-up</td></tr>
+      <tr><td>Pipedrive</td><td>CRM — positive leads only</td></tr>
+      <tr><td>AMW</td><td>Google reseller — pseudo email accounts for outbound</td></tr>
+      <tr><td>Discord</td><td>Virtual office — shifts, standups, coordination</td></tr>
+      <tr><td>Google Sheets</td><td>GSR tracking sheet — single source of truth</td></tr>
+      <tr><td>ChatGPT (custom)</td><td>Research only — never final copy</td></tr>
+    </tbody></table>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: VOLUME                             -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-volume" data-page="volume">
+  <section class="hero"><div class="hero-eyebrow">12 — Sending Volume</div><h1>~2L unique contacts per year.</h1></section>
+  <section class="section">
+    <div class="bar-row"><div class="bar-label">Standard/day</div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div><div class="bar-value">1,400–1,800</div></div>
+    <div class="bar-row"><div class="bar-label">UK/batch</div><div class="bar-track"><div class="bar-fill" style="width:8%"></div></div><div class="bar-value">~472</div></div>
+    <div class="bar-row"><div class="bar-label">Elongated/batch</div><div class="bar-track"><div class="bar-fill" style="width:3%"></div></div><div class="bar-value">10–60</div></div>
+    <div style="margin-top:var(--gap)">
+      <table class="data-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>
+        <tr><td>Email accounts (example)</td><td>24 accounts = 312 capacity</td></tr>
+        <tr><td>Another batch</td><td>480 capacity</td></tr>
+        <tr class="row-highlight"><td>Yearly unique (2025)</td><td>~1,86,000</td></tr>
+        <tr class="row-highlight"><td>Yearly total</td><td>~10,00,000</td></tr>
+      </tbody></table>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: METRICS                            -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-metrics" data-page="metrics">
+  <section class="hero"><div class="hero-eyebrow">13 — Performance Metrics</div><h1>200+ leads over two years.</h1></section>
+  <section class="section">
+    <div class="two-col">
+      <div>
+        <div class="funnel-step"><div class="funnel-pct">~2L</div><div class="funnel-label">Unique contacts (2025)</div></div>
+        <div class="funnel-step"><div class="funnel-pct">249</div><div class="funnel-label">Total leads (2 years, incl referrals)</div></div>
+        <div class="funnel-step"><div class="funnel-pct">~200</div><div class="funnel-label">Pure cold email leads</div></div>
+        <div class="funnel-step"><div class="funnel-pct">48%</div><div class="funnel-label">Open rate (best campaign)</div></div>
+        <div class="funnel-step"><div class="funnel-pct">~0.1%</div><div class="funnel-label">Conversion rate</div></div>
+      </div>
+      <div>
+        <div class="card"><div class="card-eyebrow">Best reply sources</div><div class="card-title">Initial + Follow-up 1</div><div class="card-body">Majority of positive replies. Owners + DMs >> Event Managers.</div></div>
+        <div class="card" style="margin-top:var(--gap)"><div class="card-eyebrow">Unibox categories</div><div class="card-body">Positive, Negative, Wrong Person, Out of Office, Automatic. OOO + Wrong Person most common non-positive.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: SHOWS                              -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-shows" data-page="shows">
+  <section class="hero"><div class="hero-eyebrow">14 — Trade Shows</div><h1>Active shows across industries.</h1></section>
+  <section class="section">
+    <table class="data-table"><thead><tr><th>Show</th><th>Category</th><th>Industry</th><th>Notes</th></tr></thead><tbody>
+      <tr><td>RSNA</td><td>Standard</td><td>Healthcare</td><td>50K attendees, 700 exhibitors, McCormick. Owner copy pending.</td></tr>
+      <tr><td>Electronica</td><td>Standard (New)</td><td>Electronics</td><td>3,400 exhibitors, 80K visitors, Nov 2026. Copy written live.</td></tr>
+      <tr><td>Vision Expo</td><td>Standard/Elongated</td><td>Optics</td><td>EM at step 5. Follow-ups active.</td></tr>
+      <tr><td>America's Beauty Show</td><td>Elongated</td><td>Beauty</td><td>20K+ visitors. April. Generic copy.</td></tr>
+      <tr><td>Shop Talk</td><td>Elongated</td><td>Retail</td><td>Already in elongated.</td></tr>
+      <tr><td>Apartmentalize</td><td>Walk the Floor</td><td>Real Estate</td><td>June. WTF campaign. Personal tone.</td></tr>
+    </tbody></table>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: TEAM                               -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-team" data-page="team">
+  <section class="hero"><div class="hero-eyebrow">15 — Team Structure</div><h1>20+ people across two shifts.</h1></section>
+  <section class="section">
+    <div class="three-col">
+      <div class="card"><div class="card-eyebrow">Founder</div><div class="card-title">Tarik</div><div class="card-body">Deloitte → Wells Fargo → Google. Writes winning copies. Strategy. Customer. Wants Aman to replace his daily involvement.</div></div>
+      <div class="card"><div class="card-eyebrow">Email Ops Lead</div><div class="card-title">Hamad</div><div class="card-body">Since Dec 2023. Database, Apollo, Instantly. Senior. Training responsibility. Focus: data quality.</div></div>
+      <div class="card"><div class="card-eyebrow">Campaign Support</div><div class="card-title">Saurabh</div><div class="card-body">Since Jul 2024. Writes 3/4 follow-up copies. Campaign activation. Middleman. Finance background.</div></div>
+    </div>
+    <div style="margin-top:var(--gap)">
+      <table class="data-table"><thead><tr><th>Role</th><th>People</th><th>Shift</th></tr></thead><tbody>
+        <tr><td>Founder</td><td>Tarik</td><td>As needed</td></tr>
+        <tr><td>Campaign</td><td>Hamad + Saurabh</td><td>Standard</td></tr>
+        <tr><td>PM (new)</td><td>Aman</td><td>6 AM start</td></tr>
+        <tr><td>Extraction</td><td>Tammy + 10+ interns</td><td>11 AM – 7/8 PM</td></tr>
+        <tr><td>Exception</td><td>Mokul</td><td>5 PM – 1 AM</td></tr>
+        <tr><td>SEO (new)</td><td>Salman</td><td>TBD</td></tr>
+      </tbody></table>
+    </div>
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE: GAPS                               -->
+<!-- ════════════════════════════════════════ -->
+<div class="page" id="page-gaps" data-page="gaps">
+  <section class="hero"><div class="hero-eyebrow">16 — Known Gaps</div><h1>Where the system leaks.</h1></section>
+  <section class="section">
+    <div class="two-col">
+      <div>
+        <div class="redflag">Apollo gap: ~20% exhibitors have no contacts — go uncontacted</div>
+        <div class="redflag">LinkedIn research for gap contacts on hold — team overloaded</div>
+        <div class="redflag">No re-engagement for "already have vendor" responders</div>
+        <div class="redflag">Email health risk: same contacts in Elongated + Standard</div>
+        <div class="redflag">ChatGPT copy patterns being flagged by Gmail/Outlook</div>
+        <div class="redflag">No systematic A/B testing</div>
+      </div>
+      <div>
+        <div class="redflag">Date gap misconfig — accidental consecutive sends happened</div>
+        <div class="redflag">Data freshness: old year data may target wrong exhibitors</div>
+        <div class="redflag">No written SOPs — processes in people's heads</div>
+        <div class="redflag">Copy accountability gap — no formal review before launch</div>
+        <div class="redflag">Capacity constraints — 24 accounts = 312 per batch</div>
+        <div class="redflag">Conversion tracking imprecise — referrals mixed in</div>
+      </div>
+    </div>
+    <div class="callout"><p>"I don't care about good news — I'm only interested in bad news. Zero bad news? That's also not good news. It means we're not tracking it right."</p></div>
+  </section>
+</div>
+
+
+<footer>T&C — Trade Show Lead Gen Operations — Internal — 16 Pages + Command Center</footer>
+
+</div><!-- /main-area -->
+</div><!-- /site-shell -->
+
+<script>
+(function(){
+  function activate(page){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('is-active'));
+    document.querySelectorAll('.sidebar-link').forEach(l=>l.classList.remove('is-active'));
+    const el=document.getElementById('page-'+page);
+    if(el)el.classList.add('is-active');
+    document.querySelectorAll('.sidebar-link[data-page="'+page+'"]').forEach(l=>l.classList.add('is-active'));
+    window.scrollTo({top:0,behavior:'smooth'});
+    document.querySelector('.sidebar').classList.remove('mob-open');
+  }
+  function route(){
+    const h=(location.hash||'#command').replace('#','');
+    activate(h);
+  }
+  document.querySelectorAll('.sidebar-link').forEach(l=>{
+    l.addEventListener('click',function(e){
+      e.preventDefault();
+      location.hash=this.dataset.page;
+    });
+  });
+  window.addEventListener('hashchange',route);
+  route();
+})();
+</script>
+
+</body>
+</html>

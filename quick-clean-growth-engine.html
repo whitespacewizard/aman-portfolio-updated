@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Clean Growth Workflow Component</title>
+  <link rel="stylesheet" href="../assets/css/components/quick-clean/growth-engine.css" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=clash-grotesk@400,500,600,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #FE4C1C;
+      --text: #2b2b2b;
+      --font-heading: "Clash Display", "Helvetica Neue", Helvetica, sans-serif;
+      --font-body: "Clash Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #efefec;
+      color: var(--text);
+      font-family: var(--font-body);
+    }
+    main {
+      padding: clamp(60px, 8vw, 120px) clamp(18px, 4vw, 60px);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div data-qc-growth-engine-mount data-component-src="../components/quick-clean/growth-engine.html"></div>
+  </main>
+  <script src="../assets/js/components/quick-clean/growth-engine.js"></script>
+  <script src="../assets/js/components/quick-clean/growth-engine-loader.js"></script>
+</body>
+</html>

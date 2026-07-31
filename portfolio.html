@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aman Raj | Portfolio Work</title>
+  <meta
+    name="description"
+    content="Selected full-time growth marketing case studies by Aman Raj."
+  />
+
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link
+    rel="stylesheet"
+    href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,600,700&f[]=general-sans@400,500,600,700&display=swap"
+  />
+
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+
+  <style>
+    .portfolio-page .portfolio-hero {
+      min-height: auto;
+      padding-bottom: 54px;
+    }
+
+    .portfolio-page .portfolio-category-nav {
+      margin-top: 44px;
+    }
+
+    .portfolio-page .portfolio-services {
+      padding-top: 48px;
+    }
+
+    .portfolio-page .service-company {
+      margin: 0 0 14px;
+      color: #777777;
+      font-family: "General Sans", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.06em;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 720px) {
+      .portfolio-page .portfolio-hero {
+        padding-bottom: 38px;
+      }
+
+      .portfolio-page .portfolio-category-nav {
+        margin-top: 34px;
+      }
+
+      .portfolio-page .portfolio-services {
+        padding-top: 36px;
+      }
+    }
+  </style>
+
+  <style id="portfolio-card-spacing-match">
+    @media (min-width: 901px) {
+      .portfolio-page #full-time .service-card {
+        --portfolio-card-space: 24px;
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        align-items: stretch;
+        padding: 0 !important;
+      }
+
+      .portfolio-page #full-time .service-copy,
+      .portfolio-page #full-time .service-art {
+        min-width: 0;
+      }
+
+      .portfolio-page #full-time .service-copy {
+        width: 100% !important;
+        padding-left: var(--portfolio-card-space) !important;
+      }
+
+      .portfolio-page #full-time .service-art {
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
+        align-self: stretch;
+        justify-self: stretch;
+        margin:
+          var(--portfolio-card-space)
+          var(--portfolio-card-space)
+          var(--portfolio-card-space)
+          0 !important;
+      }
+
+      .portfolio-page #full-time .service-art .case-bg-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: none !important;
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .portfolio-page #full-time .service-card {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="portfolio-page">
+  <div id="global-menu"></div>
+
+  <main>
+    <div class="page-view portfolio-page-view">
+      <section
+        aria-labelledby="portfolio-page-title"
+        class="portfolio-hero"
+        id="portfolio"
+      >
+        <div class="portfolio-hero-shell">
+          <p class="portfolio-updated">Selected work</p>
+
+          <h1 class="portfolio-page-title" id="portfolio-page-title">
+            Portfolio <span>Work</span>
+          </h1>
+
+          <p class="portfolio-page-intro">
+            A simple collection of growth marketing work from full-time roles.
+            Freelance projects will be added later.
+          </p>
+
+          <nav
+            aria-label="Portfolio categories"
+            class="portfolio-category-nav"
+          >
+            <a class="active" href="#full-time">Full-time</a>
+            <span aria-disabled="true">
+              Freelance <small>Coming soon</small>
+            </span>
+          </nav>
+        </div>
+      </section>
+
+      <section
+        aria-label="Full-time case studies"
+        class="services-section portfolio-services"
+        id="full-time"
+      >
+        <div class="services-shell">
+          <div class="services-stack">
+            <article
+              class="service-card"
+              id="portfolio-quick-clean"
+              style="--stack-index: 0;"
+            >
+              <div class="service-copy">
+                <p class="service-company">Quick Clean Laundry Systems</p>
+
+                <h3 class="service-title">
+                  Commercial Laundry Growth in India
+                </h3>
+
+                <p class="service-description">
+                  India’s leading on-premise commercial laundry solutions
+                  provider for hospitality and healthcare. Led B2B and B2C
+                  marketing and branding across ICP segmentation, stakeholder
+                  messaging, industry events, LinkedIn, email, qualification and
+                  multi-channel demand generation.
+                </p>
+
+                <a class="case-link" href="quick-clean.html">
+                  View the case study
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M5 12h12.17l-4.58 4.59L14 18l7-7-7-7-1.41 1.41L17.17 10H5v2Z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+
+              <div aria-hidden="true" class="service-art">
+                <img
+                  alt=""
+                  class="case-bg-image"
+                  src="https://images.unsplash.com/photo-1719582225562-96e924af1060?auto=format&fit=crop&w=1400&q=82"
+                />
+
+                <div class="case-logo-overlay">
+                  <img alt="" src="assets/images/quick-clean-logo.png" />
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="service-card"
+              id="portfolio-accountx"
+              style="--stack-index: 1;"
+            >
+              <div class="service-copy">
+                <p class="service-company">AccountX</p>
+
+                <h3 class="service-title">
+                  Global GTM &amp;<br />
+                  Outbound&nbsp;Engine
+                </h3>
+
+                <p class="service-description">
+                  Built GTM foundation, country-wise ICP, outbound
+                  infrastructure, LinkedIn, cold email, SEO and Google Search Ads
+                  across 10 global markets.
+                </p>
+
+                <a class="case-link" href="accountx.html">
+                  View the case study
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M5 12h12.17l-4.58 4.59L14 18l7-7-7-7-1.41 1.41L17.17 10H5v2Z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+
+              <div aria-hidden="true" class="service-art">
+                <img
+                  alt=""
+                  class="case-bg-image"
+                  src="https://images.unsplash.com/photo-1737301214226-3f959016436f?auto=format&fit=crop&w=1400&q=82"
+                />
+
+                <div class="case-logo-overlay">
+                  <img alt="" src="assets/images/accountx-logo.png" />
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="service-card"
+              id="portfolio-bertrand-bernard"
+              style="--stack-index: 2;"
+            >
+              <div class="service-copy">
+                <p class="service-company">Bertrand &amp; Bernard LLP</p>
+
+                <h3 class="service-title">
+                  Performance Marketing &amp; Conversion Rate Optimization
+                </h3>
+
+                <p class="service-description">
+                  Paid campaigns, Shopify CRO, Meta Ads, landing pages, A/B
+                  testing, CPA reduction and conversion journey improvements for
+                  e-commerce brands.
+                </p>
+
+                <a
+                  class="case-link"
+                  href="bertrand-bernard.html#bertrand-bernard"
+                >
+                  View the case study
+                  <svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M5 12h12.17l-4.58 4.59L14 18l7-7-7-7-1.41 1.41L17.17 10H5v2Z"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+
+              <div aria-hidden="true" class="service-art">
+                <img
+                  alt=""
+                  class="case-bg-image"
+                  src="https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=1400&q=82"
+                />
+
+                <div class="case-logo-overlay">
+                  <div class="case-logo-text">B&amp;B</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="freelance-title"
+        class="freelance-placeholder"
+        id="freelance"
+      >
+        <div class="freelance-placeholder-shell">
+          <p class="section-kicker">Freelance</p>
+
+          <h2 id="freelance-title">
+            Projects will be added <span>next</span>
+          </h2>
+
+          <p>This section is intentionally kept empty for now.</p>
+        </div>
+      </section>
+    </div>
+
+    <div id="global-footer"></div>
+  </main>
+
+  <script src="assets/js/components.js"></script>
+</body>
+</html>

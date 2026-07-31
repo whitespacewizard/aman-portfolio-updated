@@ -1,0 +1,4497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bertrand &amp; Bernard Case Study | Aman Raj</title>
+<meta content="Performance marketing, Google Ads and e-commerce CRO case study for Bertrand &amp; Bernard across dental, pet care and beauty businesses." name="description"/>
+<link href="https://api.fontshare.com" rel="preconnect"/>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&amp;f[]=satoshi@400,500,600,700&amp;f[]=general-sans@400,500,600,700&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/common.css" rel="stylesheet"/>
+<link href="assets/css/bertrand-bernard.css" rel="stylesheet"/>
+<style id="bb-work-sample-slider">
+.bb-page #bb-dental-opportunity {
+  scroll-margin-top: 26px;
+}
+
+.bb-page .bb-case-slider-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) 22px;
+  gap: 12px;
+  align-items: center;
+}
+
+.bb-page .bb-case-slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(320px, 1fr);
+  grid-template-columns: none;
+  gap: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  padding: 2px;
+  scrollbar-width: none;
+}
+
+.bb-page .bb-case-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.bb-page .bb-case-slider .bb-business-card {
+  min-height: 466px;
+  scroll-snap-align: start;
+}
+
+.bb-page .bb-case-slider-arrow {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: #242424;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.bb-page .bb-case-slider-arrow:hover {
+  transform: translateX(2px);
+  border-color: transparent;
+  background: transparent;
+}
+
+.bb-page .bb-case-slider-arrow:disabled {
+  opacity: 0.24;
+  cursor: default;
+  transform: none;
+}
+
+.bb-page .bb-case-slider-arrow svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.bb-page .bb-business-card-visual {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  border-color: transparent;
+  color: #ffffff;
+  background: #171717;
+  cursor: pointer;
+}
+
+.bb-page .bb-business-card-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.03) 0%,
+      rgba(0, 0, 0, 0.12) 34%,
+      rgba(0, 0, 0, 0.84) 72%,
+      rgba(0, 0, 0, 0.98) 100%
+    );
+}
+
+.bb-page .bb-business-card-image,
+.bb-page .bb-business-card-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bb-page .bb-business-card-image {
+  z-index: -3;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 500ms ease;
+}
+
+.bb-page .bb-business-card-overlay {
+  z-index: -2;
+  background: rgba(0, 0, 0, 0.10);
+}
+
+.bb-page .bb-business-card-visual:hover .bb-business-card-image,
+.bb-page .bb-business-card-visual:focus-visible .bb-business-card-image {
+  transform: scale(1.035);
+}
+
+.bb-page .bb-business-card-visual:focus-visible {
+  outline: 2px solid var(--accent, #e2543a);
+  outline-offset: 4px;
+}
+
+.bb-page .bb-business-card-visual .bb-business-number {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: var(--accent, #e2543a);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(17, 17, 17, 0.34);
+  backdrop-filter: blur(8px);
+}
+
+.bb-page .bb-business-card-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+}
+
+.bb-page .bb-business-card-visual small {
+  color: var(--accent, #e2543a);
+}
+
+.bb-page .bb-business-card-visual h3 {
+  max-width: 250px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(31px, 3vw, 43px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.bb-page .bb-business-card-visual p {
+  max-width: 270px;
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.bb-page .bb-business-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.bb-page .bb-business-card-link svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  transition: transform 160ms ease;
+}
+
+.bb-page .bb-business-card-visual:hover .bb-business-card-link svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .bb-page .bb-case-slider-shell {
+    grid-template-columns: 18px minmax(0, 1fr) 18px;
+    gap: 8px;
+  }
+
+  .bb-page .bb-case-slider-arrow {
+    width: 18px;
+    height: 18px;
+  }
+
+  .bb-page .bb-case-slider {
+    grid-auto-columns: minmax(290px, 82%);
+  }
+}
+
+@media (max-width: 640px) {
+  .bb-page .bb-case-slider-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-page .bb-case-slider {
+    grid-row: 1;
+    grid-column: 1;
+    grid-auto-columns: minmax(275px, 88%);
+  }
+
+  .bb-page .bb-case-slider-arrow {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+  }
+
+  .bb-page .bb-case-slider-arrow:hover {
+    transform: translateY(-50%) translateX(2px);
+  }
+
+  .bb-page .bb-case-slider-prev {
+    left: 2px;
+  }
+
+  .bb-page .bb-case-slider-next {
+    right: 2px;
+  }
+
+  .bb-page .bb-case-slider .bb-business-card {
+    min-height: 430px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-page .bb-case-slider {
+    scroll-behavior: auto;
+  }
+
+  .bb-page .bb-business-card-image,
+  .bb-page .bb-business-card-link svg {
+    transition: none;
+  }
+}
+</style>
+<style id="bb-agritech-case-styles">
+.bb-page [hidden] {
+  display: none !important;
+}
+
+.bb-page .bb-business-card-agritech {
+  background:
+    radial-gradient(circle at 76% 18%, rgba(137, 164, 105, 0.26), transparent 36%),
+    linear-gradient(145deg, #243022, #111611 66%, #090b09);
+}
+
+.bb-page .bb-business-card-agritech .bb-business-card-image[hidden] {
+  display: none;
+}
+
+.bb-page .bb-business-card-visual.active {
+  box-shadow: inset 0 0 0 2px var(--accent, #e2543a);
+}
+
+.bb-page .bb-agritech-case {
+  background: #ffffff;
+}
+
+.bb-page .bb-agri-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.bb-page .bb-agri-intro-main,
+.bb-page .bb-agri-intro-aside,
+.bb-page .bb-agri-hypothesis,
+.bb-page .bb-agri-proposal,
+.bb-page .bb-agri-principle {
+  border: 1px solid rgba(43, 43, 43, 0.10);
+  border-radius: 22px;
+}
+
+.bb-page .bb-agri-intro-main {
+  padding: clamp(28px, 4vw, 48px);
+  background: #f6f6f3;
+}
+
+.bb-page .bb-agri-intro-main small,
+.bb-page .bb-agri-intro-aside small,
+.bb-page .bb-agri-heading small,
+.bb-page .bb-agri-hypothesis small,
+.bb-page .bb-agri-proposal small,
+.bb-page .bb-agri-result-hero small,
+.bb-page .bb-agri-table-head small,
+.bb-page .bb-agri-narrative-grid small,
+.bb-page .bb-agri-principle small {
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-agri-intro-main h3,
+.bb-page .bb-agri-heading h3,
+.bb-page .bb-agri-hypothesis h3,
+.bb-page .bb-agri-proposal h3,
+.bb-page .bb-agri-table-head h3,
+.bb-page .bb-agri-narrative-grid h3 {
+  margin: 12px 0 0;
+  color: #252525;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.bb-page .bb-agri-intro-main h3 {
+  max-width: 680px;
+  font-size: clamp(31px, 4vw, 50px);
+}
+
+.bb-page .bb-agri-intro-main p,
+.bb-page .bb-agri-intro-aside p,
+.bb-page .bb-agri-heading p,
+.bb-page .bb-agri-hypothesis p,
+.bb-page .bb-agri-proposal p,
+.bb-page .bb-agri-copy-block p,
+.bb-page .bb-agri-narrative-grid p,
+.bb-page .bb-agri-principle p,
+.bb-page .bb-agri-next-tests p {
+  color: #666666;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bb-page .bb-agri-intro-main p {
+  max-width: 760px;
+  margin: 22px 0 0;
+}
+
+.bb-page .bb-agri-intro-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(28px, 4vw, 42px);
+  color: #ffffff;
+  background: #171717;
+}
+
+.bb-page .bb-agri-intro-aside strong {
+  margin-top: 14px;
+  color: #ffffff;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.bb-page .bb-agri-intro-aside p {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.bb-page .bb-agri-intro-aside > span {
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.bb-page .bb-agri-heading {
+  max-width: 820px;
+  margin-top: clamp(76px, 9vw, 118px);
+}
+
+.bb-page .bb-agri-heading h3 {
+  font-size: clamp(32px, 4vw, 52px);
+}
+
+.bb-page .bb-agri-heading p {
+  max-width: 720px;
+  margin: 18px 0 0;
+}
+
+.bb-page .bb-agri-findings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.bb-page .bb-agri-findings article,
+.bb-page .bb-agri-next-tests article {
+  position: relative;
+  padding: 28px;
+  border: 1px solid rgba(43, 43, 43, 0.10);
+  border-radius: 18px;
+  background: #f6f6f3;
+}
+
+.bb-page .bb-agri-findings span,
+.bb-page .bb-agri-next-tests span {
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.bb-page .bb-agri-findings strong,
+.bb-page .bb-agri-next-tests strong {
+  display: block;
+  margin-top: 22px;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.bb-page .bb-agri-findings p,
+.bb-page .bb-agri-next-tests p {
+  margin: 11px 0 0;
+}
+
+.bb-page .bb-agri-copy-block {
+  max-width: 850px;
+  margin: 38px 0;
+  padding-left: 24px;
+  border-left: 3px solid var(--accent, #e2543a);
+}
+
+.bb-page .bb-agri-image-slot {
+  position: relative;
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin: 34px 0;
+  border: 1px solid rgba(43, 43, 43, 0.11);
+  border-radius: 24px;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #f7f7f4,
+      #f7f7f4 12px,
+      #efefeb 12px,
+      #efefeb 24px
+    );
+}
+
+.bb-page .bb-agri-image-slot img {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bb-page .bb-agri-image-slot.has-image .bb-agri-image-placeholder {
+  display: none;
+}
+
+.bb-page .bb-agri-image-placeholder {
+  max-width: 520px;
+  display: grid;
+  gap: 10px;
+  padding: 30px;
+  border: 1px dashed rgba(43, 43, 43, 0.24);
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.bb-page .bb-agri-image-placeholder small {
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-agri-image-placeholder strong {
+  color: #292929;
+  font-size: 18px;
+}
+
+.bb-page .bb-agri-image-placeholder span {
+  color: #838383;
+  font-size: 11px;
+}
+
+.bb-page .bb-agri-proposal,
+.bb-page .bb-agri-hypothesis {
+  margin-top: 36px;
+  padding: clamp(30px, 5vw, 56px);
+}
+
+.bb-page .bb-agri-proposal {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.65fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+  background: #171717;
+}
+
+.bb-page .bb-agri-proposal h3 {
+  color: #ffffff;
+  font-size: clamp(28px, 3.5vw, 44px);
+}
+
+.bb-page .bb-agri-proposal p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.bb-page .bb-agri-hypothesis {
+  background: #f6f6f3;
+}
+
+.bb-page .bb-agri-hypothesis h3 {
+  max-width: 760px;
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+.bb-page .bb-agri-hypothesis p {
+  max-width: 850px;
+  margin: 20px 0 0;
+}
+
+.bb-page .bb-agri-test-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin: 30px 0 0;
+  border: 1px solid rgba(43, 43, 43, 0.10);
+  border-radius: 20px;
+  background: rgba(43, 43, 43, 0.10);
+}
+
+.bb-page .bb-agri-test-grid > div {
+  min-height: 142px;
+  padding: 25px;
+  background: #ffffff;
+}
+
+.bb-page .bb-agri-test-grid dt {
+  color: var(--accent, #e2543a);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-agri-test-grid dd {
+  margin: 15px 0 0;
+  color: #323232;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.bb-page .bb-agri-result-hero {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: clamp(68px, 8vw, 104px);
+}
+
+.bb-page .bb-agri-result-hero article {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(30px, 5vw, 54px);
+  border-radius: 22px;
+  color: #ffffff;
+  background: #171717;
+}
+
+.bb-page .bb-agri-result-hero article:last-child {
+  color: #252525;
+  border: 1px solid rgba(43, 43, 43, 0.10);
+  background: #f6f6f3;
+}
+
+.bb-page .bb-agri-result-hero strong {
+  margin-top: 14px;
+  color: inherit;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(56px, 8vw, 104px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.bb-page .bb-agri-result-hero span {
+  margin-top: 18px;
+  color: inherit;
+  opacity: 0.66;
+  font-size: 12px;
+}
+
+.bb-page .bb-agri-table-card {
+  margin-top: 26px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(43, 43, 43, 0.10);
+  border-radius: 22px;
+  background: #ffffff;
+}
+
+.bb-page .bb-agri-table-head h3 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.bb-page .bb-agri-table-scroll {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+.bb-page .bb-agri-table-card table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.bb-page .bb-agri-table-card th,
+.bb-page .bb-agri-table-card td {
+  padding: 18px 14px;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.10);
+  color: #313131;
+  font-size: 13px;
+  text-align: left;
+}
+
+.bb-page .bb-agri-table-card thead th {
+  color: #747474;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-agri-table-card tbody th {
+  font-weight: 700;
+}
+
+.bb-page .bb-agri-table-card td.positive {
+  color: #047239;
+  font-weight: 700;
+}
+
+.bb-page .bb-agri-narrative-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: clamp(66px, 8vw, 100px);
+}
+
+.bb-page .bb-agri-narrative-grid article {
+  padding: clamp(26px, 4vw, 40px);
+  border-top: 1px solid rgba(43, 43, 43, 0.15);
+}
+
+.bb-page .bb-agri-narrative-grid h3 {
+  font-size: clamp(24px, 2.8vw, 35px);
+}
+
+.bb-page .bb-agri-narrative-grid p {
+  margin: 18px 0 0;
+}
+
+.bb-page .bb-agri-principle {
+  margin-top: 36px;
+  padding: clamp(30px, 5vw, 56px);
+  background: #171717;
+}
+
+.bb-page .bb-agri-principle p {
+  max-width: 950px;
+  margin: 16px 0 0;
+  color: #ffffff;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(24px, 3.4vw, 42px);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.035em;
+}
+
+.bb-page .bb-agri-next-tests {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@media (max-width: 980px) {
+  .bb-page .bb-agri-intro-grid,
+  .bb-page .bb-agri-proposal {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-page .bb-agri-findings,
+  .bb-page .bb-agri-narrative-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-page .bb-agri-test-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bb-page .bb-agri-next-tests {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .bb-page .bb-agri-image-slot {
+    min-height: 300px;
+  }
+
+  .bb-page .bb-agri-test-grid,
+  .bb-page .bb-agri-result-hero,
+  .bb-page .bb-agri-next-tests {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-page .bb-agri-result-hero article {
+    min-height: 210px;
+  }
+}
+</style>
+<style id="bb-agritech-trim-and-image-fix">
+.bb-page .bb-agri-compact-section {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1.66fr);
+  gap: clamp(24px, 5vw, 72px);
+  padding: clamp(54px, 7vw, 88px) 0;
+  border-top: 1px solid rgba(43, 43, 43, 0.12);
+}
+
+.bb-page .bb-agri-compact-section:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.bb-page .bb-agri-compact-label {
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-agri-compact-copy h3 {
+  max-width: 820px;
+  margin: 0;
+  color: #252525;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.bb-page .bb-agri-compact-copy p,
+.bb-page .bb-agri-solution-note p,
+.bb-page .bb-agri-result-note p {
+  max-width: 820px;
+  margin: 20px 0 0;
+  color: #666666;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bb-page .bb-agri-image-fit {
+  min-height: 0;
+  aspect-ratio: auto;
+  padding: 18px;
+  background: #efefec;
+}
+
+.bb-page .bb-agri-image-fit img {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  max-height: 760px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.bb-page .bb-agri-image-fit.has-image {
+  display: block;
+}
+
+.bb-page .bb-agri-solution-note,
+.bb-page .bb-agri-result-note {
+  max-width: 880px;
+  margin: 24px auto 34px;
+  padding-left: 24px;
+  border-left: 3px solid var(--accent, #e2543a);
+}
+
+.bb-page .bb-agri-result-section {
+  margin-top: clamp(72px, 9vw, 112px);
+}
+
+.bb-page .bb-agri-result-note {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .bb-page .bb-agri-compact-section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .bb-page .bb-agri-image-fit {
+    padding: 10px;
+    border-radius: 18px;
+  }
+}
+</style>
+<style id="bb-clean-fixed-navigation">
+.bb-page #bertrand-bernard,
+.bb-page #bb-case-studies,
+.bb-page #bb-agritech-case,
+.bb-page #bb-dental-opportunity,
+.bb-page #bb-dental-solution,
+.bb-page #bb-dental-results {
+  scroll-margin-top: 28px;
+}
+
+.bb-page .bb-page-nav {
+  position: fixed;
+  right: 22px;
+  bottom: 102px;
+  z-index: 80;
+  width: 175px;
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid rgba(24, 24, 24, 0.10);
+  border-radius: 21px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 34px rgba(24, 24, 24, 0.09);
+  backdrop-filter: blur(12px);
+}
+
+.bb-page .bb-page-nav-label {
+  padding: 6px 9px 8px;
+  color: #8a8a8a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-page-nav a {
+  min-height: 36px;
+  display: grid;
+  grid-template-columns: 25px minmax(0, 1fr);
+  gap: 7px;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 12px;
+  color: #5f5f5f;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.bb-page .bb-page-nav a[hidden] {
+  display: none !important;
+}
+
+.bb-page .bb-page-nav a i {
+  color: #a0a0a0;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.bb-page .bb-page-nav a:hover,
+.bb-page .bb-page-nav a:focus-visible {
+  color: #202020;
+  background: #f1f1ee;
+  outline: none;
+}
+
+/* Preserve the requested black-and-white work-sample card images. */
+.bb-page .bb-business-card-image {
+  filter: grayscale(100%);
+}
+
+@media (max-width: 1120px) {
+  .bb-page .bb-page-nav {
+    right: 14px;
+    width: 159px;
+  }
+}
+
+@media (max-width: 900px) {
+  .bb-page .bb-page-nav {
+    left: 15px;
+    right: 15px;
+    bottom: 84px;
+    width: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    overflow: visible;
+    padding: 9px;
+    border-radius: 17px;
+  }
+
+  .bb-page .bb-page-nav-label {
+    display: none;
+  }
+
+  .bb-page .bb-page-nav a {
+    min-width: 0;
+    min-height: 44px;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    justify-items: center;
+    padding: 6px 5px;
+    font-size: 12px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .bb-page .bb-page-nav a i {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .bb-page .bb-page-nav {
+    bottom: 78px;
+  }
+
+  .bb-page .bb-page-nav a {
+    min-height: 42px;
+    font-size: 11px;
+  }
+}
+</style>
+<style id="bb-header-overview-refinement">
+.bb-page .bb-title {
+  max-width: 1120px;
+}
+
+.bb-page .bb-lead {
+  max-width: 840px;
+  margin-bottom: 42px;
+}
+
+.bb-page .bb-tags {
+  margin-top: 0;
+}
+
+
+
+@media (max-width: 720px) {
+  .bb-page .bb-title {
+    max-width: 100%;
+  }
+
+  .bb-page .bb-lead {
+    margin-bottom: 32px;
+  }
+}
+</style><style id="bb-card-content-simplification">
+.bb-page .bb-business-card-visual .bb-business-card-content {
+  gap: 12px;
+}
+
+.bb-page .bb-business-card-visual .bb-business-card-content > p {
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    max-height 220ms ease,
+    margin 220ms ease,
+    opacity 180ms ease,
+    transform 220ms ease;
+}
+
+.bb-page .bb-business-card-visual:hover .bb-business-card-content > p,
+.bb-page .bb-business-card-visual:focus-visible .bb-business-card-content > p,
+.bb-page .bb-business-card-visual:focus-within .bb-business-card-content > p {
+  max-height: 120px;
+  margin: 4px 0 0;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bb-page .bb-business-card-visual h3 {
+  max-width: 280px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-page .bb-business-card-visual .bb-business-card-content > p {
+    transition: none;
+  }
+}
+</style><style id="bb-email-case-styles">
+.bb-page #bb-email-case {
+  scroll-margin-top: 28px;
+}
+
+.bb-page .bb-business-card-email {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255, 85, 39, 0.18), transparent 34%),
+    linear-gradient(145deg, #2b2b2b, #111111 64%, #070707);
+}
+
+.bb-page .bb-business-card-email .bb-business-card-image[hidden] {
+  display: none;
+}
+
+.bb-page .bb-email-compact-section {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1.66fr);
+  gap: clamp(24px, 5vw, 72px);
+  padding: clamp(54px, 7vw, 88px) 0;
+  border-top: 1px solid rgba(43, 43, 43, 0.12);
+}
+
+.bb-page .bb-email-compact-section:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.bb-page .bb-email-section-label {
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-email-section-copy h3 {
+  max-width: 850px;
+  margin: 0;
+  color: #252525;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.bb-page .bb-email-section-copy p,
+.bb-page .bb-email-role-grid p,
+.bb-page .bb-email-solution-note p,
+.bb-page .bb-email-proof-note {
+  max-width: 840px;
+  margin: 20px 0 0;
+  color: #666666;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bb-page .bb-email-role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 34px;
+}
+
+.bb-page .bb-email-role-grid article {
+  padding: clamp(26px, 4vw, 40px);
+  border: 1px solid rgba(43, 43, 43, 0.10);
+  border-radius: 20px;
+  background: #f6f6f3;
+}
+
+.bb-page .bb-email-role-grid small {
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-email-role-grid h4 {
+  margin: 14px 0 0;
+  color: #292929;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(24px, 2.8vw, 35px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.bb-page .bb-email-role-grid p {
+  margin-top: 16px;
+}
+
+.bb-page .bb-email-image-slot {
+  position: relative;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin: 34px 0;
+  padding: 18px;
+  border: 1px solid rgba(43, 43, 43, 0.11);
+  border-radius: 24px;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #f7f7f4,
+      #f7f7f4 12px,
+      #efefeb 12px,
+      #efefeb 24px
+    );
+}
+
+.bb-page .bb-email-image-slot img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  max-height: 760px;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.bb-page .bb-email-image-slot.has-image {
+  display: block;
+}
+
+.bb-page .bb-email-image-slot.has-image .bb-email-image-placeholder {
+  display: none;
+}
+
+.bb-page .bb-email-image-placeholder {
+  max-width: 520px;
+  display: grid;
+  gap: 10px;
+  padding: 30px;
+  border: 1px dashed rgba(43, 43, 43, 0.24);
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.bb-page .bb-email-image-placeholder small {
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-email-image-placeholder strong {
+  color: #292929;
+  font-size: 18px;
+}
+
+.bb-page .bb-email-image-placeholder span {
+  color: #838383;
+  font-size: 11px;
+}
+
+.bb-page .bb-email-solution-note {
+  max-width: 880px;
+  margin: 24px auto 34px;
+  padding-left: 24px;
+  border-left: 3px solid var(--accent, #e2543a);
+}
+
+.bb-page .bb-email-result-section {
+  margin-top: clamp(72px, 9vw, 112px);
+}
+
+.bb-page .bb-email-result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(43, 43, 43, 0.10);
+  border-radius: 22px;
+  background: rgba(43, 43, 43, 0.10);
+}
+
+.bb-page .bb-email-result-grid article {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px;
+  background: #ffffff;
+}
+
+.bb-page .bb-email-result-grid article:first-child {
+  color: #ffffff;
+  background: #171717;
+}
+
+.bb-page .bb-email-result-grid small {
+  color: var(--accent, #e2543a);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-email-result-grid strong {
+  margin-top: 14px;
+  color: inherit;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(38px, 4.5vw, 62px);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.bb-page .bb-email-result-grid span {
+  margin-top: 14px;
+  color: inherit;
+  opacity: 0.62;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.bb-page .bb-email-result-proof {
+  margin-top: 28px;
+}
+
+.bb-page .bb-email-proof-note {
+  margin: 18px 0 0;
+  font-size: 11px;
+}
+
+@media (max-width: 980px) {
+  .bb-page .bb-email-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-page .bb-email-result-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .bb-page .bb-email-compact-section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .bb-page .bb-email-image-slot {
+    min-height: 280px;
+    padding: 10px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .bb-page .bb-email-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-page .bb-email-result-grid article {
+    min-height: 150px;
+  }
+}
+</style><style id="bb-work-samples-three-column-grid">
+/* Static work-sample grid: three cards per desktop row */
+.bb-page .bb-case-slider-shell {
+  display: block;
+}
+
+.bb-page .bb-case-slider {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  gap: 18px;
+  overflow: visible;
+  padding: 0;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+  overscroll-behavior: auto;
+}
+
+.bb-page .bb-case-slider .bb-business-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 466px;
+  scroll-snap-align: none;
+}
+
+@media (max-width: 980px) {
+  .bb-page .bb-case-slider {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .bb-page .bb-case-slider-shell {
+    display: block;
+  }
+
+  .bb-page .bb-case-slider {
+    display: grid;
+    grid-row: auto;
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: auto;
+    gap: 16px;
+  }
+
+  .bb-page .bb-case-slider .bb-business-card {
+    min-height: 430px;
+  }
+}
+</style>
+<style id="bb-image-cards-white-background">
+/* Make all case-study image containers plain white */
+.bb-page .bb-email-image-slot,
+.bb-page .bb-agri-image-slot {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-color: rgba(43, 43, 43, 0.10) !important;
+}
+
+.bb-page .bb-email-image-slot img,
+.bb-page .bb-agri-image-slot img {
+  background: #ffffff !important;
+}
+
+.bb-page .bb-email-image-placeholder,
+.bb-page .bb-agri-image-placeholder {
+  background: #ffffff !important;
+}
+</style>
+<style id="bb-next-portfolio-styles">
+.bb-page #bb-next-cases {
+  scroll-margin-top: 28px;
+}
+
+.bb-page .bb-next-portfolio {
+  padding-top: clamp(96px, 10vw, 150px);
+  background: #e9e9e7;
+}
+
+.bb-page .bb-next-portfolio-header {
+  max-width: 760px;
+}
+
+.bb-page .bb-next-portfolio-kicker {
+  margin: 0 0 18px;
+  color: #777777;
+  font-family: "General Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-next-portfolio .service-company {
+  margin: 0 0 14px;
+  color: #777777;
+  font-family: "General Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-next-portfolio .service-card {
+  margin-bottom: 88px;
+}
+
+.bb-page .bb-next-portfolio .service-card:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .bb-page .bb-next-portfolio .service-card {
+    margin-bottom: 66px;
+  }
+}
+
+@media (max-width: 720px) {
+  .bb-page .bb-next-portfolio {
+    padding-top: 82px;
+  }
+
+  .bb-page .bb-next-portfolio-header {
+    margin-bottom: 54px;
+  }
+}
+
+@media (max-width: 520px) {
+  .bb-page .bb-next-portfolio .service-card {
+    margin-bottom: 50px;
+  }
+}
+</style>
+<style id="bb-next-portfolio-card-match">
+  /* Match the homepage portfolio-card layout and spacing */
+  @media (min-width: 901px) {
+    .bb-page #bb-next-cases .service-card {
+      --portfolio-card-space: clamp(12px, 2vw, 24px);
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+      align-items: stretch;
+      padding: 0 !important;
+    }
+
+    .bb-page #bb-next-cases .service-copy,
+    .bb-page #bb-next-cases .service-art {
+      min-width: 0;
+    }
+
+    .bb-page #bb-next-cases .service-copy {
+      width: 100% !important;
+      padding-left: var(--portfolio-card-space) !important;
+    }
+
+    .bb-page #bb-next-cases .service-art {
+      width: auto !important;
+      max-width: none !important;
+      height: auto !important;
+      align-self: stretch;
+      justify-self: stretch;
+      margin:
+        var(--portfolio-card-space)
+        var(--portfolio-card-space)
+        var(--portfolio-card-space)
+        0 !important;
+    }
+
+    .bb-page #bb-next-cases .service-art .case-bg-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none !important;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .bb-page #bb-next-cases .service-card {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+<style id="bb-quick-clean-header">
+/* Compact dark hero aligned exactly with the Quick Clean and AccounTX headers */
+.bb-page .bb-quick-clean-hero {
+  min-height: 0 !important;
+  height: auto !important;
+  display: block !important;
+  padding: 92px 0 92px !important;
+  color: #ffffff !important;
+  background: #171717 !important;
+}
+
+/* Reset the original Bertrand hero layout that was creating the large empty gap. */
+.bb-page .bb-quick-clean-hero .bb-shell {
+  min-height: 0 !important;
+  height: auto !important;
+  display: block !important;
+  align-items: initial !important;
+  justify-content: initial !important;
+  gap: 0 !important;
+}
+
+.bb-page .bb-quick-clean-hero .bb-back {
+  position: static !important;
+  inset: auto !important;
+  display: inline-flex !important;
+  margin: 0 0 28px !important;
+  color: rgba(255, 255, 255, 0.66) !important;
+}
+
+.bb-page .bb-quick-clean-hero .bb-back:hover,
+.bb-page .bb-quick-clean-hero .bb-back:focus-visible {
+  color: #ffffff !important;
+}
+
+.bb-page .bb-quick-clean-hero .bb-back svg {
+  fill: currentColor;
+}
+
+.bb-page .bb-quick-clean-hero .bb-kicker {
+  position: static !important;
+  margin: 0 0 24px !important;
+  padding: 0 !important;
+  color: var(--accent, #e2543a) !important;
+}
+
+.bb-page .bb-quick-clean-hero .bb-title {
+  max-width: 980px;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #ffffff !important;
+  font-size: clamp(35px, 4.55vw, 63px);
+  line-height: 0.96;
+  letter-spacing: -0.052em;
+}
+
+.bb-page .bb-quick-clean-hero .bb-title span {
+  display: block;
+  color: #ffffff !important;
+}
+
+.bb-page .bb-quick-clean-hero .bb-hero-role {
+  max-width: 920px;
+  margin: clamp(24px, 3vw, 34px) 0 0 !important;
+  padding: 0 !important;
+}
+
+.bb-page .bb-quick-clean-hero .bb-hero-role-copy {
+  max-width: 860px;
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: clamp(13px, 1vw, 15px);
+  line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+  .bb-page .bb-quick-clean-hero {
+    padding: 78px 0 78px !important;
+  }
+
+  .bb-page .bb-quick-clean-hero .bb-back {
+    margin-bottom: 24px !important;
+  }
+
+  .bb-page .bb-quick-clean-hero .bb-kicker {
+    margin-bottom: 20px !important;
+  }
+
+  .bb-page .bb-quick-clean-hero .bb-title {
+    font-size: clamp(32.2px, 10.5vw, 46.2px);
+  }
+}
+</style>
+<style id="bb-case-studies-first-section">
+/* First content section: clean white Case Studies area, matching the simple
+   editorial treatment used across the other case-study pages. */
+.bb-page .bb-case-studies-section {
+  padding-top: 92px !important;
+  background: #ffffff !important;
+}
+
+.bb-page .bb-case-studies-head {
+  max-width: 880px;
+  margin-bottom: clamp(44px, 6vw, 72px);
+}
+
+.bb-page .bb-case-studies-head h2 {
+  margin: 0;
+  color: #252525;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(36px, 4.2vw, 58px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.bb-page .bb-case-studies-head p {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: #666666;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.55;
+}
+
+.bb-page .bb-case-studies-section .bb-case-slider-shell,
+.bb-page .bb-case-studies-section .bb-case-slider {
+  background: #ffffff;
+}
+
+@media (max-width: 720px) {
+  .bb-page .bb-case-studies-section {
+    padding-top: 78px !important;
+  }
+
+  .bb-page .bb-case-studies-head {
+    margin-bottom: 38px;
+  }
+
+  .bb-page .bb-case-studies-head h2 {
+    font-size: clamp(34px, 11vw, 48px);
+  }
+
+  .bb-page .bb-case-studies-head p {
+    font-size: 14px;
+  }
+}
+</style>
+<style id="bb-opportunity-section-design">
+/* Shared Opportunity layout, matched to the supplied reference structure. */
+.bb-page .qcs2-opportunity {
+  padding: 0 0 clamp(54px, 7vw, 88px);
+  border-top: 0;
+  background: #ffffff;
+}
+
+.bb-page .bb-section-head + .qcs2-opportunity {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.bb-page .qcs2-opportunity .qcx-shell {
+  width: 100%;
+  margin: 0;
+}
+
+.bb-page .qcs2-simple-head {
+  max-width: 100%;
+  margin: 0;
+}
+
+.bb-page .qcs2-simple-head h2 {
+  margin: 0;
+  color: #202020;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(34px, 3.8vw, 48px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.bb-page .qcs2-simple-head p {
+  max-width: 920px;
+  margin: 14px 0 0;
+  color: #626262;
+  font-family: "Satoshi", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.bb-page .qcs2-text-points {
+  display: grid;
+  gap: 32px;
+  margin-top: clamp(42px, 5vw, 52px);
+  border: 0;
+}
+
+.bb-page .qcs2-text-points > p {
+  display: block;
+  max-width: 1050px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #626262;
+  font-family: "Satoshi", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.bb-page .qcs7-opportunity-heading {
+  display: flex;
+  gap: 9px;
+  align-items: baseline;
+}
+
+.bb-page .qcs7-opportunity-number {
+  flex: 0 0 auto;
+  padding: 0;
+  color: var(--accent, #e2543a);
+  font-family: "Satoshi", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.bb-page .qcs7-opportunity-heading strong {
+  color: #171717;
+  font-family: "Satoshi", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.bb-page .qcs7-opportunity-copy {
+  display: block;
+  max-width: 1050px;
+  margin-top: 11px;
+  color: #626262;
+  font-family: "Satoshi", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+@media (max-width: 760px) {
+  .bb-page .qcs2-opportunity {
+    padding: 0 0 48px;
+  }
+
+  .bb-page .bb-section-head + .qcs2-opportunity {
+    padding-top: 0;
+  }
+
+  .bb-page .qcs2-simple-head h2 {
+    font-size: clamp(34px, 11vw, 48px);
+  }
+
+  .bb-page .qcs2-simple-head p,
+  .bb-page .qcs2-text-points > p,
+  .bb-page .qcs7-opportunity-number,
+  .bb-page .qcs7-opportunity-heading strong,
+  .bb-page .qcs7-opportunity-copy {
+    font-size: 15px;
+  }
+
+  .bb-page .qcs2-text-points {
+    gap: 28px;
+    margin-top: 36px;
+  }
+}
+</style>
+<style id="bb-case-study-gap-fix">
+/* Remove every inherited spacer between the case cards and active case content. */
+.bb-page #bb-case-studies {
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.bb-page #bb-case-studies > .bb-shell,
+.bb-page #bb-case-studies .bb-case-slider-shell,
+.bb-page #bb-case-studies .bb-case-slider,
+.bb-page #bb-case-studies .bb-business-grid {
+  min-height: 0 !important;
+  height: auto !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.bb-page #bb-case-studies::after,
+.bb-page #bb-case-studies > .bb-shell::after,
+.bb-page #bb-case-studies .bb-case-slider-shell::after,
+.bb-page #bb-case-studies .bb-case-slider::after {
+  content: none !important;
+  display: none !important;
+}
+
+.bb-page #bb-agritech-case,
+.bb-page #bb-email-case,
+.bb-page #bb-dental-opportunity {
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 92px 0 0 !important;
+  border-top: 0 !important;
+}
+
+.bb-page #bb-agritech-case > .bb-shell,
+.bb-page #bb-email-case > .bb-shell,
+.bb-page #bb-dental-opportunity > .bb-shell {
+  min-height: 0 !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-top: 0 !important;
+}
+
+.bb-page #bb-agritech-case .bb-case-opportunity,
+.bb-page #bb-email-case .bb-case-opportunity,
+.bb-page #bb-dental-opportunity .bb-case-opportunity {
+  min-height: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+
+@media (max-width: 720px) {
+  .bb-page #bb-agritech-case,
+  .bb-page #bb-email-case,
+  .bb-page #bb-dental-opportunity {
+    padding-top: 78px !important;
+  }
+}
+</style>
+<style id="bb-case-card-border-fix">
+/* Case Studies cards: keep the original 1px border, but render it white. */
+.bb-page #bb-case-studies .bb-business-card,
+.bb-page #bb-case-studies .bb-business-card-visual {
+  border: 1px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+.bb-page #bb-case-studies .bb-business-card-visual.active {
+  box-shadow: none !important;
+}
+
+/* Keep an accessible keyboard-only focus indicator without changing the card border. */
+.bb-page #bb-case-studies .bb-business-card-visual:focus-visible {
+  outline: 2px solid var(--accent, #e2543a);
+  outline-offset: 4px;
+}
+</style>
+<style id="bb-dental-opportunity-solution-results-format">
+/* Dental case only: Opportunity → Solution → Results. */
+.bb-page #bb-dental-opportunity,
+.bb-page #bb-dental-solution,
+.bb-page #bb-dental-results {
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  scroll-margin-top: 28px;
+}
+
+.bb-page #bb-dental-opportunity {
+  padding: 92px 0 !important;
+  background: #ffffff;
+}
+
+.bb-page #bb-dental-opportunity > .bb-shell,
+.bb-page #bb-dental-solution > .bb-shell,
+.bb-page #bb-dental-results > .bb-shell {
+  min-height: 0;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.bb-page #bb-dental-opportunity .qcx-shell {
+  width: 100%;
+  margin: 0;
+}
+
+.bb-page #bb-dental-solution {
+  padding: clamp(82px, 9vw, 132px) 0;
+  color: #242424;
+  background: #e9e9e7;
+}
+
+.bb-page #bb-dental-results {
+  padding: clamp(82px, 9vw, 132px) 0;
+  background: #ffffff;
+}
+
+.bb-page .bb-dental-format-head {
+  max-width: 900px;
+  margin: 0 0 clamp(46px, 6vw, 72px);
+}
+
+.bb-page .bb-dental-format-head h2 {
+  margin: 0;
+  color: #242424;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.bb-page .bb-dental-format-head p {
+  max-width: 820px;
+  margin: 18px 0 0;
+  color: #686868;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.bb-page #bb-dental-solution .bb-strategy-grid {
+  display: block;
+  margin-top: 0;
+  border-top: 1px solid rgba(36, 36, 36, 0.14);
+}
+
+.bb-page #bb-dental-solution .bb-strategy-grid article {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 44px minmax(210px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(18px, 3vw, 42px);
+  align-items: start;
+  padding: clamp(24px, 3vw, 34px) 0;
+  color: #292929;
+  border: 0;
+  border-bottom: 1px solid rgba(36, 36, 36, 0.14);
+  border-radius: 0;
+  background: transparent;
+}
+
+.bb-page #bb-dental-solution .bb-strategy-grid article > span {
+  padding-top: 3px;
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.bb-page #bb-dental-solution .bb-strategy-grid article h3 {
+  margin: 0;
+  color: #292929;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 600;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.bb-page #bb-dental-solution .bb-strategy-grid article p {
+  max-width: 660px;
+  margin: 0;
+  color: #686868;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bb-page #bb-dental-solution .bb-measurement-note {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 1.66fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: start;
+  margin-top: clamp(36px, 5vw, 58px);
+  padding: 0;
+  color: #242424;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.bb-page #bb-dental-solution .bb-measurement-note small {
+  padding-top: 3px;
+  color: var(--accent, #e2543a);
+}
+
+.bb-page #bb-dental-solution .bb-measurement-note p {
+  max-width: 820px;
+  margin: 0;
+  color: #686868;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+@media (max-width: 760px) {
+  .bb-page #bb-dental-solution .bb-strategy-grid article {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px 16px;
+  }
+
+  .bb-page #bb-dental-solution .bb-strategy-grid article p {
+    grid-column: 2;
+  }
+
+  .bb-page #bb-dental-solution .bb-measurement-note {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.bb-page #bb-dental-results .bb-toggle-panel {
+  margin-top: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-section {
+  margin-top: clamp(76px, 9vw, 112px);
+  padding-top: clamp(54px, 7vw, 84px);
+  border-top: 1px solid rgba(36, 36, 36, 0.12);
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-head {
+  margin-bottom: 38px;
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-head > p {
+  color: var(--accent, #e2543a);
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-head h3 {
+  margin: 0;
+  color: #242424;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(30px, 3.6vw, 48px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-head span {
+  display: block;
+  max-width: 720px;
+  margin-top: 14px;
+  color: #686868;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .bb-page #bb-dental-opportunity,
+  .bb-page #bb-dental-solution,
+  .bb-page #bb-dental-results {
+    padding: 78px 0 !important;
+  }
+
+  .bb-page .bb-dental-format-head {
+    margin-bottom: 38px;
+  }
+
+  .bb-page .bb-dental-format-head p {
+    font-size: 14px;
+  }
+
+  .bb-page #bb-dental-results .bb-dental-proof-section {
+    margin-top: 68px;
+    padding-top: 52px;
+  }
+}
+</style>
+
+<style id="bb-dental-exact-solution-layout">
+/* Dental Solution uses the same structural language as the supplied Quick Clean section. */
+.bb-page #bb-dental-solution {
+  padding: clamp(82px, 9vw, 132px) 0;
+  color: #242424;
+  background: #e9e9e7;
+}
+
+.bb-page #bb-dental-solution > .bb-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.bb-page #bb-dental-solution .qcs2-simple-head {
+  max-width: 820px;
+  margin: 0 0 clamp(48px, 6vw, 76px);
+}
+
+.bb-page #bb-dental-solution .qcs2-simple-head h2 {
+  margin: 0;
+  color: #242424;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.bb-page #bb-dental-solution .qcs2-simple-head p {
+  max-width: 760px;
+  margin: 18px 0 0;
+  color: #686868;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.bb-page #bb-dental-solution .qcs2-solution-group {
+  padding: clamp(48px, 6vw, 68px) 0;
+  border-top: 1px solid rgba(36, 36, 36, 0.12);
+}
+
+.bb-page #bb-dental-solution .qcs2-solution-group:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.bb-page #bb-dental-solution .qcs2-solution-group:last-child {
+  padding-bottom: 0;
+}
+
+.bb-page #bb-dental-solution .qcs2-group-label {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.bb-page #bb-dental-solution .qcs2-group-label span {
+  flex: 0 0 auto;
+  color: var(--accent, #e2543a);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.bb-page #bb-dental-solution .qcs2-group-label strong {
+  color: #242424;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.bb-page #bb-dental-solution .qcs3-work-summary,
+.bb-page #bb-dental-solution .qcs2-diagram-note {
+  max-width: 880px;
+  margin: 0 0 28px;
+  color: #686868;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* 01 · Measurement table */
+.bb-page #bb-dental-solution .qcs5-qualification-card {
+  overflow: hidden;
+  border: 1px solid rgba(36, 36, 36, 0.10);
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.bb-page #bb-dental-solution .qcs5-qualification-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bb-page #bb-dental-solution .qcs5-qualification-table th,
+.bb-page #bb-dental-solution .qcs5-qualification-table td {
+  padding: 17px 20px;
+  border-bottom: 1px solid rgba(36, 36, 36, 0.08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.bb-page #bb-dental-solution .qcs5-qualification-table thead th {
+  color: #777777;
+  background: #f4f4f1;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page #bb-dental-solution .qcs5-qualification-table tbody th {
+  width: 30%;
+  color: #333333;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.bb-page #bb-dental-solution .qcs5-qualification-table tbody td {
+  color: #686868;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.bb-page #bb-dental-solution .qcs5-qualification-table tbody tr:last-child th,
+.bb-page #bb-dental-solution .qcs5-qualification-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.bb-page #bb-dental-solution .qcs5-handoff-row th,
+.bb-page #bb-dental-solution .qcs5-handoff-row td {
+  color: #ffffff;
+  background: #171717;
+}
+
+.bb-page #bb-dental-solution .qcs2-diagram-note {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+
+/* 02 · Exact Quick Clean-style editorial flow, no cards */
+.bb-page #bb-dental-solution .qcs3-positioning-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, auto);
+  column-gap: clamp(58px, 8vw, 90px);
+  row-gap: 42px;
+  margin-top: 30px;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-flow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: rgba(36, 36, 36, 0.10);
+  transform: translateX(-0.5px);
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-flow > i {
+  display: none;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  column-gap: 17px;
+  align-content: start;
+  min-width: 0;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-step:nth-of-type(1) { grid-column: 1; grid-row: 1; }
+.bb-page #bb-dental-solution .qcs3-positioning-step:nth-of-type(2) { grid-column: 1; grid-row: 2; }
+.bb-page #bb-dental-solution .qcs3-positioning-step:nth-of-type(3) { grid-column: 1; grid-row: 3; }
+.bb-page #bb-dental-solution .qcs3-positioning-step:nth-of-type(4) { grid-column: 2; grid-row: 1; }
+.bb-page #bb-dental-solution .qcs3-positioning-step:nth-of-type(5) { grid-column: 2; grid-row: 2; }
+
+.bb-page #bb-dental-solution .qcs3-positioning-step > span {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-step > b {
+  grid-column: 2;
+  margin: 0;
+  color: #242424;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-step > p {
+  grid-column: 2;
+  max-width: 470px;
+  margin: 13px 0 0;
+  color: #686868;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* 03 · Workflow tags and operating controls */
+.bb-page #bb-dental-solution .qcs6-workflow-channels,
+.bb-page #bb-dental-solution .qcs6-workflow-tools {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  padding: 22px 0;
+  border-top: 1px solid rgba(36, 36, 36, 0.10);
+}
+
+.bb-page #bb-dental-solution .qcs6-workflow-channels > small,
+.bb-page #bb-dental-solution .qcs6-workflow-tools > small {
+  padding-top: 8px;
+  color: #777777;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bb-page #bb-dental-solution .qcs6-workflow-channels > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bb-page #bb-dental-solution .qcs6-workflow-channels span {
+  min-height: 31px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 13px;
+  border: 1px solid rgba(36, 36, 36, 0.10);
+  border-radius: 999px;
+  color: #5f5f5f;
+  background: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.bb-page #bb-dental-solution .qcs6-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.bb-page #bb-dental-solution .qcs6-tool-item {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 16px 18px;
+  border: 1px solid rgba(36, 36, 36, 0.09);
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.bb-page #bb-dental-solution .qcs6-tool-item span {
+  color: #333333;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.bb-page #bb-dental-solution .bb-dental-measurement-note {
+  max-width: 900px;
+  margin-top: 28px;
+  padding-left: 20px;
+  border-left: 2px solid var(--accent, #e2543a);
+}
+
+@media (max-width: 820px) {
+  .bb-page #bb-dental-solution .qcs3-positioning-flow {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 32px;
+  }
+
+  .bb-page #bb-dental-solution .qcs3-positioning-flow::after {
+    display: none;
+  }
+
+  .bb-page #bb-dental-solution .qcs3-positioning-step:nth-of-type(n) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .bb-page #bb-dental-solution .qcs6-workflow-channels,
+  .bb-page #bb-dental-solution .qcs6-workflow-tools {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .bb-page #bb-dental-solution .qcs6-workflow-channels > small,
+  .bb-page #bb-dental-solution .qcs6-workflow-tools > small {
+    padding-top: 0;
+  }
+
+  .bb-page #bb-dental-solution .qcs6-tool-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .bb-page #bb-dental-solution {
+    padding: 78px 0;
+  }
+
+  .bb-page #bb-dental-solution > .bb-shell {
+    width: min(100% - 30px, 1120px);
+  }
+
+  .bb-page #bb-dental-solution .qcs5-qualification-card {
+    overflow-x: auto;
+  }
+
+  .bb-page #bb-dental-solution .qcs5-qualification-table {
+    min-width: 620px;
+  }
+
+  .bb-page #bb-dental-solution .qcs3-positioning-step {
+    grid-template-columns: 30px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .bb-page #bb-dental-solution .qcs6-tool-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<style id="bb-dental-five-point-solution-refinement">
+.bb-page #bb-dental-solution .qcs2-simple-head {
+  margin-bottom: clamp(44px, 5.5vw, 68px);
+}
+
+.bb-page #bb-dental-solution .qcs2-simple-head p {
+  max-width: 820px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.bb-page #bb-dental-solution .qcs2-solution-group {
+  padding: 0;
+  border-top: 0;
+}
+
+.bb-page #bb-dental-solution .qcs2-group-label {
+  margin-bottom: 22px;
+}
+
+.bb-page #bb-dental-solution .qcs2-group-label span,
+.bb-page #bb-dental-solution .qcs2-group-label strong {
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.bb-page #bb-dental-solution .qcs3-work-summary {
+  max-width: 940px;
+  margin-bottom: 34px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-flow {
+  column-gap: clamp(54px, 7vw, 84px);
+  row-gap: 38px;
+  margin-top: 0;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-step {
+  grid-template-columns: 36px minmax(0, 1fr);
+  column-gap: 17px;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-step > span {
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-step > b {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.bb-page #bb-dental-solution .qcs3-positioning-step > p {
+  max-width: 500px;
+  margin-top: 11px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+@media (max-width: 820px) {
+  .bb-page #bb-dental-solution .qcs3-positioning-flow {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 620px) {
+  .bb-page #bb-dental-solution .qcs2-group-label span,
+  .bb-page #bb-dental-solution .qcs2-group-label strong {
+    font-size: 16px;
+  }
+
+  .bb-page #bb-dental-solution .qcs3-positioning-step > b {
+    font-size: 14.5px;
+  }
+
+  .bb-page #bb-dental-solution .qcs3-positioning-step > p {
+    font-size: 13.5px;
+  }
+}
+</style>
+
+<style id="bb-dental-simple-results-layout">
+/* Dental Results only: editorial data summary with proof screenshots. */
+.bb-page #bb-dental-results {
+  padding: clamp(82px, 9vw, 132px) 0;
+  background: #ffffff;
+}
+
+.bb-page #bb-dental-results > .bb-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.bb-page #bb-dental-results .bb-dental-format-head {
+  max-width: 820px;
+  margin: 0 0 clamp(48px, 6vw, 72px);
+}
+
+.bb-page #bb-dental-results .bb-dental-results-layout {
+  display: block;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-left,
+.bb-page #bb-dental-results .bb-dental-results-proof {
+  min-width: 0;
+}
+
+/* Two headline outcomes, presented as typography rather than cards. */
+.bb-page #bb-dental-results .bb-dental-result-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 26px 0 28px;
+  border-top: 1px solid rgba(36, 36, 36, 0.16);
+  border-bottom: 1px solid rgba(36, 36, 36, 0.16);
+}
+
+.bb-page #bb-dental-results .bb-dental-result-stat {
+  min-width: 0;
+  padding-right: clamp(22px, 4vw, 40px);
+}
+
+.bb-page #bb-dental-results .bb-dental-result-stat + .bb-dental-result-stat {
+  padding-right: 0;
+  padding-left: clamp(22px, 4vw, 40px);
+  border-left: 1px solid rgba(36, 36, 36, 0.12);
+}
+
+.bb-page #bb-dental-results .bb-dental-result-stat > small,
+.bb-page #bb-dental-results .bb-dental-results-table-wrap > small,
+.bb-page #bb-dental-results .bb-dental-results-proof > small {
+  display: block;
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page #bb-dental-results .bb-dental-result-stat > strong {
+  display: block;
+  margin-top: 14px;
+  color: #242424;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(46px, 5.2vw, 68px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.bb-page #bb-dental-results .bb-dental-result-stat > span {
+  display: block;
+  margin-top: 13px;
+  color: #6a6a6a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.bb-page #bb-dental-results .bb-dental-result-stat > span b {
+  color: #292929;
+  font-weight: 700;
+}
+
+/* Compact before-and-after comparison. */
+.bb-page #bb-dental-results .bb-dental-results-table-wrap {
+  margin-top: clamp(38px, 5vw, 54px);
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table-wrap > small,
+.bb-page #bb-dental-results .bb-dental-results-proof > small {
+  margin-bottom: 14px;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table-scroll {
+  overflow-x: auto;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table th,
+.bb-page #bb-dental-results .bb-dental-results-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid rgba(36, 36, 36, 0.12);
+  color: #414141;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table th:first-child,
+.bb-page #bb-dental-results .bb-dental-results-table td:first-child {
+  padding-left: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table th:last-child,
+.bb-page #bb-dental-results .bb-dental-results-table td:last-child {
+  padding-right: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table thead th {
+  color: #858585;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table tbody th {
+  color: #292929;
+  font-weight: 700;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table .positive {
+  color: #087640;
+  font-weight: 700;
+}
+
+/* Two short conclusions, using the same restrained list language as Solution. */
+.bb-page #bb-dental-results .bb-dental-result-insights {
+  display: grid;
+  gap: 0;
+  margin-top: clamp(34px, 4vw, 46px);
+  border-top: 1px solid rgba(36, 36, 36, 0.14);
+}
+
+.bb-page #bb-dental-results .bb-dental-result-insight {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 14px;
+  padding: 21px 0;
+  border-bottom: 1px solid rgba(36, 36, 36, 0.14);
+}
+
+.bb-page #bb-dental-results .bb-dental-result-insight > span {
+  padding-top: 3px;
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.bb-page #bb-dental-results .bb-dental-result-insight strong {
+  display: block;
+  color: #292929;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.bb-page #bb-dental-results .bb-dental-result-insight p {
+  max-width: 560px;
+  margin: 8px 0 0;
+  color: #686868;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-note {
+  margin: 22px 0 0;
+  color: #7a7a7a;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* Proof remains secondary: one label, two screenshots, no extra card treatment. */
+.bb-page #bb-dental-results .bb-dental-results-proof {
+  position: static;
+  margin-top: clamp(56px, 7vw, 88px);
+  padding-top: clamp(34px, 5vw, 52px);
+  border-top: 1px solid rgba(36, 36, 36, 0.14);
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-stack {
+  display: grid;
+  gap: 28px;
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-item {
+  margin: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-image {
+  overflow: hidden;
+  border: 1px solid rgba(36, 36, 36, 0.12);
+  background: #ffffff;
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bb-page #bb-dental-results .bb-dental-proof-note {
+  margin: 20px 0 0;
+  color: #7a7a7a;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1040px) {
+  .bb-page #bb-dental-results .bb-dental-results-proof {
+    max-width: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .bb-page #bb-dental-results .bb-dental-results-proof {
+    margin-top: 48px;
+    padding-top: 32px;
+  }
+
+  .bb-page #bb-dental-results .bb-dental-proof-stack {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .bb-page #bb-dental-results {
+    padding: 78px 0 !important;
+  }
+
+  .bb-page #bb-dental-results > .bb-shell {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .bb-page #bb-dental-results .bb-dental-format-head {
+    margin-bottom: 38px;
+  }
+
+  .bb-page #bb-dental-results .bb-dental-result-stats {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .bb-page #bb-dental-results .bb-dental-result-stat,
+  .bb-page #bb-dental-results .bb-dental-result-stat + .bb-dental-result-stat {
+    padding: 24px 0;
+    border-left: 0;
+  }
+
+  .bb-page #bb-dental-results .bb-dental-result-stat + .bb-dental-result-stat {
+    border-top: 1px solid rgba(36, 36, 36, 0.12);
+  }
+
+  .bb-page #bb-dental-results .bb-dental-result-stat > strong {
+    font-size: clamp(42px, 15vw, 58px);
+  }
+
+  .bb-page #bb-dental-results .bb-dental-result-insight {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+}
+</style>
+
+
+<style id="bb-dental-results-fewer-lines">
+/* Dental Results refinement: use whitespace, not repeated divider lines. */
+.bb-page #bb-dental-results .bb-dental-result-stats {
+  padding: 0 0 10px;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-result-stat + .bb-dental-result-stat {
+  border-left: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table th,
+.bb-page #bb-dental-results .bb-dental-results-table td {
+  border-bottom: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table thead th {
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(36, 36, 36, 0.12);
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table tbody th,
+.bb-page #bb-dental-results .bb-dental-results-table tbody td {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.bb-page #bb-dental-results .bb-dental-result-insights {
+  gap: 28px;
+  margin-top: clamp(36px, 4vw, 48px);
+  border-top: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-result-insight {
+  padding: 0;
+  border-bottom: 0;
+}
+
+.bb-page #bb-dental-results .bb-dental-results-proof {
+  padding-top: 0;
+  border-top: 0;
+}
+
+@media (max-width: 720px) {
+  .bb-page #bb-dental-results .bb-dental-result-stat + .bb-dental-result-stat {
+    margin-top: 30px;
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+</style>
+
+<style id="bb-dental-results-balanced-lines">
+/* Keep structure where it helps: borders around headline results and row lines in the table. */
+.bb-page #bb-dental-results .bb-dental-result-stats {
+  padding: 26px 0 28px;
+  border-top: 1px solid rgba(36, 36, 36, 0.16);
+  border-bottom: 1px solid rgba(36, 36, 36, 0.16);
+}
+
+.bb-page #bb-dental-results .bb-dental-results-table th,
+.bb-page #bb-dental-results .bb-dental-results-table td {
+  border-bottom: 1px solid rgba(36, 36, 36, 0.12);
+}
+
+@media (max-width: 720px) {
+  .bb-page #bb-dental-results .bb-dental-result-stats {
+    padding: 0;
+  }
+
+  .bb-page #bb-dental-results .bb-dental-result-stat,
+  .bb-page #bb-dental-results .bb-dental-result-stat + .bb-dental-result-stat {
+    padding: 24px 0;
+  }
+}
+</style>
+
+
+<style id="bb-agri-email-dental-format-match">
+/* AgriTech and B2B Email now follow the Dental Opportunity → Solution → Results structure. */
+.bb-page #bb-agri-solution,
+.bb-page #bb-email-solution,
+.bb-page #bb-agri-results,
+.bb-page #bb-email-results {
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  scroll-margin-top: 28px;
+}
+
+.bb-page #bb-agri-solution,
+.bb-page #bb-email-solution {
+  padding: clamp(82px, 9vw, 132px) 0;
+  color: #242424;
+  background: #e9e9e7;
+}
+
+.bb-page #bb-agri-results,
+.bb-page #bb-email-results {
+  padding: clamp(82px, 9vw, 132px) 0;
+  background: #ffffff;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution, #bb-agri-results, #bb-email-results) > .bb-shell {
+  width: min(1120px, calc(100% - 48px));
+  min-height: 0;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs2-simple-head,
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-format-head {
+  max-width: 820px;
+  margin: 0 0 clamp(48px, 6vw, 72px);
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution, #bb-agri-results, #bb-email-results) .qcs2-simple-head h2 {
+  margin: 0;
+  color: #242424;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution, #bb-agri-results, #bb-email-results) .qcs2-simple-head > p {
+  max-width: 820px;
+  margin: 18px 0 0;
+  color: #686868;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs2-solution-group {
+  padding: 0;
+  border: 0;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs2-group-label {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs2-group-label span {
+  flex: 0 0 auto;
+  color: var(--accent, #e2543a);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs2-group-label strong {
+  color: #242424;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-work-summary {
+  max-width: 940px;
+  margin: 0 0 34px;
+  color: #686868;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, auto);
+  column-gap: clamp(54px, 7vw, 84px);
+  row-gap: 38px;
+  margin-top: 0;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-flow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: rgba(36, 36, 36, 0.10);
+  transform: translateX(-0.5px);
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-flow > i {
+  display: none;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  column-gap: 17px;
+  align-content: start;
+  min-width: 0;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step:nth-of-type(1) { grid-column: 1; grid-row: 1; }
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step:nth-of-type(2) { grid-column: 1; grid-row: 2; }
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step:nth-of-type(3) { grid-column: 1; grid-row: 3; }
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step:nth-of-type(4) { grid-column: 2; grid-row: 1; }
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step:nth-of-type(5) { grid-column: 2; grid-row: 2; }
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step > span {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  color: var(--accent, #e2543a);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step > b {
+  grid-column: 2;
+  margin: 0;
+  color: #242424;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step > p {
+  grid-column: 2;
+  max-width: 500px;
+  margin: 11px 0 0;
+  color: #686868;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.bb-page .bb-shared-solution-note {
+  max-width: 900px;
+  margin: 40px 0 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--accent, #e2543a);
+  color: #686868;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.bb-page .bb-shared-role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(32px, 5vw, 72px);
+  margin-top: clamp(48px, 6vw, 70px);
+  padding-top: 34px;
+  border-top: 1px solid rgba(36, 36, 36, 0.12);
+}
+
+.bb-page .bb-shared-role-grid small {
+  display: block;
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page .bb-shared-role-grid strong {
+  display: block;
+  margin-top: 12px;
+  color: #292929;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.bb-page .bb-shared-role-grid p {
+  max-width: 500px;
+  margin: 10px 0 0;
+  color: #686868;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-layout {
+  display: block;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-left,
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-proof {
+  min-width: 0;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 26px 0 28px;
+  border-top: 1px solid rgba(36, 36, 36, 0.16);
+  border-bottom: 1px solid rgba(36, 36, 36, 0.16);
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat {
+  min-width: 0;
+  padding-right: clamp(22px, 4vw, 40px);
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat + .bb-dental-result-stat {
+  padding-right: 0;
+  padding-left: clamp(22px, 4vw, 40px);
+  border-left: 1px solid rgba(36, 36, 36, 0.12);
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat > small,
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table-wrap > small,
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-proof > small {
+  display: block;
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat > strong {
+  display: block;
+  margin-top: 14px;
+  color: #242424;
+  font-family: "Clash Display", Arial, sans-serif;
+  font-size: clamp(46px, 5.2vw, 68px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat > span {
+  display: block;
+  margin-top: 13px;
+  color: #6a6a6a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat > span b {
+  color: #292929;
+  font-weight: 700;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table-wrap {
+  margin-top: clamp(38px, 5vw, 54px);
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table-wrap > small,
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-proof > small {
+  margin-bottom: 14px;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table-scroll {
+  overflow-x: auto;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table th,
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid rgba(36, 36, 36, 0.12);
+  color: #414141;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table th:first-child,
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table td:first-child {
+  padding-left: 0;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table th:last-child,
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table td:last-child {
+  padding-right: 0;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table thead th {
+  color: #858585;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table tbody th {
+  color: #292929;
+  font-weight: 700;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-table .positive {
+  color: #087640;
+  font-weight: 700;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-insights {
+  display: grid;
+  gap: 28px;
+  margin-top: clamp(36px, 4vw, 48px);
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-insight {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 14px;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-insight > span {
+  padding-top: 3px;
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-insight strong {
+  display: block;
+  color: #292929;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-insight p {
+  max-width: 620px;
+  margin: 8px 0 0;
+  color: #686868;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-note {
+  margin: 22px 0 0;
+  color: #7a7a7a;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-proof {
+  position: static;
+  margin-top: clamp(56px, 7vw, 88px);
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-proof-stack {
+  display: grid;
+  gap: 28px;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-proof-item {
+  margin: 0;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-proof-image {
+  overflow: hidden;
+  border: 1px solid rgba(36, 36, 36, 0.12);
+  background: #ffffff;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-proof-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-proof-note {
+  margin: 20px 0 0;
+  color: #7a7a7a;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+@media (max-width: 820px) {
+  .bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-flow {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 30px;
+  }
+
+  .bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-flow::after {
+    display: none;
+  }
+
+  .bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step:nth-of-type(n) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .bb-page .bb-shared-role-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 720px) {
+  .bb-page #bb-agri-solution,
+  .bb-page #bb-email-solution,
+  .bb-page #bb-agri-results,
+  .bb-page #bb-email-results {
+    padding: 78px 0 !important;
+  }
+
+  .bb-page :is(#bb-agri-solution, #bb-email-solution, #bb-agri-results, #bb-email-results) > .bb-shell {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .bb-page :is(#bb-agri-solution, #bb-email-solution, #bb-agri-results, #bb-email-results) .qcs2-simple-head {
+    margin-bottom: 38px;
+  }
+
+  .bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs2-group-label span,
+  .bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs2-group-label strong {
+    font-size: 16px;
+  }
+
+  .bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step {
+    grid-template-columns: 30px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step > b {
+    font-size: 14.5px;
+  }
+
+  .bb-page :is(#bb-agri-solution, #bb-email-solution) .qcs3-positioning-step > p {
+    font-size: 13.5px;
+  }
+
+  .bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stats {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat,
+  .bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat + .bb-dental-result-stat {
+    padding: 24px 0;
+    border-left: 0;
+  }
+
+  .bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat + .bb-dental-result-stat {
+    border-top: 1px solid rgba(36, 36, 36, 0.12);
+  }
+
+  .bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-stat > strong {
+    font-size: clamp(42px, 15vw, 58px);
+  }
+
+  .bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-result-insight {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-results-proof {
+    margin-top: 48px;
+  }
+
+  .bb-page :is(#bb-agri-results, #bb-email-results) .bb-dental-proof-stack {
+    gap: 20px;
+  }
+}
+</style>
+<style id="bb-agri-solution-image-cards-and-email-proof-rounding">
+.bb-page #bb-agri-solution .bb-shared-solution-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 34px;
+}
+
+.bb-page #bb-agri-solution .bb-shared-solution-image-card {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid rgba(36, 36, 36, 0.12);
+  border-radius: 24px;
+  background: #ffffff;
+}
+
+.bb-page #bb-agri-solution .bb-shared-solution-image {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.bb-page #bb-agri-solution .bb-shared-solution-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bb-page #bb-agri-solution .bb-shared-solution-image-card figcaption {
+  margin-top: 14px;
+}
+
+.bb-page #bb-agri-solution .bb-shared-solution-image-card small {
+  display: block;
+  color: var(--accent, #e2543a);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.bb-page #bb-agri-solution .bb-shared-solution-image-card strong {
+  display: block;
+  margin-top: 8px;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.bb-page #bb-agri-solution .bb-shared-solution-image-card span {
+  display: block;
+  margin-top: 6px;
+  color: #737373;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.bb-page #bb-email-results .bb-dental-proof-image {
+  overflow: hidden;
+  padding: 16px;
+  border: 1px solid rgba(36, 36, 36, 0.12);
+  border-radius: 24px;
+  background: #ffffff;
+}
+
+.bb-page #bb-email-results .bb-dental-proof-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+@media (max-width: 760px) {
+  .bb-page #bb-agri-solution .bb-shared-solution-image-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bb-page #bb-email-results .bb-dental-proof-image {
+    padding: 12px;
+    border-radius: 20px;
+  }
+}
+</style>
+<style id="bb-three-item-page-nav">
+.bb-page .bb-page-nav {
+  width: 175px;
+}
+
+@media (max-width: 900px) {
+  .bb-page .bb-page-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+</style>
+</head>
+<body class="bb-page">
+<div id="global-menu"></div>
+<nav aria-label="Bertrand and Bernard case study navigation" class="bb-page-nav">
+<span class="bb-page-nav-label">On this page</span>
+<a data-bb-current-case="" href="#bb-dental-opportunity">
+<i>01</i>
+<span>Opportunity</span>
+</a>
+<a data-bb-dental-only="" href="#bb-dental-solution">
+<i>02</i>
+<span>Solution</span>
+</a>
+<a data-bb-dental-only="" href="#bb-dental-results">
+<i>03</i>
+<span>Results</span>
+</a></nav>
+<main>
+<div class="page-view bb-page-view">
+<section aria-labelledby="bb-title" class="bb-hero bb-quick-clean-hero" id="bertrand-bernard">
+<div class="bb-shell">
+<a class="bb-back" href="portfolio.html#portfolio">
+<svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="m14.4 5-7 7 7 7 1.4-1.4-4.6-4.6H21v-2h-9.8l4.6-4.6L14.4 5Z"></path>
+</svg>
+            All case studies
+          </a>
+<p class="bb-kicker">Bertrand &amp; Bernard · Case Study 03</p>
+<h1 class="bb-title" id="bb-title">
+            Performance Marketing &amp;
+            <span>Conversion Rate Optimization</span>
+</h1>
+<div aria-label="Role and ownership" class="bb-hero-role">
+<p class="bb-hero-role-copy">
+              As Digital Marketing Manager, I managed paid acquisition and conversion optimisation across multiple businesses, covering Meta and Google Ads, campaign structure, audience strategy, landing-page testing, Shopify CRO, performance reporting and full-funnel optimisation.
+            </p>
+</div>
+</div>
+</section>
+<section aria-labelledby="bb-case-studies-title" class="bb-section bb-section-white bb-case-studies-section" id="bb-case-studies">
+<div class="bb-shell">
+<header class="bb-case-studies-head">
+<h2 id="bb-case-studies-title">Case Studies</h2>
+<p>
+              Selected performance marketing and conversion optimisation work
+              across different businesses and growth models. Choose a card to
+              view the complete case study below.
+            </p>
+</header>
+<div class="bb-case-slider-shell">
+<div aria-label="Bertrand and Bernard work samples" class="bb-business-grid bb-case-slider">
+<article aria-label="Open Dental Clinic Performance case study" class="bb-business-card bb-business-card-visual active" data-case-card="dental" data-case-target="#bb-dental-opportunity" role="button" tabindex="0">
+<img alt="Dentist performing a dental procedure in a modern clinic" class="bb-business-card-image" loading="lazy" src="assets/images/dental-clinic-card.jpg"/>
+<div class="bb-business-card-overlay"></div>
+<div class="bb-business-card-content">
+<h3>Dental Clinic</h3>
+<p>
+                    Google Ads performance, conversion quality and acquisition
+                    efficiency.
+                  </p>
+<span class="bb-business-card-link">
+                    View the case study
+                    <svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M5 11h10.17l-4.58-4.59L12 5l7 7-7 7-1.41-1.41L15.17 13H5v-2Z"></path>
+</svg>
+</span>
+</div>
+</article>
+<article aria-label="Open AgriTech SaaS pricing and conversion case study" class="bb-business-card bb-business-card-visual bb-business-card-agritech" data-case-card="agritech" data-case-target="#bb-agritech-case" role="button" tabindex="0">
+<img alt="AgriTech field intelligence platform" class="bb-business-card-image" loading="lazy" onerror="this.hidden=true" src="assets/images/agritech-saas-card.jpg"/>
+<div class="bb-business-card-overlay"></div>
+<div class="bb-business-card-content">
+<h3>AgriTech SaaS</h3>
+<p>
+                    Reframing a feature-gated product around acres under
+                    monitoring to improve comprehension and paid conversion.
+                  </p>
+<span class="bb-business-card-link">
+                    View the case study
+                    <svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M5 11h10.17l-4.58-4.59L12 5l7 7-7 7-1.41-1.41L15.17 13H5v-2Z"></path>
+</svg>
+</span>
+</div>
+</article>
+<article aria-label="Open B2B Cold Email case study" class="bb-business-card bb-business-card-visual bb-business-card-email" data-case-card="email" data-case-target="#bb-email-case" role="button" tabindex="0"><img alt="Exhibition booth services and trade show outreach" class="bb-business-card-image" loading="lazy" onerror="this.hidden=true" src="assets/images/b2b-cold-email-card.jpg"/><div class="bb-business-card-overlay"></div><div class="bb-business-card-content"><h3>B2B Cold Email</h3><p>ICP, verified data, multi-step sequences and deliverability-safe sending for an exhibition booth services company.</p><span class="bb-business-card-link">View the case study <svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M5 11h10.17l-4.58-4.59L12 5l7 7-7 7-1.41-1.41L15.17 13H5v-2Z"></path>
+</svg></span></div></article>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="AgriTech SaaS case study opportunity" class="bb-section bb-section-white bb-agritech-case" data-case-panel="agritech" hidden="" id="bb-agritech-case">
+<div class="bb-shell">
+<section aria-labelledby="bb-agri-opportunity-title" class="qcx-section qcs2-opportunity bb-case-opportunity" id="bb-agri-opportunity">
+<div class="qcx-shell">
+<header class="qcs2-simple-head">
+<h2 id="bb-agri-opportunity-title" style="font-size: clamp(34px, 3.8vw, 48px);">Opportunity</h2>
+<p style="font-size: 15px;">Three connected pricing and product-framing gaps were holding back trial quality and paid conversion.</p>
+</header>
+<div class="qcs2-text-points">
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">01</span>
+<strong style="font-size: 15px;">Free tools set the category baseline.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          Buyers already had access to free crop-health maps and basic advisory.
+          The platform’s stronger decision layer across disease risk, irrigation,
+          harvesting and compliance was not visible enough during the buying journey.
+        </span>
+</p>
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">02</span>
+<strong style="font-size: 15px;">Feature gating hid the product’s real value.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          Sixty-four percent of trials started on the entry tier, but that tier
+          excluded disease alerts, irrigation planning, yield forecasting and
+          scouting tools. Buyers were evaluating a limited version of the product
+          instead of experiencing the capabilities that differentiated it.
+        </span>
+</p>
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">03</span>
+<strong style="font-size: 15px;">Pricing created avoidable buying friction.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          The pricing page had a 52% exit rate and organised value around feature
+          access rather than the amount of land being monitored. The model needed
+          to align with a unit customers already understood and used for budgeting.
+        </span>
+</p>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section aria-labelledby="bb-agri-solution-title" class="bb-section qcx-section qcs2-solution bb-shared-solution bb-dental-format-section" data-case-panel="agritech" hidden="" id="bb-agri-solution">
+<div class="bb-shell qcx-shell">
+<header class="qcs2-simple-head">
+<h2 id="bb-agri-solution-title">Solution</h2>
+<p>
+        The pricing model was rebuilt around land under monitoring, while the
+        product experience and experiment setup were aligned to the same logic.
+      </p>
+</header>
+<div class="qcs2-solution-group">
+<div class="qcs2-group-label">
+<span>01</span>
+<strong>Full-product access with acre-based metering</strong>
+</div>
+<p class="qcs3-work-summary">
+        Instead of restricting capabilities by plan, every plan received the
+        full product. Pricing moved to acres under monitoring, a unit customers
+        already understood and used for budgeting.
+      </p>
+<div aria-label="AgriTech pricing and product changes" class="qcs3-positioning-flow">
+<div class="qcs3-positioning-step">
+<span>01</span>
+<b>Feature gates were removed</b>
+<p>
+            Disease alerts, irrigation planning, yield forecasting and scouting
+            tools were no longer held back by the entry tier.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>02</span>
+<b>Land became the pricing unit</b>
+<p>
+            Plans were metered by acres under monitoring rather than by access
+            to different product capabilities.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>03</span>
+<b>The pricing page was reframed</b>
+<p>
+            The buying experience presented the offer around monitored acreage,
+            making the commercial model easier to understand and budget for.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>04</span>
+<b>Product selection flows were updated</b>
+<p>
+            The signup flow and in-app plan selector were changed to reflect
+            the acre-based model consistently.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>05</span>
+<b>Entitlements and testing were aligned</b>
+<p>
+            Entitlement logic was updated and the new model was tested through
+            a six-week, 50/50 A/B test across 18,412 visitors.
+          </p>
+</div>
+</div>
+</div>
+<p class="bb-shared-solution-note">
+        A grower with 800 acres and a co-operative with 90,000 acres need the
+        same tools. They simply have different amounts of land to monitor.
+        Feature gating restricted comprehension; acre-based pricing restricted
+        consumption, which is easier for buyers to understand and scale.
+      </p>
+<div aria-label="AgriTech pricing model visuals" class="bb-shared-solution-image-grid">
+<figure class="bb-shared-solution-image-card">
+<div class="bb-shared-solution-image">
+<img alt="Original AgriTech SaaS feature-gated pricing model" loading="lazy" src="assets/images/agritech-saas-feature-gating.jpg"/>
+</div>
+<figcaption>
+<small>Solution image 01</small>
+<strong>Feature-gated pricing model</strong>
+<span>The original structure used before the pricing change.</span>
+</figcaption>
+</figure>
+<figure class="bb-shared-solution-image-card">
+<div class="bb-shared-solution-image">
+<img alt="AgriTech SaaS acre-based pricing model" loading="lazy" src="assets/images/agritech-saas-acre-pricing.jpg"/>
+</div>
+<figcaption>
+<small>Solution image 02</small>
+<strong>Acre-based pricing model</strong>
+<span>The simplified acre-based model introduced in the test.</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="bb-agri-results-title" class="bb-section bb-section-white bb-shared-results bb-dental-format-section" data-case-panel="agritech" hidden="" id="bb-agri-results">
+<div class="bb-shell">
+<header class="qcs2-simple-head bb-dental-format-head">
+<h2 id="bb-agri-results-title">Results</h2>
+<p>
+        The six-week A/B test used a 50/50 split across 18,412 visitors. The
+        variant changed the pricing page, signup flow, in-app plan selector and
+        entitlement logic.
+      </p>
+</header>
+<div class="bb-dental-results-layout">
+<div class="bb-dental-results-left">
+<div aria-label="Headline AgriTech experiment results" class="bb-dental-result-stats">
+<div class="bb-dental-result-stat">
+<small>New revenue booked</small>
+<strong>+46%</strong>
+<span><b>$44,512 → $65,052</b></span>
+</div>
+<div class="bb-dental-result-stat">
+<small>New customers</small>
+<strong>2.0×</strong>
+<span><b>208 → 417</b></span>
+</div>
+</div>
+<div class="bb-dental-results-table-wrap">
+<small>Control vs variant</small>
+<div class="bb-dental-results-table-scroll">
+<table aria-label="AgriTech SaaS pricing experiment results" class="bb-dental-results-table">
+<thead>
+<tr>
+<th scope="col">Metric</th>
+<th scope="col">Control</th>
+<th scope="col">Variant</th>
+<th scope="col">Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Trial starts</th>
+<td>12.4%</td>
+<td>14.7%</td>
+<td class="positive">+18.8%</td>
+</tr>
+<tr>
+<th scope="row">Trial to paid</th>
+<td>18.2%</td>
+<td>30.7%</td>
+<td class="positive">+68.7%</td>
+</tr>
+<tr>
+<th scope="row">New customers</th>
+<td>208</td>
+<td>417</td>
+<td class="positive">2.0×</td>
+</tr>
+<tr>
+<th scope="row">Revenue per account</th>
+<td>$214</td>
+<td>$156</td>
+<td>−27%</td>
+</tr>
+<tr>
+<th scope="row">New revenue booked</th>
+<td>$44,512</td>
+<td>$65,052</td>
+<td class="positive">+46%</td>
+</tr>
+<tr>
+<th scope="row">90-day retention</th>
+<td>88.1%</td>
+<td>89.4%</td>
+<td>+1.3pp (n.s.)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div aria-label="AgriTech result interpretation" class="bb-dental-result-insights">
+<div class="bb-dental-result-insight">
+<span>01</span>
+<div>
+<strong>Customer growth outweighed lower revenue per account</strong>
+<p>
+                    Revenue per account fell from $214 to $156, but new customers
+                    increased from 208 to 417 and lifted new revenue booked by 46%.
+                  </p>
+</div>
+</div>
+<div class="bb-dental-result-insight">
+<span>02</span>
+<div>
+<strong>Retention remained stable</strong>
+<p>
+                    Ninety-day retention moved from 88.1% to 89.4%, a +1.3pp
+                    change reported as not statistically significant.
+                  </p>
+</div>
+</div>
+</div>
+<p class="bb-dental-results-note">
+                Revenue per account fell as expected, but the increase in paying
+                customers more than covered it. Stable retention indicated that
+                the additional conversions were real buyers rather than short-term
+                pricing distortion.
+              </p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section aria-label="B2B Cold Email case study opportunity" class="bb-section bb-section-white bb-email-case" data-case-panel="email" hidden="" id="bb-email-case">
+<div class="bb-shell">
+<section aria-labelledby="bb-email-opportunity-title" class="qcx-section qcs2-opportunity bb-case-opportunity" id="bb-email-opportunity">
+<div class="qcx-shell">
+<header class="qcs2-simple-head">
+<h2 id="bb-email-opportunity-title" style="font-size: clamp(34px, 3.8vw, 48px);">Opportunity</h2>
+<p style="font-size: 15px;">Three connected outbound gaps had to be solved before outreach could scale safely and remain relevant.</p>
+</header>
+<div class="qcs2-text-points">
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">01</span>
+<strong style="font-size: 15px;">Targeting needed exhibition-level precision.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          The client needed to reach companies actively preparing for trade shows,
+          not a broad list of businesses. The ICP had to connect the right company,
+          decision-maker and upcoming exhibition so each message arrived in a
+          commercially relevant context.
+        </span>
+</p>
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">02</span>
+<strong style="font-size: 15px;">Prospect data had to support personalisation.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          Scaling with incomplete or unverified records would reduce relevance,
+          increase failed deliveries and weaken campaign quality. The database
+          needed cleanup, verification and segmentation before it could reliably
+          support personalised variables and message variations.
+        </span>
+</p>
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">03</span>
+<strong style="font-size: 15px;">Sending and follow-up needed a safe system.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          A single inbox or one-off email could not create repeatable opportunity
+          flow. The campaign required warmed infrastructure, controlled daily
+          volume and a multi-step sequence that could follow up consistently
+          without sacrificing deliverability.
+        </span>
+</p>
+</div>
+</div>
+</section>
+</div>
+</section>
+<section aria-labelledby="bb-email-solution-title" class="bb-section qcx-section qcs2-solution bb-shared-solution bb-dental-format-section" data-case-panel="email" hidden="" id="bb-email-solution">
+<div class="bb-shell qcx-shell">
+<header class="qcs2-simple-head">
+<h2 id="bb-email-solution-title">Solution</h2>
+<p>
+        Targeting, prospect data, sending infrastructure and follow-up were built
+        as one connected outbound system rather than as separate campaign tasks.
+      </p>
+</header>
+<div class="qcs2-solution-group">
+<div class="qcs2-group-label">
+<span>01</span>
+<strong>ICP to campaign execution</strong>
+</div>
+<p class="qcs3-work-summary">
+        The campaign combined exhibition-level targeting, verified prospect data,
+        warmed infrastructure and a multi-step sequence so outreach could scale
+        while remaining relevant and deliverability-safe.
+      </p>
+<div aria-label="B2B cold email campaign system" class="qcs3-positioning-flow">
+<div class="qcs3-positioning-step">
+<span>01</span>
+<b>The ICP was tied to active exhibitions</b>
+<p>
+            Companies, decision-makers and upcoming trade shows were connected
+            so each message reached a commercially relevant prospect.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>02</span>
+<b>Prospect data was prepared for personalisation</b>
+<p>
+            The lead database was sourced, cleaned, verified and segmented before
+            it was used for personalised variables and message variations.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>03</span>
+<b>Sending capacity was distributed safely</b>
+<p>
+            44 warmed inboxes were capped at 25 emails per account per
+            day, creating a controlled daily capacity of 1,100 emails.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>04</span>
+<b>A five-follow-up sequence was deployed</b>
+<p>
+            Campaigns used multi-step sequences, message variations, personalised
+            variables and soft calls to action.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>05</span>
+<b>Replies guided ongoing iteration</b>
+<p>
+            Most replies appeared after the second or third touchpoint, helping
+            focus sequence operations on consistent follow-up rather than one-off sends.
+          </p>
+</div>
+</div>
+</div>
+<div class="bb-shared-role-grid">
+<div>
+<small>My contribution</small>
+<strong>ICP to campaign execution</strong>
+<p>
+            Owned ICP definition, prospect-data sourcing and cleanup, segmentation,
+            campaign setup, sequence operations and initial scripting.
+          </p>
+</div>
+<div>
+<small>Collaboration</small>
+<strong>Copywriting guidance</strong>
+<p>
+            A Bertrand &amp; Bernard partner coached me through the copywriting
+            process, helping sharpen message angles, follow-ups and reply-focused
+            calls to action.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="bb-email-results-title" class="bb-section bb-section-white bb-shared-results bb-dental-format-section" data-case-panel="email" hidden="" id="bb-email-results">
+<div class="bb-shell">
+<header class="qcs2-simple-head bb-dental-format-head">
+<h2 id="bb-email-results-title">Results</h2>
+<p>
+        The distributed infrastructure delivered 7,700 sends without relying
+        on a single inbox or uncontrolled volume, producing measurable reply and
+        opportunity flow over seven days.
+      </p>
+</header>
+<div class="bb-dental-results-layout">
+<div class="bb-dental-results-left">
+<div aria-label="Headline B2B cold email results" class="bb-dental-result-stats">
+<div class="bb-dental-result-stat">
+<small>Total sent</small>
+<strong>7.7K</strong>
+<span><b>Across a seven-day campaign</b></span>
+</div>
+<div class="bb-dental-result-stat">
+<small>Opportunities</small>
+<strong>11</strong>
+<span><b>Generated from the campaign</b></span>
+</div>
+</div>
+<div class="bb-dental-results-table-wrap">
+<small>Campaign performance</small>
+<div class="bb-dental-results-table-scroll">
+<table aria-label="B2B cold email campaign performance" class="bb-dental-results-table">
+<thead>
+<tr>
+<th scope="col">Metric</th>
+<th scope="col">Result</th>
+<th scope="col">Campaign context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Total sent</th>
+<td>7.7K</td>
+<td>Across a seven-day campaign</td>
+</tr>
+<tr>
+<th scope="row">Open rate</th>
+<td class="positive">67.8%</td>
+<td>Strong inbox placement and relevance</td>
+</tr>
+<tr>
+<th scope="row">Reply rate</th>
+<td class="positive">2.06%</td>
+<td>Conversation-focused outreach</td>
+</tr>
+<tr>
+<th scope="row">Opportunities</th>
+<td class="positive">11</td>
+<td>Generated from the campaign</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div aria-label="B2B cold email result interpretation" class="bb-dental-result-insights">
+<div class="bb-dental-result-insight">
+<span>01</span>
+<div>
+<strong>Distributed infrastructure supported controlled scale</strong>
+<p>
+                    44 warmed inboxes at 25 emails per account per day
+                    created capacity for 1,100 daily sends and 7.7K sends in seven days.
+                  </p>
+</div>
+</div>
+<div class="bb-dental-result-insight">
+<span>02</span>
+<div>
+<strong>Follow-up created the conversation flow</strong>
+<p>
+                    Most replies appeared after the second or third touchpoint,
+                    reinforcing the value of the five-follow-up sequence.
+                  </p>
+</div>
+</div>
+</div>
+<p class="bb-dental-results-note">
+                Campaign metrics are presented as platform-reported results.
+                Client and prospect identifiers should remain hidden in the
+                final screenshots.
+              </p>
+</div>
+<aside aria-label="B2B cold email campaign proof" class="bb-dental-results-proof">
+<small>Campaign proof</small>
+<div class="bb-dental-proof-stack">
+<figure class="bb-dental-proof-item">
+<div class="bb-dental-proof-image">
+<img alt="Instantly campaign performance dashboard" loading="lazy" src="assets/images/b2b-cold-email-results-dashboard.jpg"/>
+</div>
+</figure>
+</div>
+<p class="bb-dental-proof-note">
+                The screenshot presents the platform-reported campaign results;
+                client and prospect identifiers should remain hidden.
+              </p>
+</aside>
+</div>
+</div>
+</section><section aria-labelledby="bb-dental-opportunity-title" class="bb-section bb-section-white qcx-section qcs2-opportunity bb-case-opportunity bb-dental-format-section" data-case-panel="dental" id="bb-dental-opportunity">
+<div class="bb-shell">
+<div class="qcx-shell">
+<header class="qcs2-simple-head">
+<h2 id="bb-dental-opportunity-title" style="font-size: clamp(34px, 3.8vw, 48px);">Opportunity</h2>
+<p style="font-size: 15px;">Three connected account gaps were limiting conversion output and making paid acquisition far more expensive than it needed to be.</p>
+</header>
+<div class="qcs2-text-points">
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">01</span>
+<strong style="font-size: 15px;">Conversion signals were too weak.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          Lead-form and conversion tracking were not giving Google Ads enough
+          dependable signal quality. With limited measurement data, automated
+          bidding had less reliable information to identify and optimise toward
+          users more likely to complete a valuable action.
+        </span>
+</p>
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">02</span>
+<strong style="font-size: 15px;">Weak tests were consuming budget.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          Underperforming campaigns and experiments were creating budget bleed,
+          while spend was not concentrated strongly enough around higher-intent
+          queries and campaigns. The account needed clearer pruning and allocation
+          decisions before additional budget could work efficiently.
+        </span>
+</p>
+<p style="font-size: 15px;">
+<span class="qcs7-opportunity-heading">
+<span class="qcs7-opportunity-number" style="font-size: 15px;">03</span>
+<strong style="font-size: 15px;">Reach was not translating into efficient acquisition.</strong>
+</span>
+<span class="qcs7-opportunity-copy" style="font-size: 15px;">
+          From January to June 2023, approximately $58.0K in spend and 388K
+          impressions produced only 48 measured conversions at roughly $1.21K
+          per conversion. The account had visibility, but not enough qualified
+          conversion output for the investment.
+        </span>
+</p>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="bb-dental-solution-title" class="bb-section qcx-section qcs2-solution bb-dental-solution bb-dental-format-section" data-case-panel="dental" id="bb-dental-solution">
+<div class="bb-shell qcx-shell">
+<header class="qcs2-simple-head">
+<h2 id="bb-dental-solution-title">Solution</h2>
+<p>
+        The account was improved through five connected changes that strengthened
+        measurement, removed inefficient activity and directed spend toward
+        higher-intent opportunities.
+      </p>
+</header>
+<div class="qcs2-solution-group">
+<div class="qcs2-group-label">
+<span>01</span>
+<strong>Campaign structure and intent focus</strong>
+</div>
+<p class="qcs3-work-summary">
+        Campaign cleanup, bidding learning and budget allocation were handled as
+        one system, so spend moved away from weak tests and toward searches and
+        markets with stronger lead potential.
+      </p>
+<div aria-label="Dental campaign optimisation work completed" class="qcs3-positioning-flow">
+<div class="qcs3-positioning-step">
+<span>01</span>
+<b>Tracking and signal quality improved</b>
+<p>
+            Lead-form and conversion signals were strengthened so optimisation
+            was based on clearer, more dependable measured actions.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>02</span>
+<b>Smart Bidding had more learning data</b>
+<p>
+            More conversion history gave Maximise Conversions a stronger base
+            for identifying users likely to complete a valuable action.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>03</span>
+<b>Weak tests were pruned</b>
+<p>
+            Underperforming campaigns and experiments were reduced, paused or
+            replaced to limit budget bleed.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>04</span>
+<b>Budget moved toward higher intent</b>
+<p>
+            Spend was redirected toward campaigns and queries more likely to
+            produce trackable lead actions.
+          </p>
+</div>
+<i aria-hidden="true"></i>
+<div class="qcs3-positioning-step">
+<span>05</span>
+<b>New-market expansion was tested</b>
+<p>
+            New Zealand and USA activity introduced additional audience pools
+            beyond the earlier market setup.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="bb-dental-results-title" class="bb-section bb-section-white bb-dental-results bb-dental-format-section" data-case-panel="dental" id="bb-dental-results">
+<div class="bb-shell">
+<header class="qcs2-simple-head bb-dental-format-head">
+<h2 id="bb-dental-results-title">Results</h2>
+<p>
+              Conversion output increased sharply in the second half of 2023,
+              while cost per conversion fell despite only a modest increase in
+              media spend.
+            </p>
+</header>
+<div class="bb-dental-results-layout">
+<div class="bb-dental-results-left">
+<div aria-label="Headline dental campaign results" class="bb-dental-result-stats">
+<div class="bb-dental-result-stat">
+<small>Measured conversions</small>
+<strong>361</strong>
+<span><b>+652.1%</b> compared with Jan–Jun 2023</span>
+</div>
+<div class="bb-dental-result-stat">
+<small>Cost per conversion</small>
+<strong>$173</strong>
+<span><b>85.7% lower</b> than the previous period</span>
+</div>
+</div>
+<div class="bb-dental-results-table-wrap">
+<small>Performance comparison</small>
+<div class="bb-dental-results-table-scroll">
+<table aria-label="Dental Google Ads performance before and after July 2023" class="bb-dental-results-table">
+<thead>
+<tr>
+<th scope="col">Metric</th>
+<th scope="col">Jan–Jun 2023</th>
+<th scope="col">Jul–Dec 2023</th>
+<th scope="col">Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Spend</th>
+<td>~$58.0K</td>
+<td>~$62.4K</td>
+<td>+7.7%</td>
+</tr>
+<tr>
+<th scope="row">Conversions</th>
+<td>48</td>
+<td>361</td>
+<td class="positive">+652.1%</td>
+</tr>
+<tr>
+<th scope="row">Cost / Conversion</th>
+<td>~$1.21K</td>
+<td>~$173</td>
+<td class="positive">85.7% lower</td>
+</tr>
+<tr>
+<th scope="row">Impressions</th>
+<td>388K</td>
+<td>337K</td>
+<td>-13.1%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div aria-label="Result interpretation" class="bb-dental-result-insights">
+<div class="bb-dental-result-insight">
+<span>01</span>
+<div>
+<strong>More output, nearly the same spend</strong>
+<p>
+                    Spend increased by only 7.7%, while measured conversions
+                    rose from 48 to 361.
+                  </p>
+</div>
+</div>
+<div class="bb-dental-result-insight">
+<span>02</span>
+<div>
+<strong>Better traffic and measurement efficiency</strong>
+<p>
+                    Impressions declined by 13.1%, yet conversion volume grew
+                    and average cost per conversion fell substantially.
+                  </p>
+</div>
+</div>
+</div>
+<p class="bb-dental-results-note">
+                Revenue and conversion-value tracking was not reliable enough
+                to use ROAS as the main proof point. The comparison therefore
+                focuses on measured conversion volume and cost efficiency.
+              </p>
+</div>
+<aside aria-label="Google Ads proof screenshots" class="bb-dental-results-proof">
+<div class="bb-dental-proof-stack">
+<figure class="bb-dental-proof-item">
+<div class="bb-dental-proof-image">
+<img alt="Google Ads account overview for the dental clinic" loading="lazy" src="assets/images/bertrand-bernard-proof-01.jpg"/>
+</div>
+</figure>
+<figure class="bb-dental-proof-item">
+<div class="bb-dental-proof-image">
+<img alt="Google Ads campaign performance for July to December 2023" loading="lazy" src="assets/images/bertrand-bernard-proof-02.jpg"/>
+</div>
+</figure>
+</div>
+<p class="bb-dental-proof-note">
+                Client and campaign identifiers are blurred. Portfolio figures
+                are shown as rounded USD equivalents, while the screenshots may
+                display the account's original platform currency.
+              </p>
+</aside>
+</div>
+</div>
+</section><section aria-labelledby="bb-next-portfolio-title" class="services-section bb-next-portfolio" id="bb-next-cases">
+<div class="services-shell">
+<header class="services-header bb-next-portfolio-header">
+<p class="bb-next-portfolio-kicker">Next case studies</p>
+<h2 class="services-title" id="bb-next-portfolio-title">
+        Continue with the next <span class="accent">growth&nbsp;stories</span>
+</h2>
+</header>
+<div class="services-stack">
+<article class="service-card" id="next-portfolio-quick-clean" style="--stack-index: 0;">
+<div class="service-copy">
+<p class="service-company">Quick Clean Laundry Systems</p>
+<h3 class="service-title">Commercial Laundry Growth in India</h3>
+<p class="service-description">
+            Built a structured commercial growth system across ICP segmentation,
+            stakeholder messaging, industry events, LinkedIn, email,
+            qualification and multi-channel demand generation.
+          </p>
+<a class="case-link" href="quick-clean.html">
+            View the case study
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M5 12h12.17l-4.58 4.59L14 18l7-7-7-7-1.41 1.41L17.17 10H5v2Z"></path>
+</svg>
+</a>
+</div>
+<div aria-hidden="true" class="service-art">
+<img alt="" class="case-bg-image" src="https://images.unsplash.com/photo-1719582225562-96e924af1060?auto=format&amp;fit=crop&amp;w=1400&amp;q=82"/>
+<div class="case-logo-overlay">
+<img alt="" src="assets/images/quick-clean-logo.png"/>
+</div>
+</div>
+</article>
+<article class="service-card" id="next-portfolio-accountx" style="--stack-index: 1;">
+<div class="service-copy">
+<p class="service-company">AccountX</p>
+<h3 class="service-title">Global GTM &amp; Outbound&nbsp;Engine</h3>
+<p class="service-description">
+            Built the GTM foundation, country-wise ICP, outbound infrastructure,
+            LinkedIn, cold email, SEO and Google Search Ads across global markets.
+          </p>
+<a class="case-link" href="accountx.html">
+            View the case study
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+<path d="M5 12h12.17l-4.58 4.59L14 18l7-7-7-7-1.41 1.41L17.17 10H5v2Z"></path>
+</svg>
+</a>
+</div>
+<div aria-hidden="true" class="service-art">
+<img alt="" class="case-bg-image" src="https://images.unsplash.com/photo-1737301214226-3f959016436f?auto=format&amp;fit=crop&amp;w=1400&amp;q=82"/>
+<div class="case-logo-overlay">
+<img alt="" src="assets/images/accountx-logo.png"/>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</div>
+</main>
+<div id="global-footer"></div>
+<script src="assets/js/components.js"></script>
+<script>
+    (() => {
+      const periodData = {
+        before: {
+          label: "Jan–Jun 2023",
+          title: "High spend was not translating into enough conversions.",
+          summary:
+            "The account had meaningful spend and reach, but conversion volume stayed low and acquisition cost remained too high.",
+          metrics: {
+            spend: "~$58.0K",
+            conversions: "48",
+            cpa: "~$1.21K",
+            impressions: "388K"
+          },
+          notes: {
+            spend: "Baseline paid media investment.",
+            conversions: "Low output for the budget.",
+            cpa: "Acquisition cost was too heavy.",
+            impressions: "Reach was present, efficiency was not."
+          }
+        },
+        after: {
+          label: "Jul–Dec 2023",
+          title: "The account became much more conversion-efficient.",
+          summary:
+            "Spend increased only slightly, while measured conversions grew sharply and cost per conversion dropped.",
+          metrics: {
+            spend: "~$62.4K",
+            conversions: "361",
+            cpa: "~$173",
+            impressions: "337K"
+          },
+          notes: {
+            spend: "Only +7.7% versus Jan–Jun.",
+            conversions: "+652.1% measured conversion growth.",
+            cpa: "85.7% lower acquisition cost.",
+            impressions: "Less reach, better conversion output."
+          }
+        }
+      };
+
+      const buttons = document.querySelectorAll("[data-period]");
+      const card = document.querySelector("[data-period-card]");
+
+      if (!buttons.length || !card) return;
+
+      const label = card.querySelector("[data-period-label]");
+      const title = card.querySelector("[data-period-title]");
+      const summary = card.querySelector("[data-period-summary]");
+
+      const render = (period) => {
+        const data = periodData[period];
+        if (!data) return;
+
+        label.textContent = data.label;
+        title.textContent = data.title;
+        summary.textContent = data.summary;
+
+        Object.entries(data.metrics).forEach(([key, value]) => {
+          const element = card.querySelector(`[data-metric="${key}"]`);
+          if (element) element.textContent = value;
+        });
+
+        Object.entries(data.notes).forEach(([key, value]) => {
+          const element = card.querySelector(`[data-note="${key}"]`);
+          if (element) element.textContent = value;
+        });
+
+        card.dataset.activePeriod = period;
+
+        buttons.forEach((button) => {
+          const active = button.dataset.period === period;
+          button.classList.toggle("is-active", active);
+          button.setAttribute("aria-pressed", String(active));
+        });
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => render(button.dataset.period));
+      });
+
+      render("before");
+    })();
+  </script>
+<script id="bb-work-sample-slider-script">
+(() => {
+  const caseCards = Array.from(
+    document.querySelectorAll("[data-case-card][data-case-target]")
+  );
+
+  const casePanels = Array.from(
+    document.querySelectorAll("[data-case-panel]")
+  );
+
+  const currentCaseLink = document.querySelector("[data-bb-current-case]");
+
+  const dentalOnlyLinks = Array.from(
+    document.querySelectorAll("[data-bb-dental-only]")
+  );
+
+  if (!caseCards.length || !casePanels.length) return;
+
+  const caseNavigation = {
+    dental: {
+      opportunity: "#bb-dental-opportunity",
+      solution: "#bb-dental-solution",
+      results: "#bb-dental-results"
+    },
+    agritech: {
+      opportunity: "#bb-agri-opportunity",
+      solution: "#bb-agri-solution",
+      results: "#bb-agri-results"
+    },
+    email: {
+      opportunity: "#bb-email-opportunity",
+      solution: "#bb-email-solution",
+      results: "#bb-email-results"
+    }
+  };
+
+  const syncPageNavigation = caseName => {
+    const config = caseNavigation[caseName] || caseNavigation.dental;
+
+    if (currentCaseLink) {
+      currentCaseLink.href = config.opportunity;
+
+      const label = currentCaseLink.querySelector("span");
+      if (label) label.textContent = "Opportunity";
+    }
+
+    if (dentalOnlyLinks[0]) {
+      dentalOnlyLinks[0].href = config.solution;
+      dentalOnlyLinks[0].hidden = false;
+    }
+
+    if (dentalOnlyLinks[1]) {
+      dentalOnlyLinks[1].href = config.results;
+      dentalOnlyLinks[1].hidden = false;
+    }
+  };
+
+  const openCase = card => {
+    const caseName = card.dataset.caseCard;
+    const target = document.querySelector(card.dataset.caseTarget);
+
+    if (!caseName || !target) return;
+
+    caseCards.forEach(item => {
+      const active = item === card;
+      item.classList.toggle("active", active);
+      item.setAttribute("aria-pressed", String(active));
+    });
+
+    casePanels.forEach(panel => {
+      panel.hidden = panel.dataset.casePanel !== caseName;
+    });
+
+    syncPageNavigation(caseName);
+
+    window.requestAnimationFrame(() => {
+      target.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+        block: "start"
+      });
+    });
+  };
+
+  caseCards.forEach(card => {
+    card.addEventListener("click", () => openCase(card));
+
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openCase(card);
+      }
+    });
+  });
+
+  const initiallyActiveCard =
+    caseCards.find(card => card.classList.contains("active")) ||
+    caseCards[0];
+
+  syncPageNavigation(
+    initiallyActiveCard?.dataset.caseCard || "dental"
+  );
+})();
+</script>
+</body>
+</html>

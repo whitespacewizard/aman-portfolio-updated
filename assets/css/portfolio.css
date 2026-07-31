@@ -1,0 +1,200 @@
+/* Standalone portfolio page */
+    .portfolio-page {
+      background: #e9e9e7;
+    }
+
+    .portfolio-page .portfolio-nav-link {
+      background: rgba(255, 255, 255, 0.11);
+    }
+
+    .portfolio-page-main {
+      background: #e9e9e7;
+    }
+
+    .portfolio-hero {
+      min-height: 72svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 150px clamp(24px, 6vw, 96px) 90px;
+      background: #e9e9e7;
+      font-family: "General Sans", Arial, sans-serif;
+      text-align: center;
+    }
+
+    .portfolio-hero-shell {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+    }
+
+    .portfolio-updated {
+      margin: 0 0 20px;
+      color: #4f4f4f;
+      font-size: 11.9px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .portfolio-updated::before {
+      content: "/";
+      margin-right: 8px;
+    }
+
+    .portfolio-page-title {
+      margin: 0;
+      color: #2d2d2d;
+      font-family: "General Sans", Arial, sans-serif;
+      font-size: clamp(45.9px, 5.95vw, 91.8px);
+      font-weight: 500;
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+    }
+
+    .portfolio-page-title span {
+      color: var(--accent);
+    }
+
+    .portfolio-page-intro {
+      max-width: 680px;
+      margin: 22px auto 0;
+      color: #707070;
+      font-size: clamp(11.9px, 0.85vw, 15.3px);
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+    }
+
+    .portfolio-category-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 68px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(43, 43, 43, 0.12);
+    }
+
+    .portfolio-category-nav a,
+    .portfolio-category-nav span {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 18px;
+      border-radius: 999px;
+      color: #5d5d5d;
+      font-size: 11.9px;
+      font-weight: 500;
+    }
+
+    .portfolio-category-nav .active {
+      color: #ffffff;
+      background: #171717;
+    }
+
+    .portfolio-category-nav span {
+      opacity: 0.56;
+    }
+
+    .portfolio-category-nav small {
+      color: var(--accent);
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .portfolio-page .portfolio-services {
+      padding-top: 100px;
+    }
+
+    .portfolio-page .portfolio-services .services-header {
+      margin-bottom: 68px;
+    }
+
+    .portfolio-page .service-card {
+      scroll-margin-top: 120px;
+    }
+
+    .freelance-placeholder {
+      padding: 115px clamp(24px, 6vw, 96px) 130px;
+      background: #f3f3f1;
+      font-family: "General Sans", Arial, sans-serif;
+    }
+
+    .freelance-placeholder-shell {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding-top: 70px;
+      border-top: 1px solid rgba(43, 43, 43, 0.13);
+    }
+
+    .freelance-placeholder h2 {
+      max-width: 760px;
+      margin: 0;
+      color: #2d2d2d;
+      font-size: clamp(35.7px, 3.74vw, 57.8px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .freelance-placeholder h2 span {
+      color: var(--accent);
+    }
+
+    .freelance-placeholder p:last-child {
+      margin: 18px 0 0;
+      color: #747474;
+      font-size: clamp(11.9px, 0.85vw, 15.3px);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 720px) {
+      .portfolio-hero {
+        min-height: auto;
+        padding: 120px 20px 62px;
+        text-align: left;
+      }
+
+      .portfolio-page-title {
+        font-size: clamp(44.2px, 14.45vw, 66.3px);
+      }
+
+      .portfolio-page-intro {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .portfolio-category-nav {
+        justify-content: flex-start;
+        gap: 6px;
+        margin-top: 46px;
+        padding-top: 22px;
+        overflow-x: auto;
+      }
+
+      .portfolio-category-nav a,
+      .portfolio-category-nav span {
+        flex: 0 0 auto;
+      }
+
+      .portfolio-page .portfolio-services {
+        padding-top: 74px;
+      }
+
+      .freelance-placeholder {
+        padding: 84px 20px 96px;
+      }
+
+      .freelance-placeholder-shell {
+        padding-top: 48px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .portfolio-hero,
+      .freelance-placeholder {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+    }
