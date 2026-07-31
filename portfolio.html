@@ -10,12 +10,6 @@
     content="Selected full-time growth marketing case studies by Aman Raj."
   />
 
-  <link rel="preconnect" href="https://api.fontshare.com" />
-  <link
-    rel="stylesheet"
-    href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,600,700&f[]=general-sans@400,500,600,700&display=swap"
-  />
-
   <link rel="stylesheet" href="assets/css/common.css" />
   <link rel="stylesheet" href="assets/css/portfolio.css" />
 
@@ -36,7 +30,7 @@
     .portfolio-page .service-company {
       margin: 0 0 14px;
       color: #777777;
-      font-family: "General Sans", Arial, sans-serif;
+      font-family: var(--font-body);
       font-size: 12px;
       font-weight: 600;
       line-height: 1.3;
@@ -106,6 +100,47 @@
       .portfolio-page #full-time .service-card {
         grid-template-columns: 1fr !important;
       }
+    }
+  </style>
+
+  <style id="portfolio-final-font-lock">
+    /* Portfolio page follows the typography variables from common.css. */
+    body.portfolio-page,
+    body.portfolio-page button,
+    body.portfolio-page input,
+    body.portfolio-page textarea,
+    body.portfolio-page select,
+    body.portfolio-page a,
+    body.portfolio-page p,
+    body.portfolio-page span,
+    body.portfolio-page small,
+    body.portfolio-page strong,
+    body.portfolio-page b,
+    body.portfolio-page li {
+      font-family: var(--font-body) !important;
+    }
+
+    body.portfolio-page h1,
+    body.portfolio-page h1 *,
+    body.portfolio-page h2,
+    body.portfolio-page h2 *,
+    body.portfolio-page h3,
+    body.portfolio-page h3 *,
+    body.portfolio-page h4,
+    body.portfolio-page h4 *,
+    body.portfolio-page h5,
+    body.portfolio-page h5 *,
+    body.portfolio-page h6,
+    body.portfolio-page h6 *,
+    body.portfolio-page .portfolio-page-title,
+    body.portfolio-page .portfolio-page-title *,
+    body.portfolio-page .service-title,
+    body.portfolio-page .service-title *,
+    body.portfolio-page .case-logo-text,
+    body.portfolio-page .case-logo-text *,
+    body.portfolio-page .footer-outline-name,
+    body.portfolio-page .footer-outline-name * {
+      font-family: var(--font-heading) !important;
     }
   </style>
 </head>
