@@ -2996,49 +2996,58 @@ main {
 
 
 /* Final global typography lock
-   Keeps the same fonts even when a page-specific stylesheet is loaded later. */
-body,
-body * {
+   Uses targeted text elements instead of body * so icons and embedded widgets
+   are not forced into the website font. */
+html body,
+html body button,
+html body input,
+html body textarea,
+html body select,
+html body label,
+html body legend,
+html body p,
+html body a,
+html body span,
+html body small,
+html body strong,
+html body b,
+html body em,
+html body li,
+html body dt,
+html body dd,
+html body th,
+html body td {
   font-family: var(--font-body) !important;
 }
 
-h1,
-h1 *,
-h2,
-h2 *,
-h3,
-h3 *,
-h4,
-h4 *,
-h5,
-h5 *,
-h6,
-h6 *,
-.hero-name,
-.hero-name *,
-.footer-outline-name,
-.footer-outline-name *,
-.faq-question,
-.faq-question *,
-.case-logo-text,
-.case-logo-text * {
+html body h1,
+html body h1 *,
+html body h2,
+html body h2 *,
+html body h3,
+html body h3 *,
+html body h4,
+html body h4 *,
+html body h5,
+html body h5 *,
+html body h6,
+html body h6 *,
+html body .hero-name,
+html body .hero-name *,
+html body .footer-outline-name,
+html body .footer-outline-name *,
+html body .faq-question,
+html body .faq-question *,
+html body .case-logo-text,
+html body .case-logo-text * {
   font-family: var(--font-heading) !important;
 }
 
-
-/* Hero name uses the global heading font */
-.hero-name,
-.hero-name * {
-  font-family: var(--font-body) !important;
-}
-
-
-/* Hero name typography */
-.hero-name,
-.hero-name * {
-  font-family: var(--font-heading) !important;
+html body .hero-name,
+html body .hero-name * {
   font-weight: 600 !important;
 }
+
 /* ==========================================================
    FOOTER REDESIGN V2
    Marquee first, contact form, compact link rail and outlined
@@ -4567,8 +4576,6 @@ h6 *,
 
 /* ==========================================================
    FINAL HEADER + MENU FONT LOCK
-   Keeps every header and navigation text on IBM Plex Sans even when
-   older rules appear earlier in this stylesheet.
    ========================================================== */
 
 .top-menu-shell,
@@ -4577,8 +4584,11 @@ h6 *,
 .top-menu-shell .mobile-brand,
 .top-menu-shell .mobile-menu-toggle,
 .top-menu-shell .mobile-menu-panel,
-.top-menu-shell .mobile-menu-panel a,
+.top-menu-shell .mobile-menu-panel a {
+  font-family: var(--font-body) !important;
+}
+
 .hero-name,
 .hero-name * {
-  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-family: var(--font-heading) !important;
 }
