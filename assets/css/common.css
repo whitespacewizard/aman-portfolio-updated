@@ -1,7 +1,7 @@
-@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=clash-grotesk@400,500,600,700&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap");
 
 :root {
-      --font-heading: "Clash Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-heading: "Clash Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --font-body: "Clash Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --background: #ffffff;
       --text: #2b2b2b;
@@ -245,7 +245,7 @@ h6,
       letter-spacing: -0.02em;
     }
 
-    /* Exact Clash Display Semibold heading style */
+    /* Exact Clash Grotesk Semibold heading style */
     .hero-name {
       margin: 0;
       font-family: var(--font-heading);
@@ -3036,7 +3036,7 @@ h6 *,
 /* Hero name typography */
 .hero-name,
 .hero-name * {
-  font-family: "Clash Display", "Helvetica Neue", Helvetica, sans-serif !important;
+  font-family: "Clash Grotesk", "Helvetica Neue", Helvetica, sans-serif !important;
   font-weight: 600 !important;
 }
 /* ==========================================================
