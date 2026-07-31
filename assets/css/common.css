@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
 
 :root {
-      --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-heading: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       --background: #ffffff;
       --text: #2b2b2b;
       --muted: #777777;
@@ -245,7 +245,7 @@ h6,
       letter-spacing: -0.02em;
     }
 
-    /* Exact Clash Grotesk Semibold heading style */
+    /* Manrope Semibold heading style */
     .hero-name {
       margin: 0;
       font-family: var(--font-heading);
@@ -3026,7 +3026,7 @@ h6 *,
 }
 
 
-/* Hero name override: Aman Raj uses Clash Grotesk */
+/* Hero name uses the global heading font */
 .hero-name,
 .hero-name * {
   font-family: var(--font-body) !important;
@@ -3036,7 +3036,7 @@ h6 *,
 /* Hero name typography */
 .hero-name,
 .hero-name * {
-  font-family: "Clash Grotesk", "Helvetica Neue", Helvetica, sans-serif !important;
+  font-family: var(--font-heading) !important;
   font-weight: 600 !important;
 }
 /* ==========================================================
@@ -4563,3 +4563,22 @@ h6 *,
   }
 }
 
+
+
+/* ==========================================================
+   FINAL HEADER + MENU FONT LOCK
+   Keeps every header and navigation text on Manrope even when
+   older rules appear earlier in this stylesheet.
+   ========================================================== */
+
+.top-menu-shell,
+.top-menu-shell .top-nav,
+.top-menu-shell .top-nav a,
+.top-menu-shell .mobile-brand,
+.top-menu-shell .mobile-menu-toggle,
+.top-menu-shell .mobile-menu-panel,
+.top-menu-shell .mobile-menu-panel a,
+.hero-name,
+.hero-name * {
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
