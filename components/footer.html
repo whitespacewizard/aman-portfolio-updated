@@ -23,21 +23,31 @@
   <div class="footer-shell">
     <section aria-label="Contact form" class="footer-form-panel">
       <form
-        action="mailto:amanraj.gtm@gmail.com"
+        accept-charset="UTF-8"
+        action="mailto:amanraj.gtm@gmail.com?subject=New%20website%20contact"
+        autocomplete="on"
         class="footer-form"
         enctype="text/plain"
         method="post"
       >
         <div class="footer-form-grid">
-          <label class="footer-field">
+          <label class="footer-field" for="footer-full-name">
             <span>Your full name *</span>
-            <input autocomplete="name" name="Full name" placeholder="John Smith" required type="text" />
+            <input
+              autocomplete="name"
+              id="footer-full-name"
+              name="Full name"
+              placeholder="John Smith"
+              required
+              type="text"
+            />
           </label>
 
-          <label class="footer-field">
+          <label class="footer-field" for="footer-role">
             <span>Your role *</span>
             <input
               autocomplete="organization-title"
+              id="footer-role"
               name="Role"
               placeholder="Founder, Recruiter, Freelancer, etc."
               required
@@ -46,10 +56,11 @@
           </label>
         </div>
 
-        <label class="footer-field">
+        <label class="footer-field" for="footer-email">
           <span>Your email address *</span>
           <input
             autocomplete="email"
+            id="footer-email"
             name="Email"
             placeholder="mail@example.com"
             required
@@ -59,21 +70,38 @@
 
         <fieldset class="footer-status-field">
           <legend>Your status? *</legend>
+
           <div class="footer-status-options">
-            <label>
-              <input name="Status" required type="radio" value="I have a project" />
+            <label for="footer-status-project">
+              <input
+                autocomplete="off"
+                id="footer-status-project"
+                name="Status"
+                required
+                type="radio"
+                value="I have a project"
+              />
               <span>I have a project</span>
             </label>
-            <label>
-              <input name="Status" required type="radio" value="I am a recruiter" />
+
+            <label for="footer-status-recruiter">
+              <input
+                autocomplete="off"
+                id="footer-status-recruiter"
+                name="Status"
+                required
+                type="radio"
+                value="I am a recruiter"
+              />
               <span>I am a recruiter</span>
             </label>
           </div>
         </fieldset>
 
-        <label class="footer-field footer-message-field">
+        <label class="footer-field footer-message-field" for="footer-more-info">
           <span>More info *</span>
           <textarea
+            id="footer-more-info"
             name="More info"
             placeholder="What’s this about? Project, hiring, or opportunity?"
             required
@@ -88,17 +116,22 @@
       </form>
     </section>
 
-<nav aria-label="Contact and social links" class="footer-contact-row">
+    <nav aria-label="Contact and social links" class="footer-contact-row">
       <a href="mailto:amanraj.gtm@gmail.com">
         <span>Email</span>
         <strong>amanraj.gtm@gmail.com</strong>
       </a>
+
       <a href="tel:+917358258229">
         <span>Phone</span>
         <strong>+91 73582 58229</strong>
       </a>
-      <!-- Replace the profile URL below with your real LinkedIn URL. -->
-      <a href="https://www.linkedin.com/in/your-profile" rel="noopener noreferrer" target="_blank">
+
+      <a
+        href="https://www.linkedin.com/in/your-profile"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <span>LinkedIn</span>
         <strong>View profile</strong>
       </a>
