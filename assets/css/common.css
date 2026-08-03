@@ -2429,7 +2429,7 @@ footer {
 
 /* ==========================================================FOOTER FINAL CONTACT + STAR FIXThis override guarantees one star between messages andrenders the email/phone text even if the component markupcontains missing, raw, or duplicated contact text.========================================================== */
 
-/* Make the large outlined name slightly more visible */.footer-outline-name {-webkit-text-stroke: 1px rgba(43, 43, 43, 0.16) !important;text-stroke: 1px rgba(43, 43, 43, 0.16) !important;}
+/* Make the large outlined name slightly more visible */.footer-outline-name {-webkit-text-stroke: 1px rgba(43, 43, 43, 0.16) !important;}
 
 /* The footer HTML already contains star elements.Disable the old CSS-generated star to prevent duplicates. */.footer-marquee-group span::after {content: none !important;display: none !important;}
 
@@ -2569,7 +2569,7 @@ to {opacity: 1;transform: translateY(0);}}
 
 .site-footer {isolation: isolate;}
 
-.site-footer .footer-outline-name,.site-footer .footer-display-name,.site-footer .footer-name {display: block !important;visibility: visible !important;opacity: 1 !important;color: #d0d0cc !important;background: none !important;-webkit-background-clip: border-box !important;background-clip: border-box !important;-webkit-text-fill-color: #d0d0cc !important;-webkit-text-stroke: 0 transparent !important;text-stroke: 0 transparent !important;text-shadow: none !important;paint-order: fill !important;z-index: 1 !important;}
+.site-footer .footer-outline-name,.site-footer .footer-display-name,.site-footer .footer-name {display: block !important;visibility: visible !important;opacity: 1 !important;color: #d0d0cc !important;background: none !important;-webkit-background-clip: border-box !important;background-clip: border-box !important;-webkit-text-fill-color: #d0d0cc !important;-webkit-text-stroke: 0 transparent !important;text-shadow: none !important;paint-order: fill !important;z-index: 1 !important;}
 
 .footer-shell {position: relative;z-index: 2;}
 
@@ -2643,7 +2643,7 @@ html body .hero-name,html body .hero-name * {font-weight: 600 !important;}
 
 .site-footer .footer-field input::placeholder,.site-footer .footer-field textarea::placeholder {color: #aaaaaa;opacity: 1;}
 
-.site-footer .footer-field input,.site-footer .footer-field textarea {border-bottom-color: var(--accent);}
+.site-footer .footer-field input:focus,.site-footer .footer-field textarea:focus {border-bottom-color: var(--accent);}
 
 .site-footer .footer-status-field {min-width: 0;margin: 0;padding: 0;border: 0;}
 
@@ -2659,21 +2659,21 @@ html body .hero-name,html body .hero-name * {font-weight: 600 !important;}
 
 .site-footer .footer-status-options span::before {content: "";width: 8px;height: 8px;border: 1px solid rgba(43, 43, 43, 0.28);border-radius: 50%;background: transparent;}
 
-.site-footer .footer-status-options input + span {color: #ffffff;border-color: #242424;background: #242424;}
+.site-footer .footer-status-options input:checked + span {color: #ffffff;border-color: #242424;background: #242424;}
 
-.site-footer .footer-status-options input + span::before {border-color: var(--accent);background: var(--accent);}
+.site-footer .footer-status-options input:checked + span::before {border-color: var(--accent);background: var(--accent);}
 
-.site-footer .footer-status-options input + span {outline: 2px solid var(--accent);outline-offset: 3px;}
+.site-footer .footer-status-options input:focus-visible + span {outline: 2px solid var(--accent);outline-offset: 3px;}
 
 .site-footer .footer-submit {min-height: 50px;display: inline-flex;align-items: center;justify-content: center;gap: 10px;width: 100%;padding: 0 22px;border: 0;border-radius: 12px;color: #ffffff;background: var(--accent);font-family: var(--font-body) !important;font-size: 13px;font-weight: 700;cursor: pointer;transition: background-color 180ms ease, transform 180ms ease;}
 
-.site-footer .footer-submit {background: #e43f14;transform: translateY(-1px);}
+.site-footer .footer-submit:hover {background: #e43f14;transform: translateY(-1px);}
 
-.site-footer .footer-submit {outline: 2px solid #242424;outline-offset: 3px;}
+.site-footer .footer-submit:focus-visible {outline: 2px solid #242424;outline-offset: 3px;}
 
 .site-footer .footer-bottom {position: relative;z-index: 4;display: flex !important;align-items: center;justify-content: space-between;gap: 18px;margin-top: 28px;padding: 0 2px;color: #777777;font-size: 10px;letter-spacing: 0.02em;}
 
-.site-footer .footer-contact-row {position: relative;z-index: 4;display: grid;grid-template-columns: repeat(4, minmax(0, 1fr));margin-top: clamp(48px, 6vw, 78px);border-top: 1px solid rgba(43, 43, 43, 0.12);border-bottom: 1px solid rgba(43, 43, 43, 0.12);}
+.site-footer .footer-contact-row {position: relative;z-index: 4;display: grid;grid-template-columns: repeat(3, minmax(0, 1fr));margin-top: clamp(48px, 6vw, 78px);border-top: 1px solid rgba(43, 43, 43, 0.12);border-bottom: 1px solid rgba(43, 43, 43, 0.12);}
 
 .site-footer .footer-contact-row a {min-width: 0;display: grid;gap: 7px;padding: 20px clamp(12px, 2vw, 24px);border-right: 1px solid rgba(43, 43, 43, 0.12);transition: background-color 180ms ease;}
 
@@ -2687,7 +2687,7 @@ html body .hero-name,html body .hero-name * {font-weight: 600 !important;}
 
 .site-footer .footer-contact-row strong {min-width: 0;overflow-wrap: anywhere;color: #333333;font-size: clamp(10.5px, 0.8vw, 12px);font-weight: 600;line-height: 1.35;}
 
-.site-footer .footer-outline-name,.site-footer .footer-display-name,.site-footer .footer-name {position: relative !important;inset: auto !important;z-index: 2 !important;width: 100% !important;display: block !important;margin: clamp(54px, 7vw, 100px) 0 -0.075em !important;padding-left: 0.08em;overflow: visible;color: transparent !important;background: none !important;font-family: var(--font-heading) !important;font-size: clamp(82px, 16.2vw, 278px) !important;font-weight: 500 !important;line-height: 0.76 !important;letter-spacing: 0.08em !important;text-align: center;text-transform: uppercase;white-space: nowrap;-webkit-background-clip: border-box !important;background-clip: border-box !important;-webkit-text-fill-color: transparent !important;-webkit-text-stroke: 1px rgba(43, 43, 43, 0.15) !important;text-stroke: 1px rgba(43, 43, 43, 0.15) !important;text-shadow: none !important;paint-order: stroke !important;opacity: 1 !important;visibility: visible !important;transform: none !important;pointer-events: none;user-select: none;}
+.site-footer .footer-outline-name,.site-footer .footer-display-name,.site-footer .footer-name {position: relative !important;inset: auto !important;z-index: 2 !important;width: 100% !important;display: block !important;margin: clamp(54px, 7vw, 100px) 0 -0.075em !important;padding-left: 0.08em;overflow: visible;color: transparent !important;background: none !important;font-family: var(--font-heading) !important;font-size: clamp(82px, 16.2vw, 278px) !important;font-weight: 500 !important;line-height: 0.76 !important;letter-spacing: 0.08em !important;text-align: center;text-transform: uppercase;white-space: nowrap;-webkit-background-clip: border-box !important;background-clip: border-box !important;-webkit-text-fill-color: transparent !important;-webkit-text-stroke: 1px rgba(43, 43, 43, 0.15) !important;text-shadow: none !important;paint-order: stroke !important;opacity: 1 !important;visibility: visible !important;transform: none !important;pointer-events: none;user-select: none;}
 
 @media (max-width: 900px) {.site-footer .footer-form-panel {grid-template-columns: 1fr;gap: 42px;}
 
@@ -2785,7 +2785,7 @@ html body .hero-name,html body .hero-name * {font-weight: 600 !important;}
 
 /* ==========================================================FOOTER NAME SIZE + FILL UPDATE25% larger, filled with the same light grey used previouslyfor the outline.========================================================== */
 
-.site-footer .footer-outline-name,.site-footer .footer-display-name,.site-footer .footer-name {color: rgba(43, 43, 43, 0.15) !important;-webkit-text-fill-color: rgba(43, 43, 43, 0.15) !important;-webkit-text-stroke: 0 transparent !important;text-stroke: 0 transparent !important;paint-order: fill !important;font-size: clamp(102.5px, 20.25vw, 347.5px) !important;}
+.site-footer .footer-outline-name,.site-footer .footer-display-name,.site-footer .footer-name {color: rgba(43, 43, 43, 0.15) !important;-webkit-text-fill-color: rgba(43, 43, 43, 0.15) !important;-webkit-text-stroke: 0 transparent !important;paint-order: fill !important;font-size: clamp(102.5px, 20.25vw, 347.5px) !important;}
 
 @media (max-width: 620px) {.site-footer .footer-outline-name,.site-footer .footer-display-name,.site-footer .footer-name {font-size: clamp(85px, 28.125vw, 145px) !important;}}
 
@@ -2915,6 +2915,10 @@ html body .hero-name,html body .hero-name * {font-weight: 600 !important;}
     font-size: 13.7px !important;
     font-weight: 500 !important;
     line-height: 1 !important;
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.04em !important;
+    text-transform: uppercase !important;
   }
 
   .top-nav .home-link {
@@ -3048,5 +3052,262 @@ html body .hero-name,html body .hero-name * {font-weight: 600 !important;}
     letter-spacing: -0.052em !important;
     transform: translateX(-50%) translateY(0.04em) !important;
     transform-origin: center bottom !important;
+  }
+}
+
+/* ==========================================================
+   FINAL FOOTER FORM STATE FIX
+   Only the checked radio is visually active.
+========================================================== */
+.site-footer .footer-status-options input:not(:checked) + span {
+  color: #666666;
+  border-color: rgba(43, 43, 43, 0.12);
+  background: #f5f5f2;
+  outline: 0;
+}
+
+.site-footer .footer-status-options input:not(:checked) + span::before {
+  border-color: rgba(43, 43, 43, 0.28);
+  background: transparent;
+}
+
+.site-footer .footer-status-options input:checked + span {
+  color: #ffffff;
+  border-color: #242424;
+  background: #242424;
+}
+
+.site-footer .footer-status-options input:checked + span::before {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.site-footer .footer-status-options input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.site-footer .footer-status-options input:checked:focus-visible + span {
+  outline-color: #242424;
+}
+
+/* ==========================================================
+   FINAL MOBILE HERO REFERENCE FORMAT
+   Layout reference only. Existing colours, content and desktop
+   hero remain unchanged.
+========================================================== */
+
+@media (max-width: 720px) {
+  .home-page-view .hero-stage {
+    min-height: auto !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas:
+      "photo"
+      "left"
+      "right" !important;
+    align-content: start !important;
+    align-items: start !important;
+    justify-items: stretch !important;
+    gap: 0 !important;
+    padding: 72px 20px 44px !important;
+  }
+
+  .home-page-view .hero .portrait-card {
+    grid-area: photo !important;
+    position: relative !important;
+    inset: auto !important;
+    order: initial !important;
+    width: 111px !important;
+    height: 111px !important;
+    aspect-ratio: 1 !important;
+    justify-self: start !important;
+    margin: 8px 0 26px !important;
+    border-radius: 50% !important;
+    transform: none !important;
+  }
+
+  .home-page-view .hero .portrait-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 50% 28% !important;
+    transform: scale(1.08) !important;
+  }
+
+  .home-page-view .hero .name-block {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .home-page-view .hero .name-block.left {
+    grid-area: left !important;
+    order: initial !important;
+    text-align: left !important;
+  }
+
+  .home-page-view .hero .name-block.right {
+    grid-area: right !important;
+    order: initial !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+  }
+
+  .home-page-view .hero .name-block.left .eyebrow {
+    min-height: 0 !important;
+    display: block !important;
+    margin: 0 0 12px !important;
+    color: #747474;
+    font-size: 11.9px !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+  }
+
+  .home-page-view .hero .name-block.left .detail,
+  .home-page-view .hero .name-block.right .eyebrow {
+    display: none !important;
+  }
+
+  .home-page-view .hero .hero-name {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    font-size: clamp(64px, 18.8vw, 83px) !important;
+    line-height: 0.92 !important;
+    letter-spacing: -0.055em !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    transform: none !important;
+  }
+
+  .home-page-view .hero .name-block.right .hero-name {
+    margin-top: 0.04em !important;
+  }
+
+  .home-page-view .hero .name-block.right .detail {
+    max-width: 330px !important;
+    display: block !important;
+    margin: 20px 0 0 !important;
+    color: #6e6e6e;
+    font-size: 12.75px !important;
+    line-height: 1.45 !important;
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page-view .hero-stage {
+    min-height: auto !important;
+    padding: 68px 16px 40px !important;
+  }
+
+  .home-page-view .hero .portrait-card {
+    width: 105px !important;
+    height: 105px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .home-page-view .hero .hero-name {
+    font-size: clamp(58px, 18vw, 70px) !important;
+  }
+}
+
+/* ==========================================================
+   FINAL MOBILE HERO NAME ONE LINE
+   Keeps AMAN and RAJ on one row without changing desktop.
+========================================================== */
+
+@media (max-width: 720px) {
+  .home-page-view .hero-stage {
+    grid-template-columns: max-content max-content minmax(0, 1fr) !important;
+    grid-template-areas:
+      "photo photo photo"
+      "eyebrow eyebrow eyebrow"
+      "aman raj ."
+      "detail detail detail" !important;
+    column-gap: 10px !important;
+    row-gap: 0 !important;
+  }
+
+  .home-page-view .hero .name-block.left,
+  .home-page-view .hero .name-block.right {
+    display: contents !important;
+  }
+
+  .home-page-view .hero .name-block.left .eyebrow {
+    grid-area: eyebrow !important;
+    margin-bottom: 14px !important;
+  }
+
+  .home-page-view .hero .name-block.left .hero-name {
+    grid-area: aman !important;
+    width: auto !important;
+    max-width: none !important;
+    justify-self: start !important;
+    align-self: baseline !important;
+    font-size: clamp(50px, 15.4vw, 68px) !important;
+    line-height: 0.9 !important;
+  }
+
+  .home-page-view .hero .name-block.right .hero-name {
+    grid-area: raj !important;
+    width: auto !important;
+    max-width: none !important;
+    justify-self: start !important;
+    align-self: baseline !important;
+    margin: 0 !important;
+    font-size: clamp(47px, 14.2vw, 63px) !important;
+    line-height: 0.9 !important;
+  }
+
+  .home-page-view .hero .name-block.right .detail {
+    grid-area: detail !important;
+    margin-top: 22px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page-view .hero-stage {
+    column-gap: 8px !important;
+  }
+
+  .home-page-view .hero .name-block.left .hero-name {
+    font-size: clamp(47px, 15vw, 58px) !important;
+  }
+
+  .home-page-view .hero .name-block.right .hero-name {
+    font-size: clamp(44px, 13.9vw, 54px) !important;
+  }
+}
+
+/* ==========================================================
+   FINAL MOBILE MENU RIGHT ALIGN
+========================================================== */
+
+@media (max-width: 720px) {
+  .mobile-menu-toggle {
+    margin-left: auto !important;
+  }
+}
+
+/* ==========================================================
+   FINAL MOBILE BRAND UPPERCASE FIX
+========================================================== */
+
+@media (max-width: 720px) {
+  .mobile-brand {
+    font-family: var(--font-heading) !important;
+    font-size: 12.1px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.04em !important;
+    text-transform: uppercase !important;
   }
 }
