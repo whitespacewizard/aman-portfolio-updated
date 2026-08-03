@@ -3311,3 +3311,185 @@ html body .hero-name,html body .hero-name * {font-weight: 600 !important;}
     text-transform: uppercase !important;
   }
 }
+
+/* ==========================================================
+   FINAL HIDE MOBILE BRAND ON DESKTOP
+========================================================== */
+
+@media (min-width: 721px) {
+  .top-nav .mobile-brand {
+    display: none !important;
+  }
+}
+
+/* ==========================================================
+   FINAL CAREER TOOL STACK AND DESKTOP MENU CASE FIX
+========================================================== */
+
+/* Tool stack sits inside Career, directly below the Founder role. */
+.career-tool-stack {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(64px, 7vw, 96px);
+  padding-top: clamp(34px, 4vw, 50px);
+}
+
+.career-tool-stack-heading {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.career-tool-stack-line {
+  height: 1px;
+  flex: 1 1 auto;
+  background: rgba(43, 43, 43, 0.14);
+}
+
+.career-tool-stack-title {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #5f5f5f;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.career-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: center;
+  gap: 28px 24px;
+  margin-top: clamp(34px, 4vw, 48px);
+}
+
+.career-tool-item {
+  min-width: 0;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+}
+
+.career-tool-item img {
+  width: auto;
+  max-width: min(100%, 196px);
+  height: auto;
+  max-height: 74px;
+  display: block;
+  object-fit: contain;
+  transform: scale(1.67);
+  transform-origin: center;
+}
+
+/* Keep the existing Career fade behind the logo content. */
+.career-bottom-fade {
+  z-index: 0;
+}
+
+/* Restore the original title case on the desktop navigation. */
+@media (min-width: 721px) {
+  .top-nav a {
+    font-family: var(--font-body) !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .career-tool-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .career-tool-stack {
+    margin-top: 52px;
+    padding-top: 30px;
+  }
+
+  .career-tool-stack-heading {
+    gap: 12px;
+  }
+
+  .career-tool-stack-title {
+    font-size: 10.5px;
+    letter-spacing: 0.10em;
+  }
+
+  .career-tool-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 14px;
+    margin-top: 30px;
+  }
+
+  .career-tool-item {
+    min-height: 72px;
+    padding: 6px;
+  }
+
+  .career-tool-item img {
+    max-width: min(100%, 152px);
+    max-height: 53px;
+    transform: scale(1.44);
+  }
+}
+
+/* ==========================================================
+   FINAL CAREER CERTIFICATIONS
+========================================================== */
+
+.career-certifications {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(60px, 6vw, 88px);
+}
+
+.career-certification-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(22px, 2.5vw, 32px);
+  margin-top: clamp(34px, 4vw, 48px);
+}
+
+.career-certification-card {
+  min-width: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.career-certification-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  border: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 720px) {
+  .career-certifications {
+    margin-top: 50px;
+  }
+
+  .career-certification-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 30px;
+  }
+}
