@@ -6,9 +6,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>AccountX Case Study | Aman Raj</title>
 <meta content="AccountX global sales and marketing engine case study covering opportunity, solution and results." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="assets/css/common.css" rel="stylesheet"/>
 <link href="assets/css/accountx.css" rel="stylesheet"/>
 <style id="accountx-flow-layer">
@@ -1034,9 +1031,7 @@
   margin: 0 !important;
   padding: 0 !important;
   color: #ffffff !important;
-  font-family: var(--font-heading);
   font-size: clamp(35px, 4.55vw, 63px);
-  font-weight: 500;
   line-height: 0.96;
   letter-spacing: -0.052em;
 }
@@ -1044,11 +1039,6 @@
 .accountx-page .acx-quick-clean-hero .acx-title span {
   display: block;
   color: #ffffff !important;
-  font-family: inherit !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-  letter-spacing: inherit !important;
 }
 
 .accountx-page .acx-quick-clean-hero .acx-hero-role {
@@ -1822,72 +1812,106 @@
 </style>
 
 <style id="accountx-final-font-lock">
-/* Final AccountX font source and override.
-   This sits after accountx.css, so page CSS cannot replace the font variables. */
-:root,
-body.accountx-page {
-  --font-heading: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+/* AccountX now follows the same typography variables and lock as Bertrand & Bernard. */
+.accountx-page,
+.accountx-page *,
+.accountx-page *::before,
+.accountx-page *::after {
+  font-family: var(--font-body) !important;
 }
 
-body.accountx-page {
+.accountx-page h1,
+.accountx-page h1 *,
+.accountx-page h2,
+.accountx-page h2 *,
+.accountx-page h3,
+.accountx-page h3 *,
+.accountx-page h4,
+.accountx-page h4 *,
+.accountx-page h5,
+.accountx-page h5 *,
+.accountx-page h6,
+.accountx-page h6 *,
+.accountx-page .acx-title,
+.accountx-page .acx-title *,
+.accountx-page .case-logo-text,
+.accountx-page .case-logo-text *,
+.accountx-page .footer-outline-name,
+.accountx-page .footer-outline-name * {
+  font-family: var(--font-heading) !important;
+}
+</style>
+
+<style id="accountx-hero-line-font-fix">
+/* Force both AccountX hero lines to use the exact same heading face. */
+.accountx-page .acx-quick-clean-hero .acx-title > .acx-title-line {
+  display: block;
+  font-family: var(--font-heading) !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-synthesis: none;
+  font-variation-settings: normal;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+</style>
+
+
+<style id="shared-case-study-typography-alignment">
+/* Shared typography roles across Quick Clean, AccountX and Bertrand & Bernard. */
+.accountx-page .acx-kicker {
   font-family: var(--font-body) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.accountx-page .acx-title,
+.accountx-page .acx-title * {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(35px, 4.55vw, 63px) !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  line-height: 0.96 !important;
+  letter-spacing: -0.052em !important;
   font-synthesis: none;
 }
 
-/* Page copy and interface text */
-body.accountx-page button,
-body.accountx-page input,
-body.accountx-page textarea,
-body.accountx-page select,
-body.accountx-page .accountx-page-view,
-body.accountx-page .acx-page-nav,
-body.accountx-page .acx-page-nav a,
-body.accountx-page .acx-page-nav span,
-body.accountx-page .acx-page-nav i,
-body.accountx-page .top-menu-shell,
-body.accountx-page .top-menu-shell a,
-body.accountx-page .top-menu-shell button,
-body.accountx-page .mobile-menu-panel,
-body.accountx-page .mobile-menu-panel a,
-body.accountx-page .site-footer,
-body.accountx-page .site-footer a,
-body.accountx-page .site-footer button,
-body.accountx-page .site-footer input,
-body.accountx-page .site-footer textarea,
-body.accountx-page .site-footer label,
-body.accountx-page .site-footer legend {
+.accountx-page .acx-hero-role-copy {
   font-family: var(--font-body) !important;
+  font-size: clamp(13px, 1vw, 15px) !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1.55 !important;
 }
 
-/* Main and section headings */
-body.accountx-page h1,
-body.accountx-page h1 *,
-body.accountx-page h2,
-body.accountx-page h2 *,
-body.accountx-page h3,
-body.accountx-page h3 *,
-body.accountx-page h4,
-body.accountx-page h4 *,
-body.accountx-page h5,
-body.accountx-page h5 *,
-body.accountx-page h6,
-body.accountx-page h6 *,
-body.accountx-page .acx-title,
-body.accountx-page .acx-title *,
-body.accountx-page .qcs4-result-metrics strong,
-body.accountx-page .case-logo-text,
-body.accountx-page .case-logo-text *,
-body.accountx-page .footer-outline-name,
-body.accountx-page .footer-outline-name * {
+.accountx-page .qcs2-simple-head h2 {
   font-family: var(--font-heading) !important;
+  font-size: clamp(38px, 4.5vw, 58px) !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
 }
 
-/* IBM Plex needs less aggressive tracking than the old display font. */
-body.accountx-page .acx-quick-clean-hero .acx-title {
-  font-weight: 600 !important;
-  letter-spacing: -0.035em !important;
-  line-height: 0.98 !important;
+.accountx-page #acx-opportunity .qcs2-simple-head > p,
+.accountx-page #acx-opportunity .qcs2-text-points > p,
+.accountx-page #acx-opportunity .qcs7-opportunity-copy {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0 !important;
+}
+
+.accountx-page #acx-opportunity .qcs7-opportunity-number,
+.accountx-page #acx-opportunity .qcs7-opportunity-heading strong {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
 }
 </style>
 
@@ -1912,12 +1936,12 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
           </a>
 <p class="acx-kicker">AccountX · Case Study 02</p>
 <h1 class="acx-title" id="acx-title">
-            <span>Building a Global Sales &amp;</span>
-            <span>Marketing Engine</span>
+            <span class="acx-title-line">Building a Global Sales &amp;</span>
+            <span class="acx-title-line">Marketing Engine</span>
 </h1>
 <div aria-label="Role and ownership" class="acx-hero-role">
 <p class="acx-hero-role-copy">
-              As Manager, Growth and Communication, I built AccounTX’s global acquisition foundation across 10 markets, covering country-wise ICP research, market-specific positioning, website and sales messaging, proposal logic, email infrastructure, outbound workflows and lead generation in close partnership with the founders and sales team.
+              As Manager, Growth and Communication, I built AccounTX’s global acquisition foundation across 10 markets, covering market-specific ICP research, market-specific positioning, website and sales messaging, proposal logic, email infrastructure, outbound workflows and lead generation in close partnership with the founders and sales team.
             </p>
 </div>
 </div>
@@ -1956,7 +1980,7 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
       <p>
         <span class="qcs7-opportunity-heading">
           <span class="qcs7-opportunity-number">02</span>
-          <strong>No country-wise ICP research.</strong>
+          <strong>No market-specific ICP framework.</strong>
         </span>
 
         <span class="qcs7-opportunity-copy">
@@ -2014,7 +2038,7 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
       <div class="acx-acquisition-grid">
         <article>
           <small>Outbound foundation</small>
-          <strong>Email marketing</strong>
+          <strong>Outbound email</strong>
           <p>
             Set up domains and mailboxes, completed the warm-up process and built
             targeted email sequences. Campaigns were launched market by market,
@@ -2040,12 +2064,38 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
           </p>
         </article>
       </div>
+
+      <figure aria-labelledby="acx-growth-roadmap-title" style="margin: clamp(42px, 5vw, 60px) 0 0;">
+        <h3
+          id="acx-growth-roadmap-title"
+          style="margin: 0 0 20px; color: #242424; font-family: var(--font-heading); font-size: clamp(27px, 3vw, 38px); font-weight: 600; line-height: 1.08; letter-spacing: -0.035em;"
+        >
+          Growth engine roadmap
+        </h3>
+
+        <div class="acx-dashboard-placeholder">
+          <div class="acx-placeholder-browser">
+            <div class="acx-placeholder-canvas" style="background: #ffffff;">
+              <img
+                alt="Six-month AccountX growth engine roadmap"
+                loading="lazy"
+                src="assets/images/accountx-growth-engine-roadmap.png"
+                style="object-fit: contain; background: #ffffff;"
+              />
+            </div>
+          </div>
+        </div>
+
+        <figcaption style="max-width: 920px; margin: 14px 0 0; color: #777777; font-size: 11px; line-height: 1.6;">
+          Excerpt from the six-month growth roadmap delivered to the client, covering acquisition channels, execution priorities, KPIs and customer-journey metrics.
+        </figcaption>
+      </figure>
     </div>
 
     <div class="qcs2-solution-group">
       <div class="qcs2-group-label">
         <span>02</span>
-        <strong>Country-wise ICP research and segmentation</strong>
+        <strong>Market-specific ICP research and segmentation</strong>
       </div>
 
       <p class="acx-solution-summary">
@@ -2087,6 +2137,9 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
           <span>Singapore</span>
           <span>Australia</span>
         </div>
+        <p style="grid-column: 1 / -1; margin: 4px 0 0; color: #777777; font-size: 11px; line-height: 1.5;">
+          Initial rollout shown across six markets; the research framework was later expanded across 10 markets.
+        </p>
       </div>
     </div>
 
@@ -2143,7 +2196,7 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
 
       <p>
         The work gave AccountX a repeatable acquisition system, clearer
-        country-wise targeting and a consistent set of sales and marketing
+        market-specific targeting and a consistent set of sales and marketing
         assets for global growth.
       </p>
     </header>
@@ -2152,7 +2205,7 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
 
       <div>
         <small>Qualified lead generation</small>
-        <strong>8–10 / month</strong>
+        <strong>8–10/month</strong>
         <p>
           Qualified leads generated through warmed email campaigns, LinkedIn
           activity and structured follow-up.
@@ -2160,7 +2213,7 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
       </div>
 
       <div>
-        <small>Country-wise GTM research</small>
+        <small>Market-specific GTM research</small>
         <strong>10 markets</strong>
         <p>
           ICP segmentation, compliance context, buyer pain points and service-fit
@@ -2214,14 +2267,15 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
 <article class="service-card" id="next-portfolio-bertrand-bernard" style="--stack-index: 0;">
 <div class="service-copy">
 <p class="service-company">Bertrand &amp; Bernard LLP</p>
-<h3 class="service-title">Performance Marketing &amp; E-commerce CRO</h3>
+<h3 class="service-title">Performance Marketing, CRO &amp; Growth</h3>
 <p class="service-description">
-            Paid campaigns, Shopify CRO, Meta Ads, landing pages, A/B testing,
-            CPA reduction and conversion journey improvements for e-commerce
-            brands.
+            Worked across 7+ client accounts spanning Google Ads, Meta Ads, paid
+            acquisition, landing pages, Shopify CRO, A/B testing, pricing strategy
+            and B2B outbound.
           </p>
+<p class="service-metrics" style="margin: 16px 0 0; color: #777777; font-family: var(--font-body); font-size: 12px; font-weight: 600; line-height: 1.4; letter-spacing: 0.02em;">7+ clients · 3 featured case studies</p>
 <a class="case-link" href="bertrand-bernard.html">
-            View the case study
+            View the case studies
             <svg aria-hidden="true" viewbox="0 0 24 24">
 <path d="M5 12h12.17l-4.58 4.59L14 18l7-7-7-7-1.41 1.41L17.17 10H5v2Z"></path>
 </svg>
@@ -2238,12 +2292,13 @@ body.accountx-page .acx-quick-clean-hero .acx-title {
 <article class="service-card" id="next-portfolio-quick-clean" style="--stack-index: 1;">
 <div class="service-copy">
 <p class="service-company">Quick Clean Laundry Systems</p>
-<h3 class="service-title">Commercial Laundry Growth in India</h3>
+<h3 class="service-title">Commercial Laundry Growth Engine</h3>
 <p class="service-description">
-            Built a structured commercial growth system across ICP segmentation,
-            stakeholder messaging, industry events, LinkedIn, email, qualification
-            and multi-channel demand generation.
+            Built Quick Clean’s commercial growth system across hospitality,
+            healthcare and retail through ICP-led qualification, sector positioning,
+            sales enablement and connected CRM workflows.
           </p>
+<p class="service-metrics" style="margin: 16px 0 0; color: #777777; font-family: var(--font-body); font-size: 12px; font-weight: 600; line-height: 1.4; letter-spacing: 0.02em;">20–25 SQLs/quarter · 15–17 retail leads/month</p>
 <a class="case-link" href="quick-clean.html">
             View the case study
             <svg aria-hidden="true" viewbox="0 0 24 24">

@@ -1598,10 +1598,10 @@
   margin: 0;
   color: #252525;
   font-family: var(--font-heading);
-  font-size: clamp(36px, 4.2vw, 58px);
-  font-weight: 600;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 500;
   line-height: 1;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.04em;
 }
 
 .bb-page .bb-case-studies-head p {
@@ -1627,7 +1627,7 @@
   }
 
   .bb-page .bb-case-studies-head h2 {
-    font-size: clamp(34px, 11vw, 48px);
+    font-size: clamp(38px, 4.5vw, 58px);
   }
 
   .bb-page .bb-case-studies-head p {
@@ -1662,9 +1662,9 @@
   margin: 0;
   color: #202020;
   font-family: var(--font-heading);
-  font-size: clamp(34px, 3.8vw, 48px);
+  font-size: clamp(38px, 4.5vw, 58px);
   font-weight: 500;
-  line-height: 1.05;
+  line-height: 1;
   letter-spacing: -0.04em;
 }
 
@@ -1745,7 +1745,7 @@
   }
 
   .bb-page .qcs2-simple-head h2 {
-    font-size: clamp(34px, 11vw, 48px);
+    font-size: clamp(38px, 4.5vw, 58px);
   }
 
   .bb-page .qcs2-simple-head p,
@@ -3454,6 +3454,67 @@
 }
 </style>
 
+
+<style id="shared-case-study-typography-alignment">
+/* Shared typography roles across Quick Clean, AccountX and Bertrand & Bernard. */
+.bb-page .bb-kicker {
+  font-family: var(--font-body) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.bb-page .bb-title,
+.bb-page .bb-title * {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(35px, 4.55vw, 63px) !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  line-height: 0.96 !important;
+  letter-spacing: -0.052em !important;
+  font-synthesis: none;
+}
+
+.bb-page .bb-hero-role-copy {
+  font-family: var(--font-body) !important;
+  font-size: clamp(13px, 1vw, 15px) !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1.55 !important;
+}
+
+.bb-page .bb-case-studies-head h2,
+.bb-page .qcs2-simple-head h2,
+.bb-page .bb-dental-format-head h2 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(38px, 4.5vw, 58px) !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+}
+
+.bb-page .qcs2-opportunity .qcs2-simple-head > p,
+.bb-page .qcs2-opportunity .qcs2-text-points > p,
+.bb-page .qcs2-opportunity .qcs7-opportunity-copy {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0 !important;
+}
+
+.bb-page .qcs2-opportunity .qcs7-opportunity-number,
+.bb-page .qcs2-opportunity .qcs7-opportunity-heading strong {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+}
+</style>
+
 </head>
 <body class="bb-page">
 <div id="global-menu"></div>
@@ -3551,8 +3612,8 @@
 <section aria-labelledby="bb-agri-opportunity-title" class="qcx-section qcs2-opportunity bb-case-opportunity" id="bb-agri-opportunity">
 <div class="qcx-shell">
 <header class="qcs2-simple-head">
-<h2 id="bb-agri-opportunity-title" style="font-size: clamp(34px, 3.8vw, 48px);">Opportunity</h2>
-<p style="font-size: 15px;">Three connected pricing and product-framing gaps were holding back trial quality and paid conversion.</p>
+<h2 id="bb-agri-opportunity-title">Opportunity</h2>
+<p style="font-size: 15px;">Three connected pricing and product-framing gaps were limiting product understanding and trial-to-paid potential.</p>
 </header>
 <div class="qcs2-text-points">
 <p style="font-size: 15px;">
@@ -3561,9 +3622,9 @@
 <strong style="font-size: 15px;">Free tools set the category baseline.</strong>
 </span>
 <span class="qcs7-opportunity-copy" style="font-size: 15px;">
-          Buyers already had access to free crop-health maps and basic advisory.
-          The platform’s stronger decision layer across disease risk, irrigation,
-          harvesting and compliance was not visible enough during the buying journey.
+          In a market with free crop-health maps and basic advisory, the platform’s
+          higher-value tools across disease risk, irrigation, harvesting and compliance
+          needed clearer differentiation during the buying journey.
         </span>
 </p>
 <p style="font-size: 15px;">
@@ -3572,9 +3633,8 @@
 <strong style="font-size: 15px;">Feature gating hid the product’s real value.</strong>
 </span>
 <span class="qcs7-opportunity-copy" style="font-size: 15px;">
-          Sixty-four percent of trials started on the entry tier, but that tier
-          excluded disease alerts, irrigation planning, yield forecasting and
-          scouting tools. Buyers were evaluating a limited version of the product
+          The entry tier excluded disease alerts, irrigation planning, yield forecasting
+          and scouting tools. Buyers were evaluating a limited version of the product
           instead of experiencing the capabilities that differentiated it.
         </span>
 </p>
@@ -3584,9 +3644,9 @@
 <strong style="font-size: 15px;">Pricing created avoidable buying friction.</strong>
 </span>
 <span class="qcs7-opportunity-copy" style="font-size: 15px;">
-          The pricing page had a 52% exit rate and organised value around feature
-          access rather than the amount of land being monitored. The model needed
-          to align with a unit customers already understood and used for budgeting.
+          The pricing page organised value around feature access rather than the amount
+          of land being monitored. The model needed to align with a unit customers already
+          understood and used for budgeting.
         </span>
 </p>
 </div>
@@ -3599,8 +3659,7 @@
 <header class="qcs2-simple-head">
 <h2 id="bb-agri-solution-title">Solution</h2>
 <p>
-        The pricing model was rebuilt around land under monitoring, while the
-        product experience and experiment setup were aligned to the same logic.
+        The pricing model was rebuilt around land under monitoring, with the product experience and measurement framework aligned to the same logic.
       </p>
 </header>
 <div class="qcs2-solution-group">
@@ -3609,17 +3668,15 @@
 <strong>Full-product access with acre-based metering</strong>
 </div>
 <p class="qcs3-work-summary">
-        Instead of restricting capabilities by plan, every plan received the
-        full product. Pricing moved to acres under monitoring, a unit customers
-        already understood and used for budgeting.
+        Instead of restricting capabilities by plan, the redesigned model gave every plan access to the full product. Pricing moved to acres under monitoring, a unit
+        customers already understood and used for budgeting.
       </p>
 <div aria-label="AgriTech pricing and product changes" class="qcs3-positioning-flow">
 <div class="qcs3-positioning-step">
 <span>01</span>
 <b>Feature gates were removed</b>
 <p>
-            Disease alerts, irrigation planning, yield forecasting and scouting
-            tools were no longer held back by the entry tier.
+            The redesigned model included disease alerts, irrigation planning, yield forecasting and scouting tools across every plan.
           </p>
 </div>
 <i aria-hidden="true"></i>
@@ -3634,7 +3691,7 @@
 <i aria-hidden="true"></i>
 <div class="qcs3-positioning-step">
 <span>03</span>
-<b>The pricing page was reframed</b>
+<b>The pricing page was redesigned</b>
 <p>
             The buying experience presented the offer around monitored acreage,
             making the commercial model easier to understand and budget for.
@@ -3643,28 +3700,26 @@
 <i aria-hidden="true"></i>
 <div class="qcs3-positioning-step">
 <span>04</span>
-<b>Product selection flows were updated</b>
+<b>Product selection flows were redesigned</b>
 <p>
-            The signup flow and in-app plan selector were changed to reflect
+            The signup flow and in-app plan selector were redesigned to present
             the acre-based model consistently.
           </p>
 </div>
 <i aria-hidden="true"></i>
 <div class="qcs3-positioning-step">
 <span>05</span>
-<b>Entitlements and testing were aligned</b>
+<b>Entitlements and measurement were aligned</b>
 <p>
-            Entitlement logic was updated and the new model was tested through
-            a six-week, 50/50 A/B test across 18,412 visitors.
+            Entitlement logic was mapped to the redesigned model, with a plan covering conversion, revenue and customer-quality outcomes.
           </p>
 </div>
 </div>
 </div>
 <p class="bb-shared-solution-note">
-        A grower with 800 acres and a co-operative with 90,000 acres need the
-        same tools. They simply have different amounts of land to monitor.
-        Feature gating restricted comprehension; acre-based pricing restricted
-        consumption, which is easier for buyers to understand and scale.
+        A grower with 800 acres and a co-operative with 90,000 acres may need the
+        same tools, but they have different amounts of land to monitor. Acre-based
+        pricing makes that difference easier to understand and scale.
       </p>
 <div aria-label="AgriTech pricing model visuals" class="bb-shared-solution-image-grid">
 <figure class="bb-shared-solution-image-card">
@@ -3674,7 +3729,7 @@
 <figcaption>
 <small>Solution image 01</small>
 <strong>Feature-gated pricing model</strong>
-<span>The original structure used before the pricing change.</span>
+<span>Original feature-gated pricing model used as the control.</span>
 </figcaption>
 </figure>
 <figure class="bb-shared-solution-image-card">
@@ -3684,7 +3739,7 @@
 <figcaption>
 <small>Solution image 02</small>
 <strong>Acre-based pricing model</strong>
-<span>The simplified acre-based model introduced in the test.</span>
+<span>Acre-based pricing variant designed for controlled testing.</span>
 </figcaption>
 </figure>
 </div>
@@ -3693,75 +3748,68 @@
 <section aria-labelledby="bb-agri-results-title" class="bb-section bb-section-white bb-shared-results bb-dental-format-section" data-case-panel="agritech" hidden="" id="bb-agri-results">
 <div class="bb-shell">
 <header class="qcs2-simple-head bb-dental-format-head">
-<h2 id="bb-agri-results-title">Results</h2>
+<h2 id="bb-agri-results-title">Experiment Framework</h2>
 <p>
-        The six-week A/B test used a 50/50 split across 18,412 visitors. The
-        variant changed the pricing page, signup flow, in-app plan selector and
-        entitlement logic.
+        The redesign was structured for a controlled test comparing the feature-gated
+        model with the proposed acre-based variant across conversion, revenue and
+        retention metrics.
       </p>
 </header>
 <div class="bb-dental-results-layout">
 <div class="bb-dental-results-left">
-<div aria-label="Headline AgriTech experiment results" class="bb-dental-result-stats">
+<div aria-label="Primary AgriTech validation metrics" class="bb-dental-result-stats">
 <div class="bb-dental-result-stat">
-<small>New revenue booked</small>
-<strong>+46%</strong>
-<span><b>$44,512 → $65,052</b></span>
+<small>Primary commercial metric</small>
+<strong>New revenue booked</strong>
+<span>Tests whether customer growth offsets any reduction in revenue per account.</span>
 </div>
 <div class="bb-dental-result-stat">
-<small>New customers</small>
-<strong>2.0×</strong>
-<span><b>208 → 417</b></span>
+<small>Quality guardrail</small>
+<strong>90-day retention</strong>
+<span>Checks whether easier entry continues to attract suitable customers.</span>
 </div>
 </div>
 <div class="bb-dental-results-table-wrap">
-<small>Control vs variant</small>
+<small>Measurement framework</small>
 <div class="bb-dental-results-table-scroll">
-<table aria-label="AgriTech SaaS pricing experiment results" class="bb-dental-results-table">
+<table aria-label="AgriTech SaaS pricing validation measurement framework" class="bb-dental-results-table">
 <thead>
 <tr>
 <th scope="col">Metric</th>
-<th scope="col">Control</th>
-<th scope="col">Variant</th>
-<th scope="col">Change</th>
+<th scope="col">What it measures</th>
+<th scope="col">Success signal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">Trial starts</th>
-<td>12.4%</td>
-<td>14.7%</td>
-<td class="positive">+18.8%</td>
+<td>Initial response to the redesigned pricing experience</td>
+<td>More qualified visitors begin a trial</td>
 </tr>
 <tr>
 <th scope="row">Trial to paid</th>
-<td>18.2%</td>
-<td>30.7%</td>
-<td class="positive">+68.7%</td>
+<td>Product understanding and purchase intent</td>
+<td>A higher share of trials become customers</td>
 </tr>
 <tr>
 <th scope="row">New customers</th>
-<td>208</td>
-<td>417</td>
-<td class="positive">2.0×</td>
+<td>Overall acquisition impact</td>
+<td>Customer volume increases</td>
 </tr>
 <tr>
 <th scope="row">Revenue per account</th>
-<td>$214</td>
-<td>$156</td>
-<td>−27%</td>
+<td>Effect of the new entry model</td>
+<td>Any decline remains commercially manageable</td>
 </tr>
 <tr>
 <th scope="row">New revenue booked</th>
-<td>$44,512</td>
-<td>$65,052</td>
-<td class="positive">+46%</td>
+<td>Total commercial impact</td>
+<td>Customer growth produces more revenue</td>
 </tr>
 <tr>
 <th scope="row">90-day retention</th>
-<td>88.1%</td>
-<td>89.4%</td>
-<td>+1.3pp (n.s.)</td>
+<td>Customer quality and fit</td>
+<td>Retention remains stable</td>
 </tr>
 </tbody>
 </table>
@@ -3771,29 +3819,28 @@
 <div class="bb-dental-result-insight">
 <span>01</span>
 <div>
-<strong>Customer growth outweighed lower revenue per account</strong>
+<strong>Customer growth needed to outweigh lower revenue per account</strong>
 <p>
-                    Revenue per account fell from $214 to $156, but new customers
-                    increased from 208 to 417 and lifted new revenue booked by 46%.
+                    The model would succeed commercially if increased customer volume generated more total revenue despite a lower average starting price.
                   </p>
 </div>
 </div>
 <div class="bb-dental-result-insight">
 <span>02</span>
 <div>
-<strong>Retention remained stable</strong>
+<strong>Retention needed to remain stable</strong>
 <p>
-                    Ninety-day retention moved from 88.1% to 89.4%, a +1.3pp
-                    change reported as not statistically significant.
+                    Ninety-day retention would serve as a quality guardrail, checking that easier entry continued to attract suitable long-term customers.
                   </p>
 </div>
 </div>
 </div>
 <p class="bb-dental-results-note">
-                Revenue per account fell as expected, but the increase in paying
-                customers more than covered it. Stable retention indicated that
-                the additional conversions were real buyers rather than short-term
-                pricing distortion.
+                The experiment would evaluate whether increased customer volume could offset
+                a lower starting price without weakening retention or long-term customer quality.
+              </p>
+<p class="bb-dental-results-note">
+                This case study presents real pricing strategy and experiment-design work. Test results are omitted because the original reporting source is no longer available.
               </p>
 </div>
 
@@ -3806,7 +3853,7 @@
 <section aria-labelledby="bb-email-opportunity-title" class="qcx-section qcs2-opportunity bb-case-opportunity" id="bb-email-opportunity">
 <div class="qcx-shell">
 <header class="qcs2-simple-head">
-<h2 id="bb-email-opportunity-title" style="font-size: clamp(34px, 3.8vw, 48px);">Opportunity</h2>
+<h2 id="bb-email-opportunity-title">Opportunity</h2>
 <p style="font-size: 15px;">Three connected outbound gaps had to be solved before outreach could scale safely and remain relevant.</p>
 </header>
 <div class="qcs2-text-points">
@@ -3911,8 +3958,8 @@
 <span>05</span>
 <b>Replies guided ongoing iteration</b>
 <p>
-            Most replies appeared after the second or third touchpoint, helping
-            focus sequence operations on consistent follow-up rather than one-off sends.
+            Reply patterns guided ongoing iteration, helping keep the sequence focused
+            on consistent follow-up rather than one-off sends.
           </p>
 </div>
 </div>
@@ -3959,7 +4006,7 @@
 <div class="bb-dental-result-stat">
 <small>Opportunity</small>
 <strong>1</strong>
-<span><b>$80K in potential value</b></span>
+<span><b>$80K in potential pipeline value</b></span>
 </div>
 </div>
 <div class="bb-dental-results-table-wrap">
@@ -3982,7 +4029,7 @@
 <tr>
 <th scope="row">Open rate</th>
 <td class="positive">67.8%</td>
-<td>Strong inbox placement and relevance</td>
+<td>Strong platform-recorded engagement</td>
 </tr>
 <tr>
 <th scope="row">Reply rate</th>
@@ -3992,7 +4039,7 @@
 <tr>
 <th scope="row">Opportunity</th>
 <td class="positive">1</td>
-<td>$80K in potential value</td>
+<td>$80K in potential pipeline value</td>
 </tr>
 </tbody>
 </table>
@@ -4014,16 +4061,15 @@
 <div>
 <strong>Follow-up created the conversation flow</strong>
 <p>
-                    Most replies appeared after the second or third touchpoint,
-                    reinforcing the value of the five-follow-up sequence.
+                    The multi-step sequence created consistent follow-up without relying
+                    on one-off sends.
                   </p>
 </div>
 </div>
 </div>
 <p class="bb-dental-results-note">
-                Campaign metrics are presented as platform-reported results.
-                Client and prospect identifiers should remain hidden in the
-                final screenshots.
+                Campaign metrics are platform-reported. Client and prospect identifiers
+                have been removed for confidentiality.
               </p>
 </div>
 <aside aria-label="B2B cold email campaign proof" class="bb-dental-results-proof">
@@ -4036,24 +4082,37 @@
 </figure>
 </div>
 <p class="bb-dental-proof-note">
-                The screenshot presents the platform-reported campaign results;
-                client and prospect identifiers should remain hidden.
+                The screenshot presents platform-reported campaign results. Client and
+                prospect identifiers have been removed for confidentiality.
               </p>
 </aside>
 </div>
-<section aria-label="Later B2B cold email scale" style="margin-top: clamp(48px, 6vw, 72px); background: #ffffff; color: #838383;">
-<p style="max-width: 840px; margin: 0; color: #838383; font-size: 13px; line-height: 1.65;">
-        After the initial setup was built and validated, the company continued using
-        and scaling the same email marketing system internally.
+<section aria-labelledby="bb-email-account-scale-title" aria-label="Later B2B cold email scale" style="margin-top: clamp(48px, 6vw, 72px); background: #ffffff; color: #838383;">
+<h3 id="bb-email-account-scale-title" style="margin: 0; color: #252525; font-family: var(--font-heading); font-size: clamp(28px, 3.4vw, 42px); font-weight: 600; line-height: 1.05; letter-spacing: -0.04em;">
+        Later account-scale performance
+      </h3>
+<p style="max-width: 840px; margin: 18px 0 0; color: #838383; font-size: 13px; line-height: 1.65;">
+        After the initial outbound system was implemented and validated, the company
+        continued using and scaling the same infrastructure internally.
       </p>
+<figure class="bb-dental-proof-item" style="margin: 30px 0 0;">
+<div class="bb-dental-proof-image">
+<img alt="Later platform-reported B2B cold email account performance dashboard" loading="lazy" src="assets/images/b2b-cold-email-account-scale-dashboard.png"/>
+</div>
+<figcaption style="margin: 14px 0 0; color: #838383; font-size: 11px; line-height: 1.65;">
+        Later platform-reported account performance showing 1.1M+ total sends,
+        164 opportunities and $13.12M in potential pipeline value.
+      </figcaption>
+</figure>
 <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 5vw, 64px); margin-top: 24px; color: #838383;">
-<p style="margin: 0; color: #838383; font-size: 12px; line-height: 1.5;"><strong style="display: block; color: #838383; font-family: var(--font-heading); font-size: clamp(46px, 5.2vw, 68px); font-weight: 500; line-height: 1.08; letter-spacing: -0.055em; padding-top: 4px;">1.1M+</strong>emails sent</p>
+<p style="margin: 0; color: #838383; font-size: 12px; line-height: 1.5;"><strong style="display: block; color: #838383; font-family: var(--font-heading); font-size: clamp(46px, 5.2vw, 68px); font-weight: 500; line-height: 1.08; letter-spacing: -0.055em; padding-top: 4px;">1.1M+</strong>total sends</p>
 <p style="margin: 0; color: #838383; font-size: 12px; line-height: 1.5;"><strong style="display: block; color: #838383; font-family: var(--font-heading); font-size: clamp(46px, 5.2vw, 68px); font-weight: 500; line-height: 1.08; letter-spacing: -0.055em; padding-top: 4px;">164</strong>opportunities</p>
-<p style="margin: 0; color: #838383; font-size: 12px; line-height: 1.5;"><strong style="display: block; color: #838383; font-family: var(--font-heading); font-size: clamp(46px, 5.2vw, 68px); font-weight: 500; line-height: 1.08; letter-spacing: -0.055em; padding-top: 4px;">$13.12M</strong>potential pipeline</p>
+<p style="margin: 0; color: #838383; font-size: 12px; line-height: 1.5;"><strong style="display: block; color: #838383; font-family: var(--font-heading); font-size: clamp(46px, 5.2vw, 68px); font-weight: 500; line-height: 1.08; letter-spacing: -0.055em; padding-top: 4px;">$13.12M</strong>potential pipeline value</p>
 </div>
 <p style="max-width: 840px; margin: 18px 0 0; color: #838383; font-size: 11px; line-height: 1.65;">
-        These later platform-reported results are shown separately from the seven-day
-        campaign; the pipeline figure represents opportunity value, not confirmed revenue.
+        These later platform-reported account totals are shown separately and are not
+        attributed solely to the initial seven-day campaign. Pipeline represents
+        opportunity value, not confirmed revenue.
       </p>
 </section>
 </div>
@@ -4061,44 +4120,43 @@
 <div class="bb-shell">
 <div class="qcx-shell">
 <header class="qcs2-simple-head">
-<h2 id="bb-dental-opportunity-title" style="font-size: clamp(34px, 3.8vw, 48px);">Opportunity</h2>
-<p style="font-size: 15px;">Three connected account gaps were limiting conversion output and making paid acquisition far more expensive than it needed to be.</p>
+<h2 id="bb-dental-opportunity-title">Opportunity</h2>
+<p style="font-size: 15px;">Three connected account gaps were limiting conversion output and making paid acquisition more expensive than necessary.</p>
 </header>
 <div class="qcs2-text-points">
 <p style="font-size: 15px;">
 <span class="qcs7-opportunity-heading">
 <span class="qcs7-opportunity-number" style="font-size: 15px;">01</span>
-<strong style="font-size: 15px;">Conversion signals were too weak.</strong>
+<strong style="font-size: 15px;">Conversion signals were limiting optimisation.</strong>
 </span>
 <span class="qcs7-opportunity-copy" style="font-size: 15px;">
-          Lead-form and conversion tracking were not giving Google Ads enough
-          dependable signal quality. With limited measurement data, automated
-          bidding had less reliable information to identify and optimise toward
-          users more likely to complete a valuable action.
+          Lead-form and conversion tracking were not providing Google Ads with dependable
+          signal quality. With limited measurement data, automated bidding had less
+          reliable information to identify and optimise toward users more likely to
+          complete a valuable action.
         </span>
 </p>
 <p style="font-size: 15px;">
 <span class="qcs7-opportunity-heading">
 <span class="qcs7-opportunity-number" style="font-size: 15px;">02</span>
-<strong style="font-size: 15px;">Weak tests were consuming budget.</strong>
+<strong style="font-size: 15px;">Underperforming activity was consuming budget.</strong>
 </span>
 <span class="qcs7-opportunity-copy" style="font-size: 15px;">
-          Underperforming campaigns and experiments were creating budget bleed,
-          while spend was not concentrated strongly enough around higher-intent
-          queries and campaigns. The account needed clearer pruning and allocation
-          decisions before additional budget could work efficiently.
+          Weak campaigns and experiments were creating budget bleed, while spend was
+          not concentrated strongly enough around higher-intent queries and campaigns.
+          The account needed clearer pruning and allocation decisions before additional
+          budget could work efficiently.
         </span>
 </p>
 <p style="font-size: 15px;">
 <span class="qcs7-opportunity-heading">
 <span class="qcs7-opportunity-number" style="font-size: 15px;">03</span>
-<strong style="font-size: 15px;">Reach was not translating into efficient acquisition.</strong>
+<strong style="font-size: 15px;">Reach was not producing efficient acquisition.</strong>
 </span>
 <span class="qcs7-opportunity-copy" style="font-size: 15px;">
-          From January to June 2023, approximately $58.0K in spend and 388K
-          impressions produced only 48 measured conversions at roughly $1.21K
-          per conversion. The account had visibility, but not enough qualified
-          conversion output for the investment.
+          From January to June 2023, approximately $68.9K in spend and 394K impressions generated 56 measured conversions at roughly $1.23K per conversion. With an average
+          customer value of about $1.8K, acquisition efficiency needed significant
+          improvement.
         </span>
 </p>
 </div>
@@ -4110,55 +4168,45 @@
 <header class="qcs2-simple-head">
 <h2 id="bb-dental-solution-title">Solution</h2>
 <p>
-        The account was improved through five connected changes that strengthened
-        measurement, removed inefficient activity and directed spend toward
-        higher-intent opportunities.
+        Five connected changes strengthened measurement, removed inefficient activity
+        and redirected spend toward higher-intent opportunities.
       </p>
 </header>
 <div class="qcs2-solution-group">
-<div class="qcs2-group-label">
-<span>01</span>
-<strong>Campaign structure and intent focus</strong>
-</div>
-<p class="qcs3-work-summary">
-        Campaign cleanup, bidding learning and budget allocation were handled as
-        one system, so spend moved away from weak tests and toward searches and
-        markets with stronger lead potential.
-      </p>
 <div aria-label="Dental campaign optimisation work completed" class="qcs3-positioning-flow">
 <div class="qcs3-positioning-step">
 <span>01</span>
-<b>Tracking and signal quality improved</b>
+<b>Tracking and signal quality strengthened</b>
 <p>
-            Lead-form and conversion signals were strengthened so optimisation
-            was based on clearer, more dependable measured actions.
+            Lead-form and conversion signals were improved, giving optimisation clearer
+            and more dependable measured actions.
           </p>
 </div>
 <i aria-hidden="true"></i>
 <div class="qcs3-positioning-step">
 <span>02</span>
-<b>Smart Bidding had more learning data</b>
+<b>Smart Bidding gained stronger learning data</b>
 <p>
-            More conversion history gave Maximise Conversions a stronger base
-            for identifying users likely to complete a valuable action.
+            More conversion history gave Maximise Conversions a stronger foundation for
+            identifying users likely to complete valuable actions.
           </p>
 </div>
 <i aria-hidden="true"></i>
 <div class="qcs3-positioning-step">
 <span>03</span>
-<b>Weak tests were pruned</b>
+<b>Weak campaigns were pruned</b>
 <p>
-            Underperforming campaigns and experiments were reduced, paused or
-            replaced to limit budget bleed.
+            Underperforming campaigns and experiments were reduced, paused or replaced
+            to limit wasted spend.
           </p>
 </div>
 <i aria-hidden="true"></i>
 <div class="qcs3-positioning-step">
 <span>04</span>
-<b>Budget moved toward higher intent</b>
+<b>Budget shifted toward higher intent</b>
 <p>
-            Spend was redirected toward campaigns and queries more likely to
-            produce trackable lead actions.
+            Spend was redirected toward campaigns and queries more likely to generate
+            trackable lead actions.
           </p>
 </div>
 <i aria-hidden="true"></i>
@@ -4166,8 +4214,8 @@
 <span>05</span>
 <b>New-market expansion was tested</b>
 <p>
-            New Zealand and USA activity introduced additional audience pools
-            beyond the earlier market setup.
+            New Zealand and US campaigns introduced additional audience pools beyond the
+            original market setup.
           </p>
 </div>
 </div>
@@ -4179,9 +4227,7 @@
 <header class="qcs2-simple-head bb-dental-format-head">
 <h2 id="bb-dental-results-title">Results</h2>
 <p>
-              Conversion output increased sharply in the second half of 2023,
-              while cost per conversion fell despite only a modest increase in
-              media spend.
+              From Jul 1 to Dec 25, 2023, measured conversions rose from 56 to 361 while cost per conversion fell by 83.7%, with only a 5.2% increase in media spend.
             </p>
 </header>
 <div class="bb-dental-results-layout">
@@ -4190,12 +4236,12 @@
 <div class="bb-dental-result-stat">
 <small>Measured conversions</small>
 <strong>361</strong>
-<span><b>+652.1%</b> compared with Jan–Jun 2023</span>
+<span><b>+544.6%</b> vs Jan-Jun 2023</span>
 </div>
 <div class="bb-dental-result-stat">
 <small>Cost per conversion</small>
-<strong>$173</strong>
-<span><b>85.7% lower</b> than the previous period</span>
+<strong>~$201</strong>
+<span><b>83.7% lower</b> than Jan-Jun 2023</span>
 </div>
 </div>
 <div class="bb-dental-results-table-wrap">
@@ -4205,35 +4251,35 @@
 <thead>
 <tr>
 <th scope="col">Metric</th>
-<th scope="col">Jan–Jun 2023</th>
-<th scope="col">Jul–Dec 2023</th>
+<th scope="col">JAN-JUN 2023</th>
+<th scope="col">Jul 1–Dec 25, 2023</th>
 <th scope="col">Change</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th scope="row">Spend</th>
-<td>~$58.0K</td>
-<td>~$62.4K</td>
-<td>+7.7%</td>
+<td>~$68.9K</td>
+<td>~$72.5K</td>
+<td>+5.2%</td>
 </tr>
 <tr>
 <th scope="row">Conversions</th>
-<td>48</td>
+<td>56</td>
 <td>361</td>
-<td class="positive">+652.1%</td>
+<td class="positive">+544.6%</td>
 </tr>
 <tr>
 <th scope="row">Cost / Conversion</th>
-<td>~$1.21K</td>
-<td>~$173</td>
-<td class="positive">85.7% lower</td>
+<td>~$1.23K</td>
+<td>~$201</td>
+<td class="positive">83.7% lower</td>
 </tr>
 <tr>
 <th scope="row">Impressions</th>
-<td>388K</td>
+<td>394K</td>
 <td>337K</td>
-<td>-13.1%</td>
+<td>-14.3%</td>
 </tr>
 </tbody>
 </table>
@@ -4243,28 +4289,24 @@
 <div class="bb-dental-result-insight">
 <span>01</span>
 <div>
-<strong>More output, nearly the same spend</strong>
+<strong>More conversions, limited spend growth</strong>
 <p>
-                    Spend increased by only 7.7%, while measured conversions
-                    rose from 48 to 361.
+                    Spend increased by only 5.2%, while measured conversions rose from 56 to 361.
                   </p>
 </div>
 </div>
 <div class="bb-dental-result-insight">
 <span>02</span>
 <div>
-<strong>Better traffic and measurement efficiency</strong>
+<strong>More conversions from fewer impressions</strong>
 <p>
-                    Impressions declined by 13.1%, yet conversion volume grew
-                    and average cost per conversion fell substantially.
+                    Impressions declined by 14.3%, while conversions increased and cost per conversion fell by 83.7%.
                   </p>
 </div>
 </div>
 </div>
 <p class="bb-dental-results-note">
-                Revenue and conversion-value tracking was not reliable enough
-                to use ROAS as the main proof point. The comparison therefore
-                focuses on measured conversion volume and cost efficiency.
+                Google Ads spend and cost figures are rounded USD equivalents converted from INR using the 2023 average exchange rate. Average customer value is based on client-provided data. ROAS is excluded because revenue tracking was unreliable.
               </p>
 </div>
 <aside aria-label="Google Ads proof screenshots" class="bb-dental-results-proof">
@@ -4300,12 +4342,13 @@
 <article class="service-card" id="next-portfolio-quick-clean" style="--stack-index: 0;">
 <div class="service-copy">
 <p class="service-company">Quick Clean Laundry Systems</p>
-<h3 class="service-title">Commercial Laundry Growth in India</h3>
+<h3 class="service-title">Commercial Laundry Growth Engine</h3>
 <p class="service-description">
-            Built a structured commercial growth system across ICP segmentation,
-            stakeholder messaging, industry events, LinkedIn, email,
-            qualification and multi-channel demand generation.
+            Built Quick Clean’s commercial growth system across hospitality,
+            healthcare and retail through ICP-led qualification, sector positioning,
+            sales enablement and connected CRM workflows.
           </p>
+<p class="service-metrics" style="margin: 16px 0 0; color: #777777; font-family: var(--font-body); font-size: 12px; font-weight: 600; line-height: 1.4; letter-spacing: 0.02em;">20–25 SQLs/quarter · 15–17 retail leads/month</p>
 <a class="case-link" href="quick-clean.html">
             View the case study
             <svg aria-hidden="true" viewbox="0 0 24 24">
@@ -4323,11 +4366,13 @@
 <article class="service-card" id="next-portfolio-accountx" style="--stack-index: 1;">
 <div class="service-copy">
 <p class="service-company">AccountX</p>
-<h3 class="service-title">Global GTM &amp; Outbound&nbsp;Engine</h3>
+<h3 class="service-title">Global GTM &amp; Acquisition&nbsp;Engine</h3>
 <p class="service-description">
-            Built the GTM foundation, country-wise ICP, outbound infrastructure,
-            LinkedIn, cold email, SEO and Google Search Ads across global markets.
+            Built the company’s acquisition foundation across 10 markets through
+            market-specific ICP research, outbound email, LinkedIn, SEO and sales
+            enablement.
           </p>
+<p class="service-metrics" style="margin: 16px 0 0; color: #777777; font-family: var(--font-body); font-size: 12px; font-weight: 600; line-height: 1.4; letter-spacing: 0.02em;">10 markets · 8–10 qualified leads/month</p>
 <a class="case-link" href="accountx.html">
             View the case study
             <svg aria-hidden="true" viewbox="0 0 24 24">

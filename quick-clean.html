@@ -5521,7 +5521,7 @@
 
 .quick-clean-page .qcs4-result-metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(24px, 4vw, 60px);
   padding: 32px 0;
   border-top: 1px solid rgba(36,36,36,0.12);
@@ -6459,6 +6459,18 @@
 }
 </style>
 
+<style id="quick-clean-next-case-metrics">
+.quick-clean-page .qcx-next-portfolio .service-metrics {
+  margin: 16px 0 0;
+  color: #777777;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+</style>
+
 <style id="quick-clean-header-exact-bertrand-match">
 /* Exact header match with the final Bertrand & Bernard treatment. */
 .quick-clean-page .qcs3-hero {
@@ -6625,6 +6637,65 @@
 }
 </style>
 
+
+<style id="shared-case-study-typography-alignment">
+/* Shared typography roles across Quick Clean, AccountX and Bertrand & Bernard. */
+.quick-clean-page .qcx-kicker {
+  font-family: var(--font-body) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.quick-clean-page .qcx-title,
+.quick-clean-page .qcx-title * {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(35px, 4.55vw, 63px) !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  line-height: 0.96 !important;
+  letter-spacing: -0.052em !important;
+  font-synthesis: none;
+}
+
+.quick-clean-page .qcx-hero-role-copy {
+  font-family: var(--font-body) !important;
+  font-size: clamp(13px, 1vw, 15px) !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1.55 !important;
+}
+
+.quick-clean-page .qcs2-simple-head h2 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(38px, 4.5vw, 58px) !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+}
+
+.quick-clean-page #qc-opportunity .qcs2-simple-head > p,
+.quick-clean-page #qc-opportunity .qcs2-text-points > p,
+.quick-clean-page #qc-opportunity .qcs7-opportunity-copy {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0 !important;
+}
+
+.quick-clean-page #qc-opportunity .qcs7-opportunity-number,
+.quick-clean-page #qc-opportunity .qcs7-opportunity-heading strong {
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+}
+</style>
+
 </head>
 <body class="quick-clean-page">
 <div id="global-menu"></div>
@@ -6654,25 +6725,20 @@
 <div class="qcx-shell">
 <header class="qcs2-simple-head">
 <h2 id="qcx-opportunity-title">Opportunity</h2>
-<p>Three connected growth gaps were increasing sales effort and slowing qualified opportunities.</p>
+<p>Three connected sales gaps were increasing effort and slowing qualified opportunity creation.</p>
 </header>
 <div class="qcs2-text-points">
 <p>
-<span class="qcs7-opportunity-heading"><span class="qcs7-opportunity-number">01</span><strong>Unstructured sales pipeline.</strong></span>
-<span class="qcs7-opportunity-copy">With account data scattered, the sales team relied on random calls and meetings before sufficient research or qualification. Multiple early meetings were often needed to establish basic fit, consuming time and delaying meaningful sales conversations.</span>
+<span class="qcs7-opportunity-heading"><span class="qcs7-opportunity-number">01</span><strong>Qualification happened too late.</strong></span>
+<span class="qcs7-opportunity-copy">Account data was scattered, so sales conversations often began before sufficient research or qualification. Several early meetings were needed to establish basic fit, consuming time and delaying commercially meaningful discussions.</span>
       </p>
 <p>
 <span class="qcs7-opportunity-heading"><span class="qcs7-opportunity-number">02</span><strong>Weak category positioning.</strong></span>
-<span class="qcs7-opportunity-copy">Hotels and hospitals either managed laundry internally or treated
-        outsourced operators as interchangeable vendors. Quick Clean needed to
-        show that linen quality, consistency and availability directly affect
-        guest experience, patient safety and operational continuity.</span>
+<span class="qcs7-opportunity-copy">Hotels and hospitals either managed laundry in-house or viewed outsourced operators as interchangeable vendors. Quick Clean needed to show how linen quality, consistency and availability affected guest experience, patient safety and operational continuity.</span>
       </p>
 <p>
-<span class="qcs7-opportunity-heading"><span class="qcs7-opportunity-number">03</span><strong>Manual sales operations.</strong></span>
-<span class="qcs7-opportunity-copy">Research, CRM updates, follow-up, lead routing and quotation preparation
-        depended heavily on manual work. This increased turnaround time, created
-        avoidable errors and made the overall pipeline harder to manage.</span>
+<span class="qcs7-opportunity-heading"><span class="qcs7-opportunity-number">03</span><strong>Sales operations were too manual.</strong></span>
+<span class="qcs7-opportunity-copy">Research, CRM updates, follow-up, lead routing and quotation preparation depended heavily on manual work. This slowed response times, increased avoidable errors and made the pipeline harder to manage.</span>
       </p>
 </div>
 </div>
@@ -6682,14 +6748,13 @@
 <header class="qcs2-simple-head">
 <h2 id="qcx-solution-title">Solution</h2>
 <p>
-        The response was built around three systems: qualify before the meeting,
-        standardise the market story and automate repetitive sales work.
+        The response connected three systems: qualify before meetings, standardise the market story and automate repetitive sales work.
       </p>
 </header>
 <div class="qcs2-solution-group">
 <div class="qcs2-group-label">
 <span>01</span>
-<strong>Qualification system</strong>
+<strong>Pre-meeting qualification system</strong>
 </div>
 <div class="qcs5-qualification-card">
 <table aria-label="ICP and lead qualification criteria" class="qcs5-qualification-table">
@@ -6722,12 +6787,12 @@
 </tr>
 <tr class="qcs5-handoff-row">
 <th scope="row">Sales handoff</th>
-<td><strong>Meeting after qualification</strong></td>
+<td><strong>Sales meeting after qualification</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="qcs2-diagram-note">Research and scoring happened before sales attention. This reduced unnecessary meetings, improved timing and helped the team approach the right account, city and stakeholder with a clearer commercial reason.</p>
+<p class="qcs2-diagram-note">Research and scoring happened before sales engagement. This reduced unnecessary meetings and helped the team approach the right account, city and stakeholder with a clearer commercial reason.</p>
 </div>
 <div class="qcs2-solution-group">
 <div class="qcs2-group-label">
@@ -6735,9 +6800,7 @@
 <strong>Brand positioning and sales enablement</strong>
 </div>
 <p class="qcs3-work-summary">
-  The work was not limited to changing a tagline. The category story, stakeholder
-  messaging, sales collateral, proof and market distribution were standardised
-  so the same value proposition appeared throughout the buying journey.
+  The work went beyond changing a tagline. The category story, stakeholder messaging, sales collateral, proof and distribution were aligned so the same value proposition appeared throughout the buying journey.
 </p>
 <div aria-label="Brand positioning work completed" class="qcs3-positioning-flow">
 <div class="qcs3-positioning-step">
@@ -6779,10 +6842,11 @@
 <i aria-hidden="true"></i>
 <div class="qcs3-positioning-step">
 <span>05</span>
-<b>Market distribution</b>
+<b>Market activation</b>
 <p>
-      The story was carried through events, campaigns, relationship-led outreach,
-      PR and visibility across hospitality and business publications.
+      I represented Quick Clean at 10+ hospitality events, supported
+      by campaigns, relationship-led outreach, PR and visibility across industry
+      publications.
     </p>
 </div>
 <i aria-hidden="true"></i>
@@ -6825,9 +6889,9 @@
 <div class="qcs2-solution-group">
 <div class="qcs2-group-label">
 <span>03</span>
-<strong>AI-powered Marketing and Sales Automation</strong>
+<strong>Connected Marketing and Sales Automation</strong>
 </div>
-<p class="qcs3-work-summary">The workflow connects account research, qualification, CRM, inbound and field sources, multichannel follow-up, reply handling, nurture and sales handoff in one operating system.</p>
+<p class="qcs3-work-summary">The workflow connected account research, qualification, CRM, inbound and field sources, multichannel follow-up, reply handling, nurture and sales handoff in one operating system.</p>
 <div aria-label="Marketing channels" class="qcs6-workflow-channels">
 <small>Channels used</small>
 <div>
@@ -6886,40 +6950,37 @@
 <header class="qcs2-simple-head qcs4-results-head">
 <h2 id="qcx-results-title">Results</h2>
 <p>
-        The work created a more focused sales process, a clearer category story
-        and a more consistent operating rhythm across marketing and sales.
+        The work created a structured qualification process, clearer category positioning and a more consistent operating rhythm across marketing and sales.
       </p>
 </header>
 <div class="qcs4-result-metrics">
 <div>
-<small>Sales-qualified leads</small>
+<small>SALES-QUALIFIED LEADS</small>
 <strong>20–25 SQLs</strong>
 <p>Generated and handed over to sales per quarter.</p>
 </div>
 <div>
-<small>Post-qualification sales cycle</small>
-<strong>6–7 months</strong>
-<p>
-          Reduced from approximately 12 months through better qualification,
-          nurturing and sales enablement.
-        </p>
-</div>
-<div>
-<small>Retail leads</small>
+<small>RETAIL LEADS</small>
 <strong>15–17 leads</strong>
-<p>Generated through retail-focused campaigns per&nbsp;month.</p>
+<p>Generated through retail-focused campaigns per month.</p>
 </div>
 </div>
 <div class="qcs4-results-summary">
 <p>
 <strong>Sales transformation.</strong>
-        Quick Clean moved from random outreach, price-led positioning, inconsistent messaging and manual processes to ICP-led qualified meetings, sector-specific positioning, standardised collateral and connected CRM workflows.
+        Quick Clean moved from random outreach, price-led positioning and manual processes to pre-qualified sales meetings, sector-specific messaging, standardised collateral and connected CRM workflows.
       </p>
 <p>
 <strong>Business impact.</strong>
-        The new system improved sales efficiency, strengthened market credibility, created consistent sales enablement and reduced repetitive manual work and errors.
+        The system improved lead quality, strengthened market credibility, created clearer sales handoffs and reduced repetitive manual work and avoidable errors.
       </p>
 </div>
+<p
+  class="qcs4-results-footnote"
+  style="max-width: 900px; margin: 24px 0 0; color: #838383; font-size: 11px !important; line-height: 1.6;"
+>
+  Lead figures are based on internal tracking records. Client and prospect identifiers are omitted for confidentiality.
+</p>
 </div>
 </section>
 <section aria-labelledby="qcx-next-portfolio-title" class="services-section qcx-next-portfolio" id="qc-next-cases">
@@ -6934,11 +6995,13 @@
 <article class="service-card" id="next-portfolio-accountx" style="--stack-index: 0;">
 <div class="service-copy">
 <p class="service-company">AccountX</p>
-<h3 class="service-title">Global GTM &amp;<br/>Outbound Engine</h3>
+<h3 class="service-title">Global GTM &amp;<br/>Acquisition Engine</h3>
 <p class="service-description">
-            Built GTM foundation, country-wise ICP, outbound infrastructure,
-            LinkedIn, cold email, SEO and Google Search Ads across <span class="qcx-no-break">10 global markets</span>.
+            Built the company’s acquisition foundation across 10 markets through
+            market-specific ICP research, outbound email, LinkedIn, SEO and sales
+            enablement.
           </p>
+<p class="service-metrics">10 markets · 8–10 qualified leads/month</p>
 <a class="case-link" href="accountx.html">
             View the case study
             <svg aria-hidden="true" viewbox="0 0 24 24">
@@ -6956,13 +7019,15 @@
 <article class="service-card" id="next-portfolio-bertrand-bernard" style="--stack-index: 1;">
 <div class="service-copy">
 <p class="service-company">Bertrand &amp; Bernard LLP</p>
-<h3 class="service-title">Performance Marketing &amp; E-commerce CRO</h3>
+<h3 class="service-title">Performance Marketing, CRO &amp; Growth</h3>
 <p class="service-description">
-            Paid campaigns, Shopify CRO, Meta Ads, landing pages, A/B testing,
-            CPA reduction and conversion journey improvements for <span class="qcx-no-break">e-commerce brands</span>.
+            Worked across 7+ client accounts spanning Google Ads, Meta Ads, paid
+            acquisition, landing pages, Shopify CRO, A/B testing, pricing strategy
+            and B2B outbound.
           </p>
+<p class="service-metrics">7+ clients · 3 featured case studies</p>
 <a class="case-link" href="bertrand-bernard.html">
-            View the case study
+            View the case studies
             <svg aria-hidden="true" viewbox="0 0 24 24">
 <path d="M5 12h12.17l-4.58 4.59L14 18l7-7-7-7-1.41 1.41L17.17 10H5v2Z"></path>
 </svg>
